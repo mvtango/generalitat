@@ -15,4 +15,6 @@ rootnode=list2tree.list2tree(filter(lambda a: a["nom"], entitats.data))
 
 pres=filter(lambda a: a["name"].find("Presidència")>-1,rootnode["children"])[0]
 
-simplejson.dump(pres,open(os.path.join(datadir,"presidencia.json"),"w"));
+
+for n in (os.path.join(datadir,"presidencia.json"), os.path.join(here,"../opengov.cat/generalitat/0.3/tree.json")) :
+	simplejson.dump(pres,open(n,"w"));
