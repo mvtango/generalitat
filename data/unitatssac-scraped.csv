@@ -1,4 +1,4 @@
-id,iddep,nom,dep,resp,primer-nombre,nombre-medio,apellido-catalan,centres-cp,centres-com,centres-pob,iddep-wrong,iddep-scraped
+id,iddep,nom,dep,resp,primer-nombre,nombre-medio,apellido-catalan,centres-cp,centres-com,centres-pob,iddep-scraped,iddep-scraped-new
 16286,13760,Divisió de la Sala Central de Bombers,Departament d'Interior,Manel Bosch Serch,Manel,Bosch,Serch,8290,Vallès Occidental,Cerdanyola del Vallès,9767,9767
 535,6,012 Atenció Ciutadana,Departament de la Presidència,null,null,,,null,España,Catalunya,6564,6564
 3383,2803,061 CatSalut Respon,Departament de Salut,null,null,,,,,,7021,7021
@@ -4359,7 +4359,7 @@ id,iddep,nom,dep,resp,primer-nombre,nombre-medio,apellido-catalan,centres-cp,cen
 2755,2221,Patronat de la Casa Rafael Casanova,Departament de Cultura,null,null,,,8002,Barcelonès,Barcelona,2284,
 2763,2221,Patronat de la Casa de Cultura de Girona,Departament de Cultura,null,null,,,17002,Gironès,Girona,2284,
 2761,2221,Patronat de la Casa de Prat de la Riba,Departament de Cultura,null,null,,,8183,Vallès Oriental,Castellterçol,2284,
-73,6,Patronat de la Muntanya de Montserrat,Departament de la Presidència,Joan Rigol i Roig,Joan,,Rigol,8002,Barcelonès,Barcelona,12952,6
+73,6,Patronat de la Muntanya de Montserrat,Departament de la Presidència,Joan Rigol i Roig,Joan,,Rigol,8002,Barcelonès,Barcelona,6,6
 ,,,,,,,,8199,Bages,Monistrol de Montserrat,,
 2753,2221,Patronat de la Seu Vella de Lleida,Departament de Cultura,null,null,,,25001,Segrià,Lleida,2284,
 2764,2221,Patronat de la Universitat de Cervera,Departament de Cultura,null,null,,,25200,Segarra,Cervera,2284,
