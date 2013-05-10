@@ -1,6 +1,6 @@
 
 <!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-<title>Node-Link Tree</title>
+<title>Presidencia</title>
 
 <style type="text/css" style="display:none">circle {
   cursor: pointer;
@@ -29,6 +29,18 @@ path.link {
     i = 0,
     duration = 500,
     root;
+    
+function makeshort(a) {
+	a=a.replace(/Departament /,"Dept. ",a);
+	a=a.replace(/Secretaria General /,"Secr. Gen. ",a);
+	a=a.replace(/Direcció General /,"Dir. Gen. ",a);
+	a=a.replace(/Secretaria /,"Secr. ",a);
+	a=a.replace(/General /,"Gen. ",a);
+	a=a.replace(/Generalitat de Catalunya /,"Generalitat ",a);
+	a=a.replace(/Territorial del Govern de la Generalitat /,"",a);
+	a=a.replace(/Govern de la Generalitat /,"Govern ",a);
+	return(a);
+}
 
 var tree = d3.layout.tree()
     .size([h, w - 160]);
@@ -77,7 +89,7 @@ function update(source) {
 		.attr("y", 3)
       	//.attr("fill","#ccc")
       	//.attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; })
-      	.text(function(d) { return d.name; });
+      	.text(function(d) { return makeshort(d.name); });
 
   // Transition nodes to their new position.
 	nodeEnter.transition()
