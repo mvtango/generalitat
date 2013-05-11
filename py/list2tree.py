@@ -7,8 +7,8 @@ def dict2node(item) :
 		return({ "name" : item["nom"], "id" : item["id"], "data" : item })
 
 
-def list2tree(lista) :
-	rootnode={ "children" : [], "name": "Entitats", "id" : "0gen" }
+def list2tree(lista,children="children") :
+	rootnode={ children: [], "name": "Entitats", "id" : "0gen" }
 	index={}
 	depindex={}
 	for item in lista :
@@ -20,7 +20,7 @@ def list2tree(lista) :
 		else :
 			depindex[ds].append(index[item["id"]])
 	for item in filter(lambda a:  a["iddep"]==a["id"],lista) :
-		rootnode["children"].append(index[item["id"]])
+		rootnode[children].append(index[item["id"]])
 	found=True
 	rno=0
 	while found :
@@ -28,11 +28,11 @@ def list2tree(lista) :
 		added=[]
 		rno=rno+1
 		for n in index.values() :
-			if n["id"] in depindex and not "children" in n:
-				n["children"]=depindex[n["id"]]
+			if n["id"] in depindex and not children in n:
+				n[children]=depindex[n["id"]]
 				added.append(n)
 				found=True
-				log("#%s: %s deps for %s: %s" % (rno,len(n["children"]),n["name"],",".join(map(lambda a:a["name"],n["children"]))))
+				log("#%s: %s deps for %s: %s" % (rno,len(n[children]),n["name"],",".join(map(lambda a:a["name"],n[children]))))
 	return(rootnode) # map(lambda a:a[1],filter(lambda a: a[0] not in index , depindex.items())))
 	
 	

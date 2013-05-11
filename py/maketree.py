@@ -11,9 +11,9 @@ datadir=os.path.join(here,"../data")
 
 entitats=csvstore.csvstore(os.path.join(datadir,"unitatssac-scraped.csv"))
 
-rootnode=list2tree.list2tree(filter(lambda a: a["nom"], entitats.data))
+rootnode=list2tree.list2tree(filter(lambda a: a["nom"], entitats.data),children="_children")
 
-pres=filter(lambda a: a["name"].find("Presidència")>-1,rootnode["children"])[0]
+pres=filter(lambda a: a["name"].find("Presidència")>-1,rootnode["_children"])[0]
 
 
 for n in (os.path.join(datadir,"presidencia.json"), os.path.join(here,"../opengov.cat/generalitat/0.3/tree.json")) :
