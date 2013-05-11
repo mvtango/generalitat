@@ -2,7 +2,8 @@
 <!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <title>Presidencia</title>
 
-<style type="text/css" style="display:none">circle {
+<style type="text/css" style="display:none">
+circle {
   cursor: pointer;
   fill: #fff;
   stroke: steelblue;
@@ -13,28 +14,47 @@ text {
 	font-size:10px;
 	cursor: pointer;
 }
+
+
+
 body.label { margin: 0; padding: 0;  }
-
-
 
 div.outer { width: 148px; height: 20px; display:table;  overflow: hidden; }
 
 div.inner {
 	display: table-cell;
-	font-size: 13px;
-	line-height: 11px;
+	font-size: 12px;
+	line-height: 10px;
 	font-family: Tahoma, Arial, Sans;
 	vertical-align: middle; 
 	height: 18px;
 	overflow: hidden;
 	padding: 0;
+	cursor: pointer;
 }
+
 
 div.clip {
 	width: 100%;
 	height: 21px;
 	overflow: hidden;
-	
+}
+
+
+
+div.tooltip {   
+  position: absolute;           
+  text-align: left;           
+  width: 180px;                                
+  padding: 2px;             
+  font-size: 14px;
+  font-family: Tahoma, Sans, Arial;        
+  background: #303040;
+  color: #e0e0e0;   
+  border: 0px;      
+  border-radius: 3px;
+  padding: 2px;            
+  pointer-events: none;         
 }
 
 
@@ -145,6 +165,19 @@ function update(source) {
 
 	var nodeEnter = node.enter().append("svg:g")
     	.attr("class", "node")
+		.on("mouseover", function(d) {      
+            div.transition()        
+                .duration(200)      
+                .style("opacity", .9);      
+            div .html(d.data.nom+"<br/><i>"+has_children(d)+" dependéncies</i><br/><b>"+d.data.resp+"</b>")  
+                .style("left", (d3.event.pageX - 30) + "px")     
+                .style("top", (d3.event.pageY+20) + "px");    
+            })                  
+        .on("mouseout", function(d) {       
+            div.transition()        
+                .duration(500)      
+                .style("opacity", 0);   
+        })		
     	.attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; });
     	//.style("opacity", 1e-6);
  
@@ -165,7 +198,6 @@ function update(source) {
 		.attr("width", 150)
 		.attr("height", 36)
 		.append("xhtml:body")
-		.attr("class","label")
 		.append("div")
 		.attr("class","clip")
 		.append("div")
@@ -294,9 +326,27 @@ function click(d) {
 
 d3.select(self.frameElement).style("height", "600px");
 
-/* setTimeout(function() {
-		$(tree.nodes(root)).each(function(i,n) { if(n.depth==1) { click(n) }  });
-	},3000);
-});
-*/
+
+function node_in(d) {
+	$(this).addClass("over");
+	update(d);
+}
+
+function node_out(d) {
+	$(this).removeClass("over");
+	update(d);
+}
+
+var div = d3.select("body").append("div")   
+    .attr("class", "tooltip")               
+    .style("opacity", 0);
+
+setTimeout(function() {
+		$(tree.nodes(root)).each(function(i,n) { if(n.depth==0) { click(n) }  });
+	},500);
+
+
+
+
+
     </script> </body></html>
