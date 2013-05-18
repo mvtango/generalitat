@@ -2,7 +2,16 @@
 <!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <title>Presidencia</title>
 
+	<script type="text/javascript" src="js/d3.v3.min.js"></script> 
+	<script type="text/javascript" src="js/underscore.min.js"></script>
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/jquery-ui-1.10.3.custom.js"></script>
+	<link href="css/smoothness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+
 <style type="text/css" style="display:none">
+	
+* { font-family: Tahoma, Arial, Sans }
+
 circle {
   cursor: pointer;
   fill: #fff;
@@ -46,14 +55,13 @@ div.tooltip {
   position: absolute;           
   text-align: left;           
   width: 180px;                                
-  padding: 2px;             
+  padding: 10px;             
   font-size: 14px;
   font-family: Tahoma, Sans, Arial;        
   background: #303040;
   color: #e0e0e0;   
   border: 0px;      
   border-radius: 3px;
-  padding: 2px;            
   pointer-events: none;         
 }
 
@@ -64,20 +72,39 @@ path.link {
   stroke-width: 1.5px;
 }
 
+div#frame {
+		width: 960px; 
+}
 
+li.ui-menu-item {
+	font-size: 80%;
+}
 
 </style>
-
-<script type="text/javascript" src="js/d3.v3.min.js"></script> 
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/underscore.min.js"></script>
+<script language="javascript">
+$(function() {
 
 
-</head><body><div id="chart"></div><script type="text/javascript">var w = 960,
+});
+
+</script>
+
+</head><body>
+<div id="frame" style="position: relative">
+<div id="chart" style="float: left; width: 760px; "></div>
+<div id="sidebar" style="position: absolute; width: 200px">
+<div id="toolbar" class="ui-widget-header ui-corner-all">
+	<input type="text" id="autocomplete" style="width: 90%" value="cerca" onFocus="$(this).val('')"/> 
+	<button id="decrease" onClick="decrlevel()">treu nivell (<span id="treedepth"></span>)</button>
+</div>	
+</div>	
+</div>
+<script type="text/javascript">var w = 760,
     h = 600,
     i = 0,
     duration = 500,
-    root;
+    root,
+    nodes={};
     
 function makeshort(a) {
 	a=a.replace(/Departament /,"Dept. ",a);
@@ -110,7 +137,100 @@ d3.json("tree.json", function(json) {
   json.x0 = 0;
   json.y0 = 0;
   update(root = json);
+  nodes.list=nodelist(root);
+  nodes.names=_.union(_.map(nodes.list,function(n) { return ({ label: n.name, value : n }) }),
+					  _.map(nodes.list,function(n) { var nr=n.data.resp; if (nr) { return ({ label: nr, value : n }) }})
+  );
+  nodes.index={};
+  _.each(nodes.list,function(e) { nodes.index[e.id]=e });
+  
+  $("#autocomplete").autocomplete({
+	source: nodes.names,
+	focus: function( event, ui ) {
+        $( "#project" ).val( ui.item.label );
+        return false;
+      },
+     select: function( event, ui) {
+		$("#autocomplete").val(ui.item.label);
+		console.log(ui.item.value.id);
+		putOnMap(ui.item.value); 
+		update(root);
+		return false;
+	 } 
+   });
 });
+
+
+function putOnMap(n) {
+	console.log("put on map:"+n.name);
+	var p=nodes.index[n.data["iddep-scraped"]];
+	console.log("Opening: "+p.name);
+	open_node(p);
+	if (p.id != root.id) {
+		putOnMap(p);
+	}
+	
+}
+
+function open_node(d) {
+  if (!d.children) {
+    d.children = d._children;
+    d._children = null;
+    return true;
+  }	
+}
+
+function close_node(d) {
+  if (d.children) {
+    d._children = d.children;
+    d.children = null;
+    return true;
+  }	
+}
+
+
+function maxlevels(n) {
+	_.each(nodes.list,function(node) {
+		if (node.depth && node.depth>n) {
+			close_node(node);
+		}
+	});
+	update(root);
+}
+
+function treedepth() {
+	var m=_.max(_.map(nodes.list,function(node) { if (node.depth && node.children) { return node.depth } }));
+	return m<0 ? 0 : m;
+	
+}
+
+function decrlevel() {
+	var ml=treedepth();
+	if (ml>0) {
+		maxlevels(ml-1)
+	}
+}
+
+
+
+function nodelist(d) {
+	var l;
+	if (d._children) {
+		l=d._children;
+	} else {
+		if (d.children) {
+			l=d.children;
+		} else {
+			return [d];
+		}
+	}
+	r=[d];
+	_.each(l,function(e) {
+		r=_.union(r,nodelist(e));
+	});
+	return r
+}
+
 
 function has_children(d) {
 	if (d._children) {
@@ -158,7 +278,11 @@ function update(source) {
 
   // Compute the new tree layout.
   var nodes = tree.nodes(root).reverse();
- console.log(nodes)
+  window.s=source;
+  window.n=nodes;
+  var start=[source.id];
+  var cursor=source;
+  console.log(nodes)
   // Update the nodes…
   	var node = vis.selectAll("g.node")
       .data(nodes, function(d) { return d.id || (d.id = ++i); });
@@ -169,7 +293,7 @@ function update(source) {
             div.transition()        
                 .duration(200)      
                 .style("opacity", .9);      
-            div .html(d.data.nom+"<br/><i>"+has_children(d)+" dependéncies</i><br/><b>"+d.data.resp+"</b>")  
+				div.html(template.tooltipTemplate({ d: d }))  
                 .style("left", (d3.event.pageX - 30) + "px")     
                 .style("top", (d3.event.pageY+20) + "px");    
             })                  
@@ -310,6 +434,13 @@ function update(source) {
     d.x0 = d.x;
     d.y0 = d.y;
   });
+  var td=treedepth();
+  $("#treedepth").html(td+1);
+  if (td) {
+	  $("#decrease").attr({ disabled: null });
+  } else {
+	  $("#decrease").attr({ disabled: "disabled"});
+  }
 }
 
 // Toggle children on click.
@@ -322,31 +453,53 @@ function click(d) {
     d._children = null;
   }
   update(d);
+  div.transition()        
+  .duration(500)      
+  .style("opacity", 0);   
+
 }
 
 d3.select(self.frameElement).style("height", "600px");
 
 
-function node_in(d) {
-	$(this).addClass("over");
-	update(d);
-}
-
-function node_out(d) {
-	$(this).removeClass("over");
-	update(d);
-}
-
 var div = d3.select("body").append("div")   
     .attr("class", "tooltip")               
     .style("opacity", 0);
 
+
+
+var template={};
+
+$(function() {
+	
+// $("#decrease").button();
+
 setTimeout(function() {
 		$(tree.nodes(root)).each(function(i,n) { if(n.depth==0) { click(n) }  });
 	},500);
+	
+$("script").each(function(i,e) {
+	var $e=$(e);
+	if ($e.attr("type")=="text/template") {
+		try {
+			template[$e.attr("id")]=_.template($e.html());
+			console.log("Bingo "+$e.html());
+		} catch(err) {
+				console.error("Template error '"+err+"'"+$e.attr("id")+ " "+$e.html())
+		}
+	}	
+});
+});
 
 
 
-
-
-    </script> </body></html>
+</script>
+<script id="tooltipTemplate" type="text/template">
+<div>
+  <%= d.data.nom %> [<%= d.id %>]<br/>	
+  <% if (has_children(d)) { %><i><b><%= has_children(d) %></b> dependència<%= has_children(d)==1 ? "" : "s" %><% } %></i><br/>
+  <div style="font-size:80%;">Responsable: <%= d.data.resp != "null"  ? d.data.resp : "no especificat" %></div>
+</div>
+</script>   
+    
+     </body></html>
