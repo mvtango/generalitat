@@ -211,10 +211,25 @@ d3.json("tree.json", function(json) {
    
 });
 
+tabindex=$("#tabs").find("li a").get().map(function(a) { return($(a).attr("data-node")) });
+
 function switchTo(n) {
 		putOnMap(n); 
 		update(root,n);
 		infoWindow(n);
+		depthchange();
+		findTab(n);
+}
+
+function findTab(n) {
+    var p=tabindex.indexOf(n.id);
+		if (p>-1) {
+			$("#tabs").tabs("option","active",p);
+		} else {
+			console.log("nicht gefunden: "+n.id);
+		}
+
+	
 }
 
 function parents(p) {
@@ -530,14 +545,21 @@ function update(source, highlight) {
 	  $("svg>g").append(e);
 	});
   },duration);
-  var td=treedepth();
+  depthchange();
+}
+
+
+function depthchange() {
+	
+	  var td=treedepth();
   $("#treedepth").html(td+1);
   if (td) {
 	  $(".simpler").attr({ disabled: null });
   } else {
 	  $(".simpler").attr({ disabled: "disabled"});
   }
-}
+
+};
 
 // Toggle children on click.
 function click(d) {
@@ -554,6 +576,7 @@ function click(d) {
   $(document).aciFragment("api").set("node",d.id);
   update(d,d);
   infoWindow(d);
+  findTab(d);
 		 
 }
 
@@ -629,7 +652,7 @@ $("#tabs").tabs({ activate: function(event,ui) {
 </script>   
 <script id="infoTemplate" type="text/template">
 <div>
-  <h5><%= d.data.nom %> [<%= d.id %>]</h5>
+  <b><%= d.data.nom %> [<%= d.id %>]</b><br/>
   <div style="font-size:80%;">Responsable: <%= d.data.resp != "null"  ? d.data.resp : "no especificat" %></div>
   <% if (has_children(d)) { %><i><b><%= has_children(d) %></b> dependència<%= has_children(d)==1 ? "" : "s" %><% } %></i><br/>
   <p><i>Aquí podría ir más información...</i></p>
