@@ -28,7 +28,7 @@ text {
 
 body.label { margin: 0; padding: 0;  }
 
-div.outer { width: 148px; height: 20px; display:table;  overflow: hidden; }
+div.outer { width: 148px; height: 18px; display:table;  overflow: hidden; padding: 2px; margin: 2px; }
 
 div.inner {
 	display: table-cell;
@@ -36,7 +36,7 @@ div.inner {
 	line-height: 10px;
 	font-family: Tahoma, Arial, Sans;
 	vertical-align: middle; 
-	height: 18px;
+	height: 12px;
 	overflow: hidden;
 	padding: 0;
 	cursor: pointer;
@@ -130,6 +130,8 @@ function makeshort(a) {
 	a=a.replace(/Territorial del Govern de la Generalitat /,"",a);
 	a=a.replace(/Govern de la Generalitat /,"Govern ",a);
 	a=a.replace(/de Medicina de l'Esport i d'Activitat Física /,"",a);
+	a=a.replace(/del Patronat Catalunya Món /,"",a);
+	a=a.replace(/Consell de Diplomàcia Pública de Catalunya /,"",a);
 
  
 	return(a);
@@ -322,6 +324,7 @@ function update(source, highlight) {
 		  d.class="";
 	  }
 	});
+     nodes=_.chain(nodes).sortBy(function(a) { return a.class=="highlight" ? 0 : 1; }).value();
   } else {
 	 nodes.forEach(function(n) { n.class="" });  
   }
@@ -482,6 +485,9 @@ function update(source, highlight) {
   nodes.forEach(function(d) {
     d.x0 = d.x;
     d.y0 = d.y;
+  });
+  $("g.highlight").get().forEach(function(e) {
+	  $("svg>g").append(e);
   });
   var td=treedepth();
   $("#treedepth").html(td+1);
