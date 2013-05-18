@@ -526,15 +526,8 @@ function update(source, highlight) {
     d.y0 = d.y;
   });
   $("g.highlight").get().reverse().forEach(function(e) {
-<<<<<<< HEAD
 	  $("svg>g").append(e);
   });
-  $("g.highlight").get().reverse().forEach(function(e) {
-=======
->>>>>>> origin/master
-	  $("svg>g").append(e);
-  });
-
   var td=treedepth();
   $("#treedepth").html(td+1);
   if (td) {
@@ -558,10 +551,7 @@ function click(d) {
   .style("opacity", 0); 
   $(document).aciFragment("api").set("node",d.id);
   update(d,d);
-<<<<<<< HEAD
   infoWindow(d);
-=======
->>>>>>> origin/master
 		 
 }
 
