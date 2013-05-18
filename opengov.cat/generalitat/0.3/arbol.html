@@ -525,9 +525,11 @@ function update(source, highlight) {
     d.x0 = d.x;
     d.y0 = d.y;
   });
-  $("g.highlight").get().reverse().forEach(function(e) {
+  _.delay(function() {
+	$("g.highlight").get().forEach(function(e) {
 	  $("svg>g").append(e);
-  });
+	});
+  },duration);
   var td=treedepth();
   $("#treedepth").html(td+1);
   if (td) {
