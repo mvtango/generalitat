@@ -6,6 +6,9 @@
 	<script type="text/javascript" src="js/underscore.min.js"></script>
 	<script src="js/jquery-1.9.1.js"></script>
 	<script src="js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="js/jquery.aciPlugin.min.js"></script>
+	<script src="js/jquery.aciFragment.js"></script>
+
 	<link href="css/smoothness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
 
 <style type="text/css" style="display:none">
@@ -92,28 +95,51 @@ g.highlight div.outer {
 }
 
 </style>
-<script language="javascript">
-$(function() {
-
-
-});
-
-</script>
 
 </head><body>
 <div id="frame" style="position: relative">
- <div id="chart" style="float: left; width: 760px; "></div>
- <div id="sidebar" style="float:left; left: 770px; width: 180px; height:600px; background-color: #F0F0F0; padding: 4px; " class="ui-corner-all" >
+ <div id="chart" style="float: left; width: 960px; "></div>
+ <div id="sidebar" style="position: absolute; top: 380px; height: 200px; width: 180px; background-color: #F0F0F0; padding: 4px; border: 1px solid #aaaaaa " class="ui-corner-all" >
 	 <div id="infoWindow"></div>
  </div>
  <div id="navigator" style="position: absolute; width: 200px">
 	<div id="toolbar" class="ui-widget-header ui-corner-all">
-	<input type="text" id="autocomplete" style="width: 90%" value="cerca" onFocus="$(this).val('')"/> 
-	<button id="decrease" onClick="decrlevel()">treu nivell (<span id="treedepth"></span>)</button>
+	<input type="text" id="autocomplete" style="width: 70%" /> 
+	<button onClick="$('#autocomplete').select()">ok</button>
+	<button class="simpler" onClick="maxlevels(0)">início</button>
+	<button class="simpler" onClick="decrlevel()">treu nivell (<span id="treedepth"></span>)</button>
 	</div>	
  </div>	
+<br clear="all" />
+<div id="visita" style="width:99%; font-size:80%">
+	<div id="tabs">
+		<ul>
+			<li><a href="#tab0" data-node="6" >Presidencia</a></li>
+			<li><a href="#tab1" data-node="73" >Montserrat</a></li>
+			<li><a href="#tab2" data-node="2700">Magòria</a></li>
+			<li><a href="#tab3" data-node="18953">Máximo</a></li>
+			<li><a href="#tab4" data-node="8602">Marató</a></li>
+			<li><a href="#tab5" data-node="16552">Alemanya</a></li>
+
+		</ul>
+		<div id="tab0"><p><b>Aquí se nota que </b>Non solum propter tres canonizationes ad hoc Consistorium vos convocavi, sed etiam ut vobis decisionem magni momenti pro Ecclesiae vitae communicem. Conscientia mea iterum atque iterum coram Deo explorata ad cognitionem certam perveni vires meas ingravescente aetate non iam aptas esse ad munus Petrinum aeque administrandum.</p>
+		</div>
+		<div id="tab1"><p><b>Aquí se nota que </b>Non solum propter tres canonizationes ad hoc Consistorium vos convocavi, sed etiam ut vobis decisionem magni momenti pro Ecclesiae vitae communicem. Conscientia mea iterum atque iterum coram Deo explorata ad cognitionem certam perveni vires meas ingravescente aetate non iam aptas esse ad munus Petrinum aeque administrandum.</p>
+		</div>
+		<div id="tab2"><p><b>Aquí se nota que </b>Non solum propter tres canonizationes ad hoc Consistorium vos convocavi, sed etiam ut vobis decisionem magni momenti pro Ecclesiae vitae communicem. Conscientia mea iterum atque iterum coram Deo explorata ad cognitionem certam perveni vires meas ingravescente aetate non iam aptas esse ad munus Petrinum aeque administrandum.</p>
+		</div>
+		<div id="tab3"><p><b>12 Niveles!  Aquí se nota que </b>Non solum propter tres canonizationes ad hoc Consistorium vos convocavi, sed etiam ut vobis decisionem magni momenti pro Ecclesiae vitae communicem. Conscientia mea iterum atque iterum coram Deo explorata ad cognitionem certam perveni vires meas ingravescente aetate non iam aptas esse ad munus Petrinum aeque administrandum.</p>
+		</div>
+		<div id="tab4"><p><b>Aquí se nota que </b>Non solum propter tres canonizationes ad hoc Consistorium vos convocavi, sed etiam ut vobis decisionem magni momenti pro Ecclesiae vitae communicem. Conscientia mea iterum atque iterum coram Deo explorata ad cognitionem certam perveni vires meas ingravescente aetate non iam aptas esse ad munus Petrinum aeque administrandum.</p>
+		</div>
+		<div id="tab5"><p><b>En Berlín!</b>Non solum propter tres canonizationes ad hoc Consistorium vos convocavi, sed etiam ut vobis decisionem magni momenti pro Ecclesiae vitae communicem. Conscientia mea iterum atque iterum coram Deo explorata ad cognitionem certam perveni vires meas ingravescente aetate non iam aptas esse ad munus Petrinum aeque administrandum.</p>
+		</div>
+
+
+	</div>
 </div>
-<script type="text/javascript">var w = 760,
+</div>
+<script type="text/javascript">var w = 960,
     h = 600,
     i = 0,
     duration = 500,
@@ -169,14 +195,27 @@ d3.json("tree.json", function(json) {
      select: function( event, ui) {
 		$("#autocomplete").val(ui.item.label);
 		// console.log(ui.item.value.id);
-		putOnMap(ui.item.value); 
-		update(root,ui.item.value);
-		infoWindow(ui.item.value);
+		switchTo(ui.item.value); 
 		return false;
 	 } 
    });
+   
+   frag=$(document).aciFragment("api");
+	if (!frag.get("node")) {
+			frag.set("node",6);
+			open_node(nodes.index["6"]);
+	}
+	
+	switchTo(nodes.index[frag.get("node")]);
+
+   
 });
 
+function switchTo(n) {
+		putOnMap(n); 
+		update(root,n);
+		infoWindow(n);
+}
 
 function parents(p) {
 	var ps=[];
@@ -486,15 +525,15 @@ function update(source, highlight) {
     d.x0 = d.x;
     d.y0 = d.y;
   });
-  $("g.highlight").get().forEach(function(e) {
+  $("g.highlight").get().reverse().forEach(function(e) {
 	  $("svg>g").append(e);
   });
   var td=treedepth();
   $("#treedepth").html(td+1);
   if (td) {
-	  $("#decrease").attr({ disabled: null });
+	  $(".simpler").attr({ disabled: null });
   } else {
-	  $("#decrease").attr({ disabled: "disabled"});
+	  $(".simpler").attr({ disabled: "disabled"});
   }
 }
 
@@ -507,11 +546,12 @@ function click(d) {
     d.children = d._children;
     d._children = null;
   }
-  update(d,d);
   div.transition()        
   .duration(500)      
   .style("opacity", 0); 
-  infoWindow(d); 
+  $(document).aciFragment("api").set("node",d.id);
+  update(d,d);
+		 
 }
 
 function infoWindow(d) {
@@ -535,13 +575,11 @@ var div = d3.select("body").append("div")
 var template={};
 
 $(function() {
-	
-// $("#decrease").button();
 
-setTimeout(function() {
-		$(tree.nodes(root)).each(function(i,n) { if(n.depth==0) { click(n) }  });
-	},500);
-	
+$(document).aciFragment();	
+var frag=$(document).aciFragment("api");
+
+// $("#decrease").button();
 $("script").each(function(i,e) {
 	var $e=$(e);
 	if ($e.attr("type")=="text/template") {
@@ -552,7 +590,28 @@ $("script").each(function(i,e) {
 				console.error("Template error '"+err+"'"+$e.attr("id")+ " "+$e.html())
 		}
 	}	
+
+
+
+$("#tabs").tabs({ activate: function(event,ui) {
+		var nn=ui.newTab.find("a").attr("data-node");
+		if (nn!=window.lastnode && nodes.index[nn]) {
+			maxlevels(0);
+			switchTo(nodes.index[nn]);
+		}
+		window.lastnode=nn;
+		$(document).aciFragment("api").set("node",nn);
+	}
+	});
+
+
+
+
 });
+
+
+
+
 });
 
 
