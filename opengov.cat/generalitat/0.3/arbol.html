@@ -80,6 +80,17 @@ li.ui-menu-item {
 	font-size: 80%;
 }
 
+g.highlight circle {
+	fill: #ffff00 !important;
+	z-index: 1000;
+}
+
+g.highlight div.outer {
+   background-color: #ffff00 !important; 	
+   padding: 2px;
+   z-index: 1000;
+}
+
 </style>
 <script language="javascript">
 $(function() {
@@ -155,9 +166,9 @@ d3.json("tree.json", function(json) {
       },
      select: function( event, ui) {
 		$("#autocomplete").val(ui.item.label);
-		console.log(ui.item.value.id);
+		// console.log(ui.item.value.id);
 		putOnMap(ui.item.value); 
-		update(root);
+		update(root,ui.item.value);
 		infoWindow(ui.item.value);
 		return false;
 	 } 
@@ -165,15 +176,22 @@ d3.json("tree.json", function(json) {
 });
 
 
-function putOnMap(n) {
-	console.log("put on map:"+n.name);
-	var p=nodes.index[n.data["iddep-scraped"]];
-	console.log("Opening: "+p.name);
-	open_node(p);
-	if (p.id != root.id) {
-		putOnMap(p);
+function parents(p) {
+	var ps=[];
+	var c=p;
+	while (c.id != root.id) {
+		par=nodes.index[c.data["iddep-scraped"]];
+		ps.push(par);
+		// console.log("parent "+par.name);
+		c=par;
 	}
-	
+	return ps;
+}
+
+function putOnMap(n) {
+	_.each(parents(n),function(d) {
+			open_node(d)
+	});	
 }
 
 function open_node(d) {
@@ -278,8 +296,15 @@ function node_color(d) {
 	}
 }
 	
-	
-function update(source) {
+function node_class(d) {
+	var c="node";
+	if (d.class) {
+		c=c+" "+d.class;
+	}
+	return(c);
+}
+
+function update(source, highlight) {
 
   // Compute the new tree layout.
   var nodes = tree.nodes(root).reverse();
@@ -287,13 +312,27 @@ function update(source) {
   window.n=nodes;
   var start=[source.id];
   var cursor=source;
-  console.log(nodes)
+  if (highlight) {
+	pids=_.map(parents(highlight),function(a) { return a.id });
+	pids.push(highlight.id);
+	nodes.forEach(function(d) {
+	  if (pids.indexOf(d.id)>-1) {
+		  d.class="highlight";
+	  } else {
+		  d.class="";
+	  }
+	});
+  } else {
+	 nodes.forEach(function(n) { n.class="" });  
+  }
+  
+  // console.log(nodes)
   // Update the nodes…
   	var node = vis.selectAll("g.node")
       .data(nodes, function(d) { return d.id || (d.id = ++i); });
 
 	var nodeEnter = node.enter().append("svg:g")
-    	.attr("class", "node")
+    	.attr("class", node_class)
 		.on("mouseover", function(d) {      
             div.transition()        
                 .duration(200)      
@@ -318,6 +357,7 @@ function update(source) {
       //.attr("cy", function(d) { return source.y0; })
       .attr("r", node_radius)
       .style("fill", node_color)
+	  .attr("class",node_class)
       .on("click", click);
 
 
@@ -328,7 +368,7 @@ function update(source) {
 		.attr("height", 36)
 		.append("xhtml:body")
 		.append("div")
-		.attr("class","clip")
+		.attr("class",node_class)
 		.append("div")
 		.attr("class","outer")
 		.attr("data-id", function(d) { return d.id })
@@ -361,11 +401,15 @@ function update(source) {
 		
     node.transition()
       .duration(duration)
+      .attr("class", node_class)
       .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; })
       .style("opacity", 1)
       .select("circle")
 	  .attr("r", node_radius)
+	  .attr("class",node_class)
 	  .style("fill",node_color);
+
+	
 
       
 //    node.transition()
@@ -457,7 +501,7 @@ function click(d) {
     d.children = d._children;
     d._children = null;
   }
-  update(d);
+  update(d,d);
   div.transition()        
   .duration(500)      
   .style("opacity", 0); 
@@ -497,7 +541,7 @@ $("script").each(function(i,e) {
 	if ($e.attr("type")=="text/template") {
 		try {
 			template[$e.attr("id")]=_.template($e.html());
-			console.log("Bingo "+$e.html());
+			// console.log("Bingo "+$e.html());
 		} catch(err) {
 				console.error("Template error '"+err+"'"+$e.attr("id")+ " "+$e.html())
 		}
