@@ -91,13 +91,16 @@ $(function() {
 
 </head><body>
 <div id="frame" style="position: relative">
-<div id="chart" style="float: left; width: 760px; "></div>
-<div id="sidebar" style="position: absolute; width: 200px">
-<div id="toolbar" class="ui-widget-header ui-corner-all">
+ <div id="chart" style="float: left; width: 760px; "></div>
+ <div id="sidebar" style="float:left; left: 770px; width: 180px; height:600px; background-color: #F0F0F0; padding: 4px; " class="ui-corner-all" >
+	 <div id="infoWindow"></div>
+ </div>
+ <div id="navigator" style="position: absolute; width: 200px">
+	<div id="toolbar" class="ui-widget-header ui-corner-all">
 	<input type="text" id="autocomplete" style="width: 90%" value="cerca" onFocus="$(this).val('')"/> 
 	<button id="decrease" onClick="decrlevel()">treu nivell (<span id="treedepth"></span>)</button>
-</div>	
-</div>	
+	</div>	
+ </div>	
 </div>
 <script type="text/javascript">var w = 760,
     h = 600,
@@ -155,6 +158,7 @@ d3.json("tree.json", function(json) {
 		console.log(ui.item.value.id);
 		putOnMap(ui.item.value); 
 		update(root);
+		infoWindow(ui.item.value);
 		return false;
 	 } 
    });
@@ -207,7 +211,8 @@ function treedepth() {
 function decrlevel() {
 	var ml=treedepth();
 	if (ml>0) {
-		maxlevels(ml-1)
+		maxlevels(ml-1);
+		infoWindow();
 	}
 }
 
@@ -455,9 +460,18 @@ function click(d) {
   update(d);
   div.transition()        
   .duration(500)      
-  .style("opacity", 0);   
-
+  .style("opacity", 0); 
+  infoWindow(d); 
 }
+
+function infoWindow(d) {
+  if (d) {
+	nc=template.infoTemplate({ d: d }); 
+  } else {
+	nc="";
+  }
+  $("#infoWindow").fadeOut({complete: function() { $("#infoWindow").html(nc).fadeIn() }});
+}	
 
 d3.select(self.frameElement).style("height", "600px");
 
@@ -499,6 +513,14 @@ $("script").each(function(i,e) {
   <%= d.data.nom %> [<%= d.id %>]<br/>	
   <% if (has_children(d)) { %><i><b><%= has_children(d) %></b> dependència<%= has_children(d)==1 ? "" : "s" %><% } %></i><br/>
   <div style="font-size:80%;">Responsable: <%= d.data.resp != "null"  ? d.data.resp : "no especificat" %></div>
+</div>
+</script>   
+<script id="infoTemplate" type="text/template">
+<div>
+  <h5><%= d.data.nom %> [<%= d.id %>]</h5>
+  <div style="font-size:80%;">Responsable: <%= d.data.resp != "null"  ? d.data.resp : "no especificat" %></div>
+  <% if (has_children(d)) { %><i><b><%= has_children(d) %></b> dependència<%= has_children(d)==1 ? "" : "s" %><% } %></i><br/>
+  <p><i>Aquí podría ir más información...</i></p>
 </div>
 </script>   
     
