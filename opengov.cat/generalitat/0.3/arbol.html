@@ -215,7 +215,7 @@ tabindex=$("#tabs").find("li a").get().map(function(a) { return($(a).attr("data-
 
 function switchTo(n) {
 		putOnMap(n); 
-		update(root,n);
+		update(root,n,3);
 		infoWindow(n);
 		depthchange();
 		findTab(n);
@@ -226,7 +226,7 @@ function findTab(n) {
 		if (p>-1) {
 			$("#tabs").tabs("option","active",p);
 		} else {
-			console.log("nicht gefunden: "+n.id);
+			// console.log("nicht gefunden: "+n.id);
 		}
 
 	
@@ -273,7 +273,7 @@ function maxlevels(n) {
 			close_node(node);
 		}
 	});
-	update(root);
+	update(root,root,3);
 }
 
 function treedepth() {
@@ -360,10 +360,26 @@ function node_class(d) {
 	return(c);
 }
 
-function update(source, highlight) {
+function update(source, highlight,mroot) {
 
   // Compute the new tree layout.
-  var nodes = tree.nodes(root).reverse();
+  if (!mroot) {
+	  mroot=root;
+  } else {
+	if (typeof mroot == typeof 6) {
+		ph=parents(highlight);
+		td=treedepth();
+		console.log("parents="+ph.length,"treedepth="+td);
+		if (ph.length>=mroot) {
+			console.log("limiting to "+mroot+" from "+ph.length+" - "+ph[mroot-1].name);
+			mroot=ph[mroot-1];
+		} else {
+			mroot=root;
+		}
+	}  
+	  
+  }
+  var nodes = tree.nodes(mroot).reverse();
   window.s=source;
   window.n=nodes;
   var start=[source.id];
@@ -574,7 +590,7 @@ function click(d) {
   .duration(500)      
   .style("opacity", 0); 
   $(document).aciFragment("api").set("node",d.id);
-  update(d,d);
+  update(d,d,3);
   infoWindow(d);
   findTab(d);
 		 
