@@ -107,8 +107,11 @@ g.highlight div.outer {
 	<div id="toolbar" class="ui-widget-header ui-corner-all">
 	<input type="text" id="autocomplete" style="width: 70%" /> 
 	<button onClick="$('#autocomplete').select()">ok</button>
-	<button class="simpler" onClick="maxlevels(0)">início</button>
-	<button class="simpler" onClick="decrlevel()">treu nivell (<span id="treedepth"></span>)</button>
+	<br/>
+	<button disabled title="nivells"><span class="treedepth"></span></button>
+	<button class="simpler" onClick="maxlevels(0)" title="mostrar arrel i un nivell">início</button>
+	<button class="changeroot"  title="mostrar nivell superior a l'arrel" onClick="incrlevel()">[&lt; </button>
+	<button class="simpler" onClick="decrlevel()" title="treure l'últim nivell">]&lt; </button>
 	</div>	
  </div>	
 <br clear="all" />
@@ -268,6 +271,13 @@ function decrlevel() {
 	}
 }
 
+function incrlevel() {
+	var ps=parents(window.state.root);
+	if (ps.length>0) {
+		update(state.source,state.highlight,ps[0]);
+	}
+}
+
 
 
 function nodelist(d) {
@@ -358,8 +368,9 @@ function update(source, highlight,mroot) {
 	  
   }
   var nodes = tree.nodes(mroot).reverse();
-  window.s=source;
-  window.n=nodes;
+  window.state.source=source;
+  window.state.nodes=nodes;
+  window.state.root=mroot;
   var start=[source.id];
   var cursor=source;
   if (highlight) {
@@ -371,10 +382,12 @@ function update(source, highlight,mroot) {
 	  } else {
 		  d.class="";
 	  }
+	  window.state.highlight=highlight;
 	});
      nodes=_.chain(nodes).sortBy(function(a) { return a.class=="highlight" ? 0 : 1; }).value();
   } else {
 	 nodes.forEach(function(n) { n.class="" });  
+	 window.state.highlight=null;
   }
   
   // console.log(nodes)
@@ -545,12 +558,18 @@ function update(source, highlight,mroot) {
 
 function depthchange() {
 	
-	  var td=treedepth();
-  $("#treedepth").html(td+1);
+  var td=treedepth();
+  $(".treedepth").html(td+1);
   if (td) {
 	  $(".simpler").attr({ disabled: null });
   } else {
 	  $(".simpler").attr({ disabled: "disabled"});
+  }
+  ps=parents(window.state.root).length;
+  if (ps>0) {
+	  $(".changeroot").attr({ disabled: null });
+  } else {
+	  $(".changeroot").attr({ disabled: "disabled"});	  
   }
 
 };
@@ -593,6 +612,9 @@ var div = d3.select("body").append("div")
 
 
 var template={};
+var state={};
+var tabindex=[];
+window.state=state;
 
 $(function() {
 
@@ -655,7 +677,7 @@ function populateTabs(data,tt ) {
 
 
 
-
+//  $( "[title]" ).tooltip({ show: { delay: 4, duration: 100, }});
 
 });
 
@@ -672,7 +694,7 @@ function populateTabs(data,tt ) {
 <script id="infoTemplate" type="text/template">
 <div>
   <p><b><%= d.data.nom %></b><br /><span style="font-size: 80%">[<a href="http://www10.gencat.cat/sac/AppJava/organisme_fitxa.jsp?codi=<%= d.id %>" target="_blank"><%= d.id %> en gencat.cat</a>]</span></p>
-  <div ><%= d.data.resp != "null"  ? d.data.resp : "responsable 	no especificat" %></div>
+  <div ><%= d.data.resp != "null"  ? d.data.resp : "responsable no especificat" %></div>
   <% if (has_children(d)) { %><i style="font-size:80%"><b><%= has_children(d) %></b> dependència<%= has_children(d)==1 ? "" : "s" %><% } %></i><br/>
   <p></div>
 </script>   
