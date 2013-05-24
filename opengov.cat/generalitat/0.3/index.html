@@ -1,8 +1,707 @@
-<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"></head>
-	<body>
+
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Presidencia</title>
+
+	<script type="text/javascript" src="js/d3.v3.min.js"></script> 
+	<script type="text/javascript" src="js/underscore.min.js"></script>
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/jquery-ui-1.10.3.custom.js"></script>
+	<script src="js/jquery.aciPlugin.min.js"></script>
+	<script src="js/jquery.aciFragment.js"></script>
+	<script src="js/tabletop.js"></script>
+
+	<link href="css/smoothness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+
+<style type="text/css" style="display:none">
+	
+* { font-family: Tahoma, Arial, Sans }
+
+circle {
+  cursor: pointer;
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+text {
+	font-size:10px;
+	cursor: pointer;
+}
+
+
+
+body.label { margin: 0; padding: 0;  }
+
+div.outer { width: 148px; height: 18px; display:table;  overflow: hidden; padding: 2px; margin: 2px; }
+
+div.inner {
+	display: table-cell;
+	font-size: 12px;
+	line-height: 10px;
+	font-family: Tahoma, Arial, Sans;
+	vertical-align: middle; 
+	height: 12px;
+	overflow: hidden;
+	padding: 0;
+	cursor: pointer;
+}
+
+
+div.clip {
+	width: 100%;
+	height: 21px;
+	overflow: hidden;
+}
+
+
+
+div.tooltip {   
+  position: absolute;           
+  text-align: left;           
+  width: 180px;                                
+  padding: 10px;             
+  font-size: 14px;
+  font-family: Tahoma, Sans, Arial;        
+  background: #303040;
+  color: #e0e0e0;   
+  border: 0px;      
+  border-radius: 3px;
+  pointer-events: none;         
+}
+
+
+path.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+div#frame {
+		width: 960px; 
+}
+
+li.ui-menu-item {
+	font-size: 80%;
+}
+
+g.highlight circle {
+	fill: #ffff00 !important;
+	z-index: 1000;
+}
+
+g.highlight div.outer {
+   background-color: #ffff00 !important; 	
+   padding: 2px;
+   z-index: 1000;
+}
+
+</style>
+
+</head><body>
+<div id="frame" style="position: relative">
+ <div id="chart" style="float: left; width: 960px; "></div>
+ <div id="sidebar" style="position: absolute; top: 380px; height: 200px; width: 180px; background-color: #F0F0F0; padding: 4px; border: 1px solid #aaaaaa " class="ui-corner-all" >
+	 <div id="infoWindow"></div>
+ </div>
+ <div id="navigator" style="position: absolute; width: 200px">
+	<div id="toolbar" class="ui-widget-header ui-corner-all">
+	<input type="text" id="autocomplete" style="width: 70%" /> 
+	<button onClick="$('#autocomplete').select()">ok</button>
+	<br/>
+	<button disabled title="nivells"><span class="treedepth"></span></button>
+	<button class="simpler" onClick="maxlevels(0)" title="mostrar arrel i un nivell">início</button>
+	<button class="changeroot"  title="mostrar nivell superior a l'arrel" onClick="incrlevel()">[&lt; </button>
+	<button class="simpler" onClick="decrlevel()" title="treure l'últim nivell">]&lt; </button>
+	</div>	
+ </div>	
+<br clear="all" />
+<div id="visita" style="width:99%; font-size:80%">
+	<div id="tabs" style="display: none">
 		<ul>
-			<li><a href="cajas.html">con cajas</a></li>
-			<li><a href="arbol.html">en árbol</a></li>
 		</ul>
-</body>
-</html>
+		</div>
+
+
+	</div>
+</div>
+</div>
+<script type="text/javascript">var w = 960,
+    h = 600,
+    i = 0,
+    duration = 500,
+    root,
+    nodes={};
+    
+function makeshort(a) {
+	a=a.replace(/Departament /,"Dept. ",a);
+	a=a.replace(/Secretaria General /,"Secr. Gen. ",a);
+	a=a.replace(/Direcció General /,"Dir. Gen. ",a);
+	a=a.replace(/Secretaria /,"Secr. ",a);
+	a=a.replace(/General /,"Gen. ",a);
+	a=a.replace(/Generalitat de Catalunya /,"Generalitat ",a);
+	a=a.replace(/Territorial del Govern de la Generalitat /,"",a);
+	a=a.replace(/Govern de la Generalitat /,"Govern ",a);
+	a=a.replace(/de Medicina de l'Esport i d'Activitat Física /,"",a);
+	a=a.replace(/del Patronat Catalunya Món /,"",a);
+	a=a.replace(/Consell de Diplomàcia Pública de Catalunya /,"",a);
+
+ 
+	return(a);
+}
+
+var tree = d3.layout.tree()
+    .size([h, w - 250]);
+
+var diagonal = d3.svg.diagonal()
+    .projection(function(d) { return [d.y, d.x]; });
+
+var vis = d3.select("#chart").append("svg:svg")
+    .attr("width", w)
+    .attr("height", h)
+  .append("svg:g")
+    .attr("transform", "translate(40,0)");
+
+d3.json("tree.json", function(json) {
+  json.x0 = 0;
+  json.y0 = 0;
+  update(root = json);
+  nodes.list=nodelist(root);
+  nodes.names=_.union(_.map(nodes.list,function(n) { return ({ label: n.name, value : n }) }),
+					  _.map(nodes.list,function(n) { var nr=n.data.resp; if (nr) { return ({ label: nr, value : n }) }})
+  );
+  nodes.index={};
+  _.each(nodes.list,function(e) { nodes.index[e.id]=e });
+  
+  $("#autocomplete").autocomplete({
+	source: nodes.names,
+	focus: function( event, ui ) {
+        $( "#project" ).val( ui.item.label );
+        return false;
+      },
+     select: function( event, ui) {
+		$("#autocomplete").val(ui.item.label);
+		// console.log(ui.item.value.id);
+		switchTo(ui.item.value); 
+		return false;
+	 } 
+   });
+   
+   frag=$(document).aciFragment("api");
+	if (!frag.get("node")) {
+			frag.set("node",6)
+			open_node(nodes.index["6"]);
+	}
+
+   
+});
+
+
+function switchTo(n) {
+		putOnMap(n); 
+		update(root,n,3);
+		infoWindow(n);
+		depthchange();
+		findTab(n);
+}
+
+function findTab(n) {
+    var p=tabindex.indexOf(n.id);
+		if (p>-1) {
+			$("#tabs").tabs("option","active",p);
+		} else {
+			// console.log("nicht gefunden: "+n.id);
+		}
+}
+
+function parents(p) {
+	var ps=[];
+	var c=p;
+	while (c.id != root.id) {
+		par=nodes.index[c.data["iddep-scraped"]];
+		ps.push(par);
+		// console.log("parent "+par.name);
+		c=par;
+	}
+	return ps;
+}
+
+function putOnMap(n) {
+	_.each(parents(n),function(d) {
+			open_node(d)
+	});	
+}
+
+function open_node(d) {
+  if (!d.children) {
+    d.children = d._children;
+    d._children = null;
+    return true;
+  }	
+}
+
+function close_node(d) {
+  if (d.children) {
+    d._children = d.children;
+    d.children = null;
+    return true;
+  }	
+}
+
+
+function maxlevels(n) {
+	_.each(nodes.list,function(node) {
+		if (node.depth && node.depth>n) {
+			close_node(node);
+		}
+	});
+	update(root,root,3);
+}
+
+function treedepth() {
+	var m=_.max(_.map(nodes.list,function(node) { if (node.depth && node.children) { return node.depth } }));
+	return m<0 ? 0 : m;
+	
+}
+
+function decrlevel() {
+	var ml=treedepth();
+	if (ml>0) {
+		maxlevels(ml-1);
+		infoWindow();
+	}
+}
+
+function incrlevel() {
+	var ps=parents(window.state.root);
+	if (ps.length>0) {
+		update(state.source,state.highlight,ps[0]);
+	}
+}
+
+
+
+function nodelist(d) {
+	var l;
+	if (d._children) {
+		l=d._children;
+	} else {
+		if (d.children) {
+			l=d.children;
+		} else {
+			return [d];
+		}
+	}
+	r=[d];
+	_.each(l,function(e) {
+		r=_.union(r,nodelist(e));
+	});
+	return r
+}
+
+
+function has_children(d) {
+	if (d._children) {
+		return(d._children.length)
+	} else {
+		if (d.children) {
+			return(d.children.length*1);
+		} else {
+			return 0
+		}
+	}
+}
+
+function is_expanded(d) {
+		return !d._children
+}
+	
+function node_radius(d) {
+	var cl=has_children(d);
+	if (cl>0) {
+		if (is_expanded(d)) {
+			return(_.min([(cl*0.5)+3,8]))
+		} else {
+			return(_.min([(cl*2)+3,12]))			
+		}
+	} else {
+			return 2
+	}
+}
+
+function node_color(d) {
+	if (has_children(d)) {
+		if (is_expanded(d)) {
+				return "lightsteelblue";
+		} else {
+				return "steelblue";
+		}
+	} else {
+		return "grey";
+	}
+}
+	
+function node_class(d) {
+	var c="node";
+	if (d.class) {
+		c=c+" "+d.class;
+	}
+	return(c);
+}
+
+function update(source, highlight,mroot) {
+
+  // Compute the new tree layout.
+  if (!mroot) {
+	  mroot=root;
+  } else {
+	if (typeof mroot == typeof 6) {
+		ph=parents(highlight);
+		td=treedepth();
+		console.log("parents="+ph.length,"treedepth="+td);
+		if (ph.length>=mroot) {
+			console.log("limiting to "+mroot+" from "+ph.length+" - "+ph[mroot-1].name);
+			mroot=ph[mroot-1];
+		} else {
+			mroot=root;
+		}
+	}  
+	  
+  }
+  var nodes = tree.nodes(mroot).reverse();
+  window.state.source=source;
+  window.state.nodes=nodes;
+  window.state.root=mroot;
+  var start=[source.id];
+  var cursor=source;
+  if (highlight) {
+	pids=_.map(parents(highlight),function(a) { return a.id });
+	pids.push(highlight.id);
+	nodes.forEach(function(d) {
+	  if (pids.indexOf(d.id)>-1) {
+		  d.class="highlight";
+	  } else {
+		  d.class="";
+	  }
+	  window.state.highlight=highlight;
+	});
+     nodes=_.chain(nodes).sortBy(function(a) { return a.class=="highlight" ? 0 : 1; }).value();
+  } else {
+	 nodes.forEach(function(n) { n.class="" });  
+	 window.state.highlight=null;
+  }
+  
+  // console.log(nodes)
+  // Update the nodes…
+  	var node = vis.selectAll("g.node")
+      .data(nodes, function(d) { return d.id || (d.id = ++i); });
+
+	var nodeEnter = node.enter().append("svg:g")
+    	.attr("class", node_class)
+		.on("mouseover", function(d) {      
+            div.transition()        
+                .duration(200)      
+                .style("opacity", .9);      
+				div.html(template.tooltipTemplate({ d: d }))  
+                .style("left", (d3.event.pageX - 30) + "px")     
+                .style("top", (d3.event.pageY+20) + "px");    
+            })                  
+        .on("mouseout", function(d) {       
+            div.transition()        
+                .duration(500)      
+                .style("opacity", 0);   
+        })		
+    	.attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; });
+    	//.style("opacity", 1e-6);
+ 
+  // Enter any new nodes at the parent's previous position.
+ 
+  	nodeEnter.append("svg:circle")
+      //.attr("class", "node")
+      //.attr("cx", function(d) { return source.x0; })
+      //.attr("cy", function(d) { return source.y0; })
+      .attr("r", node_radius)
+      .style("fill", node_color)
+	  .attr("class",node_class)
+      .on("click", click);
+
+
+	nodeEnter.append("foreignObject")
+		.attr("x", 16 ) /*the position of the text (left to right)*/
+		.attr("y", -10) /*the position of the text (Up and Down)*/
+		.attr("width", 150)
+		.attr("height", 36)
+		.append("xhtml:body")
+		.append("div")
+		.attr("class",node_class)
+		.append("div")
+		.attr("class","outer")
+		.attr("data-id", function(d) { return d.id })
+		.append("div")
+		.attr("class","inner")
+		.text(function(d) { return makeshort(d.name); })
+		.on("click",click);
+
+	
+	/* nodeEnter.append("svg:text")
+      	.attr("x", 14) // function(d) { return d._children ? -8 : 8; })
+		.attr("y", 3)
+		.style("font-family", "Tahoma, Arial, Sans")
+      	//.attr("fill","#ccc")
+      	//.attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; })
+      	.text(function(d) { return makeshort(d.name)})
+      	.on("click",click);
+*/
+  // Transition nodes to their new position.
+	nodeEnter.transition()
+		.duration(duration)
+		.attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; })
+      	.style("opacity", 1)
+      .select("circle")
+    	//.attr("cx", function(d) { return d.x; })
+		//.attr("cy", function(d) { return d.y; })
+		.style("fill",node_color)
+        .attr("r", node_radius);
+		
+		
+    node.transition()
+      .duration(duration)
+      .attr("class", node_class)
+      .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; })
+      .style("opacity", 1)
+      .select("circle")
+	  .attr("r", node_radius)
+	  .attr("class",node_class)
+	  .style("fill",node_color);
+
+	
+
+      
+//    node.transition()
+//		.duration(duration)
+//		.select("circle")
+//		.style("radius",mk_radius);
+		
+	node.exit().transition()
+      .duration(duration)
+      .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
+      .style("opacity", 1e-6)
+      .remove();
+/*
+	var nodeTransition = node.transition()
+		.duration(duration);
+  
+  nodeTransition.select("circl"e")
+      .attr("cx", function(d) { return d.y; })
+      .attr("cy", function(d) { return d.x; })
+      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+  
+  nodeTransition.select("text")
+      .attr("dx", function(d) { return d._children ? -8 : 8; })
+	  .attr("dy", 3)
+      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#5babfc"; });
+
+  // Transition exiting nodes to the parent's new position.
+  var nodeExit = node.exit();
+  
+  nodeExit.select("circle").transition()
+      .duration(duration)
+      .attr("cx", function(d) { return source.y; })
+      .attr("cy", function(d) { return source.x; })
+      .remove();
+  
+  nodeExit.select("text").transition()
+      .duration(duration)
+      .remove();
+*/
+  // Update the links…
+  var link = vis.selectAll("path.link")
+      .data(tree.links(nodes), function(d) { return d.target.id; });
+
+  // Enter any new links at the parent's previous position.
+  link.enter().insert("svg:path", "g")
+      .attr("class", "link")
+      .attr("d", function(d) {
+        var o = {x: source.x0, y: source.y0};
+        return diagonal({source: o, target: o});
+      })
+    .transition()
+      .duration(duration)
+      .attr("d", diagonal);
+
+  // Transition links to their new position.
+  link.transition()
+      .duration(duration)
+      .attr("d", diagonal);
+
+  // Transition exiting nodes to the parent's new position.
+  link.exit().transition()
+      .duration(duration)
+      .attr("d", function(d) {
+        var o = {x: source.x, y: source.y};
+        return diagonal({source: o, target: o});
+      })
+      .remove();
+
+  // Stash the old positions for transition.
+  nodes.forEach(function(d) {
+    d.x0 = d.x;
+    d.y0 = d.y;
+  });
+  _.delay(function() {
+	$("g.highlight").get().forEach(function(e) {
+	  $("svg>g").append(e);
+	});
+  },duration);
+  depthchange();
+}
+
+
+function depthchange() {
+	
+  var td=treedepth();
+  $(".treedepth").html(td+1);
+  if (td) {
+	  $(".simpler").attr({ disabled: null });
+  } else {
+	  $(".simpler").attr({ disabled: "disabled"});
+  }
+  ps=parents(window.state.root).length;
+  if (ps>0) {
+	  $(".changeroot").attr({ disabled: null });
+  } else {
+	  $(".changeroot").attr({ disabled: "disabled"});	  
+  }
+
+};
+
+// Toggle children on click.
+function click(d) {
+  if (d.children) {
+    d._children = d.children;
+    d.children = null;
+  } else {
+    d.children = d._children;
+    d._children = null;
+  }
+  div.transition()        
+  .duration(500)      
+  .style("opacity", 0); 
+  $(document).aciFragment("api").set("node",d.id);
+  update(d,d,3);
+  infoWindow(d);
+  findTab(d);
+		 
+}
+
+function infoWindow(d) {
+  if (d) {
+	nc=template.infoTemplate({ d: d }); 
+  } else {
+	nc="";
+  }
+  $("#infoWindow").fadeOut({complete: function() { $("#infoWindow").html(nc).fadeIn() }});
+}	
+
+d3.select(self.frameElement).style("height", "600px");
+
+
+var div = d3.select("body").append("div")   
+    .attr("class", "tooltip")               
+    .style("opacity", 0);
+
+
+
+var template={};
+var state={};
+var tabindex=[];
+window.state=state;
+
+$(function() {
+
+$(document).aciFragment();	
+var frag=$(document).aciFragment("api");
+
+// $("#decrease").button();
+$("script").each(function(i,e) {
+	var $e=$(e);
+	if ($e.attr("type")=="text/template") {
+		try {
+			template[$e.attr("id")]=_.template($e.html());
+			// console.log("Bingo "+$e.html());
+		} catch(err) {
+				console.error("Template error '"+err+"'"+$e.attr("id")+ " "+$e.html())
+		}
+	}	
+});
+
+spreadsheet="https://docs.google.com/spreadsheet/pub?key=0AnjSydpjIFuXdG1EVmVmbS03djk0dW55LXFFb0VYLWc&output=html";
+
+
+Tabletop.init( { key: spreadsheet,
+                         callback: populateTabs,
+                         wanted: [ 'presidencia' ], 
+                         debug: true } );
+
+
+
+function populateTabs(data,tt ) {
+	$.each(data.presidencia.elements, function(i,tab) {
+		tab.id="tab-"+i;
+		console.log("title: "+tab.title);
+ 	    $("#tabs").append(template.tabBodyTemplate({ tab: tab}));
+        $("#tabs ul").append(template.tabHeadTemplate({ tab: tab}));
+    	
+	});
+	$("#tabs").tabs({ activate: function(event,ui) {
+		var nn=ui.newTab.find("a").attr("data-node");
+		if (nn!=window.lastnode && nodes.index[nn]) {
+			maxlevels(0);
+			switchTo(nodes.index[nn]);
+		}
+		window.lastnode=nn;
+		$(document).aciFragment("api").set("node",nn);
+	}
+	});
+	tabindex=$("#tabs").find("li a").get().map(function(a) { return($(a).attr("data-node")) });
+	$("#tabs").fadeIn();
+	switchTo(nodes.index[frag.get("node")]);
+
+
+
+}
+
+
+
+
+
+
+
+
+//  $( "[title]" ).tooltip({ show: { delay: 4, duration: 100, }});
+
+});
+
+
+
+</script>
+<script id="tooltipTemplate" type="text/template">
+<div>
+  <%= d.data.nom %> [<%= d.id %>]<br/>	
+  <% if (has_children(d)) { %><i><b><%= has_children(d) %></b> dependència<%= has_children(d)==1 ? "" : "s" %><% } %></i><br/>
+  <div style="font-size:80%;">Responsable: <%= d.data.resp != "null"  ? d.data.resp : "no especificat" %></div>
+</div>
+</script>   
+<script id="infoTemplate" type="text/template">
+<div>
+  <p><b><%= d.data.nom %></b><br /><span style="font-size: 80%">[<a href="http://www10.gencat.cat/sac/AppJava/organisme_fitxa.jsp?codi=<%= d.id %>" target="_blank"><%= d.id %> en gencat.cat</a>]</span></p>
+  <div ><%= d.data.resp != "null"  ? d.data.resp : "responsable no especificat" %></div>
+  <% if (has_children(d)) { %><i style="font-size:80%"><b><%= has_children(d) %></b> dependència<%= has_children(d)==1 ? "" : "s" %><% } %></i><br/>
+  <p></div>
+</script>   
+<script id="tabBodyTemplate" type="text/template">
+  <div id="<%= tab.id %>"><%= tab.content %></div>  
+</script>   
+<script id="tabHeadTemplate" type="text/template">
+ <li><a href="#<%= tab.id %>" data-node="<%= tab.node %>"><%= tab.title %></a></li>
+</script>    
+</body></html>
