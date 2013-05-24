@@ -8,6 +8,7 @@
 	<script src="js/jquery-ui-1.10.3.custom.js"></script>
 	<script src="js/jquery.aciPlugin.min.js"></script>
 	<script src="js/jquery.aciFragment.js"></script>
+	<script src="js/tabletop.js"></script>
 
 	<link href="css/smoothness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
 
@@ -112,27 +113,9 @@ g.highlight div.outer {
  </div>	
 <br clear="all" />
 <div id="visita" style="width:99%; font-size:80%">
-	<div id="tabs">
+	<div id="tabs" style="display: none">
 		<ul>
-			<li><a href="#tab0" data-node="6" >Presidencia</a></li>
-			<li><a href="#tab1" data-node="73" >Montserrat</a></li>
-			<li><a href="#tab2" data-node="2700">Magòria</a></li>
-			<li><a href="#tab3" data-node="18953">Máximo</a></li>
-			<li><a href="#tab4" data-node="8602">Marató</a></li>
-			<li><a href="#tab5" data-node="16552">Alemanya</a></li>
-
 		</ul>
-		<div id="tab0"><p><b>Aquí se nota que </b>Non solum propter tres canonizationes ad hoc Consistorium vos convocavi, sed etiam ut vobis decisionem magni momenti pro Ecclesiae vitae communicem. Conscientia mea iterum atque iterum coram Deo explorata ad cognitionem certam perveni vires meas ingravescente aetate non iam aptas esse ad munus Petrinum aeque administrandum.</p>
-		</div>
-		<div id="tab1"><p><b>Aquí se nota que </b>Non solum propter tres canonizationes ad hoc Consistorium vos convocavi, sed etiam ut vobis decisionem magni momenti pro Ecclesiae vitae communicem. Conscientia mea iterum atque iterum coram Deo explorata ad cognitionem certam perveni vires meas ingravescente aetate non iam aptas esse ad munus Petrinum aeque administrandum.</p>
-		</div>
-		<div id="tab2"><p><b>Aquí se nota que </b>Non solum propter tres canonizationes ad hoc Consistorium vos convocavi, sed etiam ut vobis decisionem magni momenti pro Ecclesiae vitae communicem. Conscientia mea iterum atque iterum coram Deo explorata ad cognitionem certam perveni vires meas ingravescente aetate non iam aptas esse ad munus Petrinum aeque administrandum.</p>
-		</div>
-		<div id="tab3"><p><b>12 Niveles!  Aquí se nota que </b>Non solum propter tres canonizationes ad hoc Consistorium vos convocavi, sed etiam ut vobis decisionem magni momenti pro Ecclesiae vitae communicem. Conscientia mea iterum atque iterum coram Deo explorata ad cognitionem certam perveni vires meas ingravescente aetate non iam aptas esse ad munus Petrinum aeque administrandum.</p>
-		</div>
-		<div id="tab4"><p><b>Aquí se nota que </b>Non solum propter tres canonizationes ad hoc Consistorium vos convocavi, sed etiam ut vobis decisionem magni momenti pro Ecclesiae vitae communicem. Conscientia mea iterum atque iterum coram Deo explorata ad cognitionem certam perveni vires meas ingravescente aetate non iam aptas esse ad munus Petrinum aeque administrandum.</p>
-		</div>
-		<div id="tab5"><p><b>En Berlín!</b>Non solum propter tres canonizationes ad hoc Consistorium vos convocavi, sed etiam ut vobis decisionem magni momenti pro Ecclesiae vitae communicem. Conscientia mea iterum atque iterum coram Deo explorata ad cognitionem certam perveni vires meas ingravescente aetate non iam aptas esse ad munus Petrinum aeque administrandum.</p>
 		</div>
 
 
@@ -202,16 +185,13 @@ d3.json("tree.json", function(json) {
    
    frag=$(document).aciFragment("api");
 	if (!frag.get("node")) {
-			frag.set("node",6);
+			frag.set("node",6)
 			open_node(nodes.index["6"]);
 	}
-	
-	switchTo(nodes.index[frag.get("node")]);
 
    
 });
 
-tabindex=$("#tabs").find("li a").get().map(function(a) { return($(a).attr("data-node")) });
 
 function switchTo(n) {
 		putOnMap(n); 
@@ -228,8 +208,6 @@ function findTab(n) {
 		} else {
 			// console.log("nicht gefunden: "+n.id);
 		}
-
-	
 }
 
 function parents(p) {
@@ -632,10 +610,27 @@ $("script").each(function(i,e) {
 				console.error("Template error '"+err+"'"+$e.attr("id")+ " "+$e.html())
 		}
 	}	
+});
+
+spreadsheet="https://docs.google.com/spreadsheet/pub?key=0AnjSydpjIFuXdG1EVmVmbS03djk0dW55LXFFb0VYLWc&output=html";
+
+
+Tabletop.init( { key: spreadsheet,
+                         callback: populateTabs,
+                         wanted: [ 'presidencia' ], 
+                         debug: true } );
 
 
 
-$("#tabs").tabs({ activate: function(event,ui) {
+function populateTabs(data,tt ) {
+	$.each(data.presidencia.elements, function(i,tab) {
+		tab.id="tab-"+i;
+		console.log("title: "+tab.title);
+ 	    $("#tabs").append(template.tabBodyTemplate({ tab: tab}));
+        $("#tabs ul").append(template.tabHeadTemplate({ tab: tab}));
+    	
+	});
+	$("#tabs").tabs({ activate: function(event,ui) {
 		var nn=ui.newTab.find("a").attr("data-node");
 		if (nn!=window.lastnode && nodes.index[nn]) {
 			maxlevels(0);
@@ -645,11 +640,19 @@ $("#tabs").tabs({ activate: function(event,ui) {
 		$(document).aciFragment("api").set("node",nn);
 	}
 	});
+	tabindex=$("#tabs").find("li a").get().map(function(a) { return($(a).attr("data-node")) });
+	$("#tabs").fadeIn();
+	switchTo(nodes.index[frag.get("node")]);
+
+
+
+}
 
 
 
 
-});
+
+
 
 
 
@@ -668,11 +671,15 @@ $("#tabs").tabs({ activate: function(event,ui) {
 </script>   
 <script id="infoTemplate" type="text/template">
 <div>
-  <b><%= d.data.nom %> [<%= d.id %>]</b><br/>
-  <div style="font-size:80%;">Responsable: <%= d.data.resp != "null"  ? d.data.resp : "no especificat" %></div>
-  <% if (has_children(d)) { %><i><b><%= has_children(d) %></b> dependència<%= has_children(d)==1 ? "" : "s" %><% } %></i><br/>
-  <p><i>Aquí podría ir más información...</i></p>
-</div>
+  <p><b><%= d.data.nom %></b><br /><span style="font-size: 80%">[<a href="http://www10.gencat.cat/sac/AppJava/organisme_fitxa.jsp?codi=<%= d.id %>" target="_blank"><%= d.id %> en gencat.cat</a>]</span></p>
+  <div ><%= d.data.resp != "null"  ? d.data.resp : "responsable 	no especificat" %></div>
+  <% if (has_children(d)) { %><i style="font-size:80%"><b><%= has_children(d) %></b> dependència<%= has_children(d)==1 ? "" : "s" %><% } %></i><br/>
+  <p></div>
 </script>   
-    
-     </body></html>
+<script id="tabBodyTemplate" type="text/template">
+  <div id="<%= tab.id %>"><%= tab.content %></div>  
+</script>   
+<script id="tabHeadTemplate" type="text/template">
+ <li><a href="#<%= tab.id %>" data-node="<%= tab.node %>"><%= tab.title %></a></li>
+</script>    
+</body></html>
