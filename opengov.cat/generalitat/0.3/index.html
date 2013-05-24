@@ -95,6 +95,10 @@ g.highlight div.outer {
    z-index: 1000;
 }
 
+a.hidden:link  { opacity: 0.1; }
+a.hidden:hover { opacity: 0.4; }
+
+
 </style>
 
 </head><body>
@@ -696,7 +700,8 @@ function populateTabs(data,tt ) {
   <p><b><%= d.data.nom %></b><br /><span style="font-size: 80%">[<a href="http://www10.gencat.cat/sac/AppJava/organisme_fitxa.jsp?codi=<%= d.id %>" target="_blank"><%= d.id %> en gencat.cat</a>]</span></p>
   <div ><%= d.data.resp != "null"  ? d.data.resp : "responsable no especificat" %></div>
   <% if (has_children(d)) { %><i style="font-size:80%"><b><%= has_children(d) %></b> dependència<%= has_children(d)==1 ? "" : "s" %><% } %></i><br/>
-  <p></div>
+  <a class="hidden" target="_blank" href="http://www10.gencat.cat/sac/AppJava/organigrama_query.jsp?codi=<%=d.id %>">organigrama</a>
+  </div>
 </script>   
 <script id="tabBodyTemplate" type="text/template">
   <div id="<%= tab.id %>"><%= tab.content %></div>  

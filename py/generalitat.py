@@ -2,8 +2,9 @@ import re
 import requests
 from lxml import etree
 from multiprocessing import Lock
+import pprint
 
-organigrama_url="http://www10.gencat.cat/sac/AppJava/organigrama_query.jsp?nivell=16&pares=true&codi=%s&jq=200001"
+organigrama_url="http://www10.gencat.cat/sac/AppJava/organigrama_query.jsp?nivell=1&pares=true&codi=%s&jq=200001"
 cache={}
 
 cachelock=Lock()
@@ -27,7 +28,7 @@ class ListConsumer :
             if n:
 				hrefid=n.groups()[0]
 				self.stack[-1]["hrefid"]=hrefid
-				if len(self.stack)>2 :
+				if len(self.stack)>1 :
 					if (("id" in self.stack[-2]) or ("hrefid" in self.stack[-2])):
 						if hrefid in self.superior :
 							raise ValueError, "%s already has an assigned superior: %s (new value: %s)" % (self.stack[-2],self.superior[self.stack[-2]],hrefid)
@@ -39,6 +40,8 @@ class ListConsumer :
 					else :
 						if "textid" in self.stack[-2] :
 							self.superior[hrefid]=self.stack[-2]["textid"]
+				else :
+					self.log("stack is %s" % len(self.stack))
             
     def end(self,tag) :
         if tag=="ul" :
@@ -61,19 +64,23 @@ class ListConsumer :
         pass
     
     def log(self,*args) :
-        pass # print args
+		pass # print args
         
         
 def dependencias(txt) :
+    # print txt
     lc=ListConsumer()
     parser=etree.HTMLParser(recover=True, target=lc)
     etree.fromstring(txt,parser)
+    lc.log(pprint.pformat(lc.superior))
     return lc.superior
     
    
 def depende_de(codi) :
 	if not codi in cache :
-		dep=dependencias(requests.get(organigrama_url % codi).content)
+		url=organigrama_url % codi
+		print url
+		dep=dependencias(requests.get(url).content)
 		cachelock.acquire()
 		cache.update(dep)
 		cachelock.release()
