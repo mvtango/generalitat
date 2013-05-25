@@ -7,24 +7,29 @@ here=os.path.split(__file__)[0]
 
 datadir=os.path.join(here,"../data")
 
+files={ "in" : "unitatssac-scraped-20130525.csv",
+        "out" : "unitatssac-scraped-20130525-out.csv"
+       }
+       
 # generalitat.cache=simplejson.load(open(os.path.join(datadir,"generalitat.cache.json")))
-entitats=csvstore.csvstore(os.path.join(datadir,"unitatssac-scraped-in.csv"))
+entitats=csvstore.csvstore(os.path.join(datadir,files["in"]))
 try  :
 	for e in entitats.data : 
-		if e["iddep"]=="6" :
-			if not e["iddep-scraped"] == e["iddep-scraped-old"]:
+		if e["iddep"]=="4163" :
+				p=e["iddep-scraped"]
 				try :
-					e["iddep-scraped-new"] = generalitat.depende_de(e["id"]) 
+					e["iddep-scraped"] = generalitat.depende_de(e["id"]) 
 				except KeyboardInterrupt :
 					print "break"
 					raise
-				except Exception:
-					pass
+				except Exception,e:
+					print "Exception: %s" % e 
 				else :
-					print "%s -> %s [%s, %s]" % (e["id"],e["iddep-scraped-new"],e["iddep-scraped-old"],e["iddep-scraped"])
-			else :
-				print "%s = %s (%s) for %s" % (e["iddep-scraped"],e["iddep-scraped-old"],e["iddep-scraped"]==e["iddep-scraped-old"],e["id"])
+					if (p==e["iddep-scraped"]) :
+						print "Same!",
+					else :
+						print "Different - ",
+					print "%s -> %s" % (e["id"],e["iddep-scraped"])
 finally :
-	entitats.store(os.path.join(datadir,"unitatssac-scraped-result.csv"))
-	simplejson.dump(generalitat.cache,open(os.path.join(datadir,"generalitat.cache-result.json"),"w"))
+	entitats.store(os.path.join(datadir,files["out"]))
 	print "stored"
