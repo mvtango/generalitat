@@ -104,13 +104,13 @@ a.hidden:hover { opacity: 0.4; }
 </head><body>
 <div id="frame" style="position: relative">
  <div id="chart" style="float: left; width: 960px; "></div>
- <div id="sidebar" style="position: absolute; top: 380px; height: 200px; width: 180px; background-color: #F0F0F0; padding: 4px; border: 1px solid #aaaaaa " class="ui-corner-all" >
+ <div id="sidebar" style="position: absolute; top: 380px;  width: 180px; background-color: #F0F0F0; padding: 4px; border: 1px solid #aaaaaa " class="ui-corner-all" >
 	 <div id="infoWindow"></div>
  </div>
  <div id="navigator" style="position: absolute; width: 200px">
 	<div id="toolbar" class="ui-widget-header ui-corner-all">
 	<input type="text" id="autocomplete" style="width: 70%" /> 
-	<button onClick="$('#autocomplete').select()">ok</button>
+	<button onClick="$('#autocomplete').select()">cerca</button>
 	<br/>
 	<button disabled title="nivells"><span class="treedepth"></span></button>
 	<button class="simpler" onClick="maxlevels(0)" title="mostrar arrel i un nivell">início</button>
@@ -184,11 +184,12 @@ d3.json(frag.get("tree") || "tree.json", function(json) {
   $("#autocomplete").autocomplete({
 	source: nodes.names,
 	focus: function( event, ui ) {
-        $( "#project" ).val( ui.item.label );
-        return false;
+        //$( "#project" ).val( ui.item.label );
+        // $("#autocomplete").val("");
+        // return false;
       },
      select: function( event, ui) {
-		$("#autocomplete").val(ui.item.label);
+		$("#autocomplete").val("") // ui.item.label);
 		// console.log(ui.item.value.id);
 		switchTo(ui.item.value); 
 		return false;
@@ -365,9 +366,9 @@ function update(source, highlight,mroot) {
 	if (typeof mroot == typeof 6) {
 		ph=parents(highlight);
 		td=treedepth();
-		console.log("parents="+ph.length,"treedepth="+td);
+		// console.log("parents="+ph.length,"treedepth="+td);
 		if (ph.length>=mroot) {
-			console.log("limiting to "+mroot+" from "+ph.length+" - "+ph[mroot-1].name);
+			// console.log("limiting to "+mroot+" from "+ph.length+" - "+ph[mroot-1].name);
 			mroot=ph[mroot-1];
 		} else {
 			mroot=root;
@@ -614,17 +615,18 @@ spreadsheet="https://docs.google.com/spreadsheet/pub?key=0AnjSydpjIFuXdG1EVmVmbS
 Tabletop.init( { key: spreadsheet,
                          callback: populateTabs,
                          wanted: [ 'presidencia' ], 
-                         debug: true } );
+                         debug: false } );
 
 
 
 function populateTabs(data,tt ) {
 	$.each(data.presidencia.elements, function(i,tab) {
-		tab.id="tab-"+i;
-		console.log("title: "+tab.title);
- 	    $("#tabs").append(template.tabBodyTemplate({ tab: tab}));
-        $("#tabs ul").append(template.tabHeadTemplate({ tab: tab}));
-    	
+		if (tab.display=="yes") {
+			tab.id="tab-"+i;
+			// console.log("title: "+tab.title);
+			$("#tabs").append(template.tabBodyTemplate({ tab: tab}));
+			$("#tabs ul").append(template.tabHeadTemplate({ tab: tab}));
+		}
 	});
 	$("#tabs").tabs({ activate: function(event,ui) {
 		var nn=ui.newTab.find("a").attr("data-node");
@@ -670,7 +672,8 @@ function populateTabs(data,tt ) {
   <p><b><%= d.data.nom %></b><br /><span style="font-size: 80%">[<a href="http://www10.gencat.cat/sac/AppJava/organisme_fitxa.jsp?codi=<%= d.id %>" target="_blank"><%= d.id %> en gencat.cat</a>]</span></p>
   <div ><%= d.data.resp != "null"  ? d.data.resp : "responsable no especificat" %></div>
   <% if (has_children(d)) { %><i style="font-size:80%"><b><%= has_children(d) %></b> dependència<%= has_children(d)==1 ? "" : "s" %><% } %></i><br/>
-  <a class="hidden" target="_blank" href="http://www10.gencat.cat/sac/AppJava/organigrama_query.jsp?codi=<%=d.id %>">organigrama</a>
+  <!-- <a class="hidden" target="_blank" href="http://www10.gencat.cat/sac/AppJava/organigrama_query.jsp?codi=<%=d.id %>">organigrama</a> -->
+  
   </div>
 </script>   
 <script id="tabBodyTemplate" type="text/template">
