@@ -9,7 +9,7 @@
 	<script src="js/jquery.aciPlugin.min.js"></script>
 	<script src="js/jquery.aciFragment.js"></script>
 	<script src="js/tabletop.js"></script>
-
+    <!-- <script src="js/jquery.analyticseventtracking.js"></script> -->
 	<link href="css/smoothness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
 
 <style type="text/css" style="display:none">
@@ -113,9 +113,9 @@ a.hidden:hover { opacity: 0.4; }
 	<button onClick="$('#autocomplete').select()">cerca</button>
 	<br/>
 	<button disabled title="nivells"><span class="treedepth"></span></button>
-	<button class="simpler" onClick="maxlevels(0)" title="mostrar arrel i un nivell">início</button>
-	<button class="changeroot"  title="mostrar nivell superior a l'arrel" onClick="incrlevel()">[&lt; </button>
-	<button class="simpler" onClick="decrlevel()" title="treure l'últim nivell">]&lt; </button>
+	<button class="simpler" onClick="maxlevels(0);_t('navegation','inicio');" title="mostrar arrel i un nivell">início</button>
+	<button class="changeroot"  title="mostrar nivell superior a l'arrel" onClick="incrlevel();_t('navegation','root-up');">[&lt; </button>
+	<button class="simpler" onClick="decrlevel();_t('navegation','leafs-up');" title="treure l'últim nivell">]&lt; </button>
 	</div>	
  </div>	
 <br clear="all" />
@@ -137,7 +137,9 @@ a.hidden:hover { opacity: 0.4; }
     nodes={},
 	frag=$(document).aciFragment("api");
 
-
+function _t(category,action) {
+	_gaq.push(['_trackEvent', category, action]);
+}
 
 
     
@@ -191,6 +193,7 @@ d3.json(frag.get("tree") || "tree.json", function(json) {
      select: function( event, ui) {
 		$("#autocomplete").val("") // 	ui.item.label);
 		// console.log(ui.item.value.id);
+		_t("search",ui.item.label);
 		switchTo(ui.item.value); 
 		return false;
 	 } 
@@ -565,6 +568,7 @@ function click(d) {
   update(d,d,3);
   infoWindow(d);
   findTab(d);
+  _t("node-click",d.data.nom);
 		 
 }
 
@@ -633,6 +637,7 @@ function populateTabs(data,tt ) {
 		if (nn!=window.lastnode && nodes.index[nn]) {
 			maxlevels(0);
 			switchTo(nodes.index[nn]);
+			_t('navegation','tab-'+nodes.index[nn].data.nom);
 		}
 		window.lastnode=nn;
 		$(document).aciFragment("api").set("node",nn);
@@ -682,4 +687,18 @@ function populateTabs(data,tt ) {
 <script id="tabHeadTemplate" type="text/template">
  <li><a href="#<%= tab.id %>" data-node="<%= tab.node %>"><%= tab.title %></a></li>
 </script>    
+<script type="text/javascript">//<![CDATA[
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-41217215-1']);
+				            _gaq.push(['_gat._anonymizeIp']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+            //]]></script>
 </body></html>
