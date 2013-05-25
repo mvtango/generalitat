@@ -101,7 +101,7 @@ a.hidden:hover { opacity: 0.4; }
 
 </style>
 
-</head><body>
+</head><body style="height: 890px">
 <div id="frame" style="position: relative">
  <div id="chart" style="float: left; width: 960px; "></div>
  <div id="sidebar" style="position: absolute; top: 380px;  width: 180px; background-color: #F0F0F0; padding: 4px; border: 1px solid #aaaaaa " class="ui-corner-all" >
@@ -189,7 +189,7 @@ d3.json(frag.get("tree") || "tree.json", function(json) {
         // return false;
       },
      select: function( event, ui) {
-		$("#autocomplete").val("") // ui.item.label);
+		$("#autocomplete").val("") // 	ui.item.label);
 		// console.log(ui.item.value.id);
 		switchTo(ui.item.value); 
 		return false;
@@ -577,7 +577,7 @@ function infoWindow(d) {
   $("#infoWindow").fadeOut({complete: function() { $("#infoWindow").html(nc).fadeIn() }});
 }	
 
-d3.select(self.frameElement).style("height", "600px");
+// d3.select(self.frameElement).style("height", "600px");
 
 
 var div = d3.select("body").append("div")   
