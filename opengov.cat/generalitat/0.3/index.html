@@ -134,7 +134,12 @@ a.hidden:hover { opacity: 0.4; }
     i = 0,
     duration = 500,
     root,
-    nodes={};
+    nodes={},
+	frag=$(document).aciFragment("api");
+
+
+
+
     
 function makeshort(a) {
 	a=a.replace(/Departament /,"Dept. ",a);
@@ -165,7 +170,7 @@ var vis = d3.select("#chart").append("svg:svg")
   .append("svg:g")
     .attr("transform", "translate(40,0)");
 
-d3.json("tree.json", function(json) {
+d3.json(frag.get("tree") || "tree.json", function(json) {
   json.x0 = 0;
   json.y0 = 0;
   update(root = json);
@@ -190,7 +195,6 @@ d3.json("tree.json", function(json) {
 	 } 
    });
    
-   frag=$(document).aciFragment("api");
 	if (!frag.get("node")) {
 			frag.set("node",6)
 			open_node(nodes.index["6"]);
@@ -479,49 +483,15 @@ function update(source, highlight,mroot) {
 
 	
 
-      
-//    node.transition()
-//		.duration(duration)
-//		.select("circle")
-//		.style("radius",mk_radius);
 		
 	node.exit().transition()
       .duration(duration)
       .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
       .style("opacity", 1e-6)
       .remove();
-/*
-	var nodeTransition = node.transition()
-		.duration(duration);
-  
-  nodeTransition.select("circl"e")
-      .attr("cx", function(d) { return d.y; })
-      .attr("cy", function(d) { return d.x; })
-      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
-  
-  nodeTransition.select("text")
-      .attr("dx", function(d) { return d._children ? -8 : 8; })
-	  .attr("dy", 3)
-      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#5babfc"; });
-
-  // Transition exiting nodes to the parent's new position.
-  var nodeExit = node.exit();
-  
-  nodeExit.select("circle").transition()
-      .duration(duration)
-      .attr("cx", function(d) { return source.y; })
-      .attr("cy", function(d) { return source.x; })
-      .remove();
-  
-  nodeExit.select("text").transition()
-      .duration(duration)
-      .remove();
-*/
-  // Update the links…
-  var link = vis.selectAll("path.link")
+   var link = vis.selectAll("path.link")
       .data(tree.links(nodes), function(d) { return d.target.id; });
 
-  // Enter any new links at the parent's previous position.
   link.enter().insert("svg:path", "g")
       .attr("class", "link")
       .attr("d", function(d) {
