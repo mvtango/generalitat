@@ -137,26 +137,51 @@ a.hidden:hover { opacity: 0.4; }
     nodes={},
 	frag=$(document).aciFragment("api");
 
+	var template={};
+	var state={};
+	var tabindex=[];
+	window.state=state;
+	window.state.tree=frag.get("tree") || "presidencia.json";
+	window.state.tabs=window.state.tree.replace(/\..+$/,"");
+
+
+
 function _t(category,action) {
 	_gaq.push(['_trackEvent', category, action]);
 }
 
-
+var _shorts=[
+	["Departament ","Dept. "],
+	["Secretaria General ","SG "],
+	["Direcció General ","DG "],
+	["Subdirecció General ","SDG "],
+	["Secretaria ","Secr. "],
+	["General ","Gen. "],
+	["Generalitat de Catalunya ","Generalitat "],
+	["Territorial del Govern de la Generalitat ",""],
+	["Govern de la Generalitat ","Govern "],
+	["de Medicina de l'Esport i d'Activitat Física ",""],
+	["del Patronat Catalunya Món ",""],
+	["Consell de Diplomàcia Pública de Catalunya ",""],
+	["Oficina Comarcal d[e'] ?","of. "],
+    ["Serveis Territorials d'Agricultura, Ramaderia, Pesca, Alimentació i Medi Natural ","ST "],
+	["Consell Regulador de la Denominació d'Origen Protegida","DOC"],
+	["Consell Regulador de la Denominació d'Origen","DOC"],
+	["Consell Regulador ","CR "],	
+	['"""','"'],
+	["Taula Sectorial Agrària ","TSA "],
+	["Comissió Assessora ","CA "],
+	["Confraria de Pescadors ","CP "]
+]
     
 function makeshort(a) {
-	a=a.replace(/Departament /,"Dept. ",a);
-	a=a.replace(/Secretaria General /,"Secr. Gen. ",a);
-	a=a.replace(/Direcció General /,"Dir. Gen. ",a);
-	a=a.replace(/Secretaria /,"Secr. ",a);
-	a=a.replace(/General /,"Gen. ",a);
-	a=a.replace(/Generalitat de Catalunya /,"Generalitat ",a);
-	a=a.replace(/Territorial del Govern de la Generalitat /,"",a);
-	a=a.replace(/Govern de la Generalitat /,"Govern ",a);
-	a=a.replace(/de Medicina de l'Esport i d'Activitat Física /,"",a);
-	a=a.replace(/del Patronat Catalunya Món /,"",a);
-	a=a.replace(/Consell de Diplomàcia Pública de Catalunya /,"",a);
-
- 
+	_(_shorts).each(function(ss) {
+		if (ss.length==2) {
+			a=a.replace(RegExp(ss[0]),ss[1])
+		} else {
+			a=a.replace(RegExp(ss[0],ss[1]),ss[2]);
+		}
+	});
 	return(a);
 }
 
@@ -172,7 +197,7 @@ var vis = d3.select("#chart").append("svg:svg")
   .append("svg:g")
     .attr("transform", "translate(40,0)");
 
-d3.json(frag.get("tree") || "tree.json", function(json) {
+d3.json(window.state.tree || "tree.json", function(json) {
   json.x0 = 0;
   json.y0 = 0;
   update(root = json);
@@ -199,10 +224,10 @@ d3.json(frag.get("tree") || "tree.json", function(json) {
 	 } 
    });
    
-	if (!frag.get("node")) {
-			frag.set("node",6)
-			open_node(nodes.index["6"]);
-	}
+	// if (!frag.get("node")) {
+	// 		frag.set("node",6)
+	// 		open_node(nodes.index["6"]);
+	//}
 
    
 });
@@ -590,15 +615,12 @@ var div = d3.select("body").append("div")
 
 
 
-var template={};
-var state={};
-var tabindex=[];
-window.state=state;
-
 $(function() {
 
 $(document).aciFragment();	
 var frag=$(document).aciFragment("api");
+
+
 
 // $("#decrease").button();
 $("script").each(function(i,e) {
@@ -618,35 +640,40 @@ spreadsheet="https://docs.google.com/spreadsheet/pub?key=0AnjSydpjIFuXdG1EVmVmbS
 
 Tabletop.init( { key: spreadsheet,
                          callback: populateTabs,
-                         wanted: [ 'presidencia' ], 
+                         wanted: [ window.state.tabs ], 
                          debug: false } );
 
 
 
 function populateTabs(data,tt ) {
-	$.each(data.presidencia.elements, function(i,tab) {
-		if (tab.display=="yes") {
-			tab.id="tab-"+i;
-			// console.log("title: "+tab.title);
-			$("#tabs").append(template.tabBodyTemplate({ tab: tab}));
-			$("#tabs ul").append(template.tabHeadTemplate({ tab: tab}));
+	if (typeof data[window.state.tabs] != "undefined") {
+			$.each(data[window.state.tabs].elements, function(i,tab) {
+			if (tab.display=="yes") {
+				tab.id="tab-"+i;
+				// console.log("title: "+tab.title);
+				$("#tabs").append(template.tabBodyTemplate({ tab: tab}));
+				$("#tabs ul").append(template.tabHeadTemplate({ tab: tab}));
+			}
+		});
+		$("#tabs").tabs({ activate: function(event,ui) {
+			var nn=ui.newTab.find("a").attr("data-node");
+			if (nn!=window.lastnode && nodes.index[nn]) {
+				maxlevels(0);
+				switchTo(nodes.index[nn]);
+				_t('navegation','tab-'+nodes.index[nn].data.nom);
+			}
+			window.lastnode=nn;
+			$(document).aciFragment("api").set("node",nn);
 		}
-	});
-	$("#tabs").tabs({ activate: function(event,ui) {
-		var nn=ui.newTab.find("a").attr("data-node");
-		if (nn!=window.lastnode && nodes.index[nn]) {
-			maxlevels(0);
-			switchTo(nodes.index[nn]);
-			_t('navegation','tab-'+nodes.index[nn].data.nom);
+		});
+		tabindex=$("#tabs").find("li a").get().map(function(a) { return($(a).attr("data-node")) });
+		$("#tabs").fadeIn();
+		if (frag.get("node")) {
+			switchTo(nodes.index[frag.get("node")]);
+		} else {
+			click(root);
 		}
-		window.lastnode=nn;
-		$(document).aciFragment("api").set("node",nn);
 	}
-	});
-	tabindex=$("#tabs").find("li a").get().map(function(a) { return($(a).attr("data-node")) });
-	$("#tabs").fadeIn();
-	switchTo(nodes.index[frag.get("node")]);
-
 
 
 }
