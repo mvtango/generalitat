@@ -1,0 +1,851 @@
+id,iddep,nom,dep,resp,primer-nombre,nombre-medio,apellido-catalan,centres-cp,centres-com,centres-pob,iddep-scraped
+18893,5823,900 900 120 Contra la violència masclista,Departament de Benestar Social i Família,null,null,,,,,,62
+15437,5823,Agència Catalana de la Joventut,Departament de Benestar Social i Família,Jordi Boixadera i Vinos,Jordi,,Boixadera,8015,Barcelonès,Barcelona,13766
+11578,5823,Alberg Anna Maria Janer,Departament de Benestar Social i Família,null,null,,,17527,Cerdanya,Llívia,17136
+19074,5823,Alberg Barcelona Urbany Hostel,Departament de Benestar Social i Família,null,null,,,8026,Barcelonès,Barcelona,17136
+16611,5823,Alberg Be Hostels Mar,Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,17136
+17655,5823,Alberg Be Hostels Sound,Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,17136
+17656,5823,Alberg Ca la Jepa,Departament de Benestar Social i Família,null,null,,,43595,Terra Alta,Prat de Comte,17136
+2553,5823,Alberg Casa Gran,Departament de Benestar Social i Família,null,null,,,43893,Tarragonès,Altafulla,17136
+11575,5823,Alberg Center-Rambles,Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,17136
+19071,5823,Alberg Costa Brava,Departament de Benestar Social i Família,null,null,,,17490,Alt Empordà,Llançà,17136
+19072,5823,Alberg Equity Point Centric,Departament de Benestar Social i Família,null,null,,,8007,Barcelonès,Barcelona,17136
+19073,5823,Alberg Equity Point Girona,Departament de Benestar Social i Família,null,null,,,17002,Gironès,Girona,17136
+2556,5823,Alberg Era Garona,Departament de Benestar Social i Família,null,null,,,25598,Naut Aran,Salardú,17136
+17658,5823,Alberg Escola de Piraguisme de Sort,Departament de Benestar Social i Família,null,null,,,25560,Pallars Sobirà,Sort,17136
+16610,5823,Alberg Ideal Youth Hostel,Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,17136
+16606,5823,Alberg In/Out,Departament de Benestar Social i Família,null,null,,,8017,Barcelonès,Barcelona,17136
+2542,5823,Alberg Jaume I,Departament de Benestar Social i Família,null,null,,,43440,Conca de Barberà,L'Espluga de Francolí,17136
+2545,5823,Alberg Josep Maria Batista i Roca,Departament de Benestar Social i Família,null,null,,,8320,Maresme,El Masnou,17136
+2540,5823,Alberg Mare de Déu de Montserrat,Departament de Benestar Social i Família,null,null,,,8023,Barcelonès,Barcelona,17136
+2541,5823,Alberg Mare de Déu de les Neus,Departament de Benestar Social i Família,null,null,,,17537,Alp,La Molina,17136
+2546,5823,Alberg Mas Silvestre,Departament de Benestar Social i Família,null,null,,,8319,Dosrius,Canyamars,17136
+11579,5823,Alberg Mas de la Coixa,Departament de Benestar Social i Família,null,null,,,43770,Ribera d'Ebre,Móra la Nova,17136
+2557,5823,Alberg Matacabós,Departament de Benestar Social i Família,null,null,,,25540,Val d'Aran,Les,17136
+16607,5823,Alberg Montsec Mur,Departament de Benestar Social i Família,null,null,,,25632,Pallars Jussà,Castell de Mur,17136
+2538,5823,Alberg Mossèn Antoni Batlle,Departament de Benestar Social i Família,null,null,,,43580,Baix Ebre,Deltebre,17136
+19075,5823,Alberg Món Natura Pirineus,Departament de Benestar Social i Família,null,null,,,25589,Pallars Sobirà,Alt Àneu,17136
+2550,5823,Alberg Pere Figuera,Departament de Benestar Social i Família,null,null,,,17535,Ripollès,Planoles,17136
+11574,5823,Alberg Pere Tarrés,Departament de Benestar Social i Família,null,null,,,8029,Barcelonès,Barcelona,17136
+19070,5823,Alberg Pere el Gran,Departament de Benestar Social i Família,null,null,,,43815,Alt Camp,Aiguamúrcia,17136
+2551,5823,Alberg Pic de l'Àliga,Departament de Benestar Social i Família,null,null,,,17534,Queralbs,Núria,17136
+10054,5823,Alberg Rectoria de la Selva,Departament de Benestar Social i Família,null,null,,,25286,Solsonès,Navès,17136
+16609,5823,Alberg Ruta del Ferro,Departament de Benestar Social i Família,null,null,,,17860,Ripollès,Sant Joan de les Abadesses,17136
+2539,5823,Alberg Santa Maria del Mar,Departament de Benestar Social i Família,null,null,,,43880,El Vendrell,Coma-ruga,17136
+2547,5823,Alberg Torre Ametller,Departament de Benestar Social i Família,null,null,,,8349,Maresme,Cabrera de Mar,17136
+19076,5823,Alberg Twentytú Hostel,Departament de Benestar Social i Família,null,null,,,8018,Barcelonès,Barcelona,17136
+10055,5823,Alberg Viladoms de Baix,Departament de Benestar Social i Família,null,null,,,8296,Bages,Castellbell i el Vilar,17136
+2534,5823,Alberg d'Empúries,Departament de Benestar Social i Família,null,null,,,17130,Alt Empordà,L'Escala,17136
+9946,5823,Alberg de Banyoles,Departament de Benestar Social i Família,null,null,,,17820,Pla de l'Estany,Banyoles,17136
+11576,5823,Alberg de Berga,Departament de Benestar Social i Família,null,null,,,8600,Berguedà,Berga,17136
+16604,5823,Alberg del Pallars,Departament de Benestar Social i Família,null,null,,,25620,Pallars Jussà,Tremp,17136
+2548,5823,Alberg l'Encanyissada,Departament de Benestar Social i Família,null,null,,,43549,Amposta,Poblenou del Delta,17136
+11586,5823,Alberg la Conreria,Departament de Benestar Social i Família,null,null,,,8391,Maresme,Tiana,17136
+11580,5823,Alberg la Sala,Departament de Benestar Social i Família,null,null,,,8696,Berguedà,La Pobla de Lillet,17136
+2536,5823,Alberg la Valira,Departament de Benestar Social i Família,null,null,,,25700,Alt Urgell,La Seu d'Urgell,17136
+2549,5823,Alberg-Residència Canonge Collell,Departament de Benestar Social i Família,null,null,,,8500,Osona,Vic,17136
+2544,5823,Alberg-Residència Cerverí de Girona,Departament de Benestar Social i Família,null,null,,,17004,Gironès,Girona,17136
+17657,5823,Alberg-Residència Esportiva Àster,Departament de Benestar Social i Família,null,null,,,43890,Vandellòs i l'Hospitalet de l'Infant,L'Hospitalet de l'Infant,17136
+2552,5823,Alberg-Residència Sant Anastasi,Departament de Benestar Social i Família,null,null,,,25003,Segrià,Lleida,17136
+11585,5823,Alberg-Residència Sant Jordi,Departament de Benestar Social i Família,null,null,,,43005,Tarragonès,Tarragona,17136
+2543,5823,Alberg-Residència Torre Malagrida,Departament de Benestar Social i Família,null,null,,,17800,Garrotxa,Olot,17136
+16608,5823,Alberg-Residència Vila-Nova,Departament de Benestar Social i Família,null,null,,,8800,Garraf,Vilanova i la Geltrú,17136
+2537,5823,Alberg-Residència del Carme,Departament de Benestar Social i Família,null,null,,,8240,Bages,Manresa,17136
+17136,5823,Albergs,Departament de Benestar Social i Família,null,null,,,,,,id-415676639
+12577,5823,Asatej Viatges,Departament de Benestar Social i Família,null,null,,,8002,Barcelonès,Barcelona,13766
+5865,5823,Assessoria Jurídica,Departament de Benestar Social i Família,Félix Salaverría i Palanca,Félix,,Salaverría,8039,Barcelonès,Barcelona,5828
+10058,5823,Casa del Mar d'Arenys de Mar,Departament de Benestar Social i Família,null,null,,,8350,Maresme,Arenys de Mar,id-984113595
+10056,5823,Casa del Mar de Barcelona,Departament de Benestar Social i Família,null,null,,,8004,Barcelonès,Barcelona,id-984113595
+10059,5823,Casa del Mar de Blanes,Departament de Benestar Social i Família,null,null,,,17300,Selva,Blanes,id-984113595
+10068,5823,Casa del Mar de Cambrils,Departament de Benestar Social i Família,null,null,,,43850,Baix Camp,Cambrils,id-984113595
+10069,5823,Casa del Mar de L'Ametlla de Mar,Departament de Benestar Social i Família,null,null,,,43860,Baix Ebre,L'Ametlla de Mar,id-984113595
+10063,5823,Casa del Mar de Llançà,Departament de Benestar Social i Família,null,null,,,17490,Alt Empordà,Llançà,id-984113595
+10066,5823,Casa del Mar de Palamós,Departament de Benestar Social i Família,null,null,,,17230,Baix Empordà,Palamós,id-984113595
+10064,5823,Casa del Mar de Roses,Departament de Benestar Social i Família,null,null,,,17480,Alt Empordà,Roses,id-984113595
+10070,5823,Casa del Mar de Sant Carles de la Ràpita,Departament de Benestar Social i Família,null,null,,,43540,Montsià,Sant Carles de la Ràpita,id-984113595
+10067,5823,Casa del Mar de Tarragona,Departament de Benestar Social i Família,null,null,,,43005,Tarragonès,Tarragona,id-984113595
+10060,5823,Casa del Mar de Tossa de Mar,Departament de Benestar Social i Família,null,null,,,17320,Selva,Tossa de Mar,id-984113595
+10057,5823,Casa del Mar de Vilanova i la Geltrú,Departament de Benestar Social i Família,null,null,,,8800,Garraf,Vilanova i la Geltrú,id-984113595
+10062,5823,Casa del Mar del Port de la Selva,Departament de Benestar Social i Família,null,null,,,17489,Alt Empordà,El Port de la Selva,id-984113595
+11234,5823,Casal Cívic Arraona - Els Merinals,Departament de Benestar Social i Família,null,null,,,8205,Vallès Occidental,Sabadell,id-1494142405
+13375,5823,Casal Cívic Badia,Departament de Benestar Social i Família,null,null,,,8214,Vallès Occidental,Badia del Vallès,id-1494142405
+11753,5823,Casal Cívic Balaguer,Departament de Benestar Social i Família,null,null,,,25600,Noguera,Balaguer,id-1494142405
+15245,5823,Casal Cívic Barcelona - Magòria,Departament de Benestar Social i Família,null,null,,,8014,Barcelonès,Barcelona,id-1494142405
+6183,5823,Casal Cívic Girona-Montilivi,Departament de Benestar Social i Família,null,null,,,17003,Gironès,Girona,id-1494142405
+6089,5823,Casal Cívic Llefià de Badalona,Departament de Benestar Social i Família,null,null,,,8913,Barcelonès,Badalona,id-1494142405
+12335,5823,Casal Cívic Molins de Rei - Riera Bonet -,Departament de Benestar Social i Família,null,null,,,8750,Baix Llobregat,Molins de Rei,id-1494142405
+8662,5823,Casal Cívic Montserrat,Departament de Benestar Social i Família,null,null,,,8700,Anoia,Igualada,id-1494142405
+7668,5823,Casal Cívic Rogelio Soto (Sabadell),Departament de Benestar Social i Família,null,null,,,8204,Vallès Occidental,Sabadell,id-1494142405
+10901,5823,Casal Cívic Salut Alta,Departament de Benestar Social i Família,null,null,,,8914,Barcelonès,Badalona,id-1494142405
+6104,5823,Casal Cívic Sant Adrià de Sant Adrià de Besòs,Departament de Benestar Social i Família,null,null,,,8930,Barcelonès,Sant Adrià de Besòs,id-1494142405
+6108,5823,Casal Cívic Sant Llorenç de Munt de Terrassa,Departament de Benestar Social i Família,null,null,,,8227,Vallès Occidental,Terrassa,id-1494142405
+6100,5823,Casal Cívic d'Olesa de Montserrat,Departament de Benestar Social i Família,null,null,,,8640,Baix Llobregat,Olesa de Montserrat,id-1494142405
+15253,5823,Casal Cívic de Blanes - Can Borell,Departament de Benestar Social i Família,null,null,,,17300,Selva,Blanes,id-1494142405
+6106,5823,Casal Cívic de Campclar de Tarragona,Departament de Benestar Social i Família,null,null,,,43006,Tarragonès,Tarragona,id-1494142405
+6105,5823,Casal Cívic de Camps Blancs de Sant Boi de Llobregat,Departament de Benestar Social i Família,null,null,,,8830,Baix Llobregat,Sant Boi de Llobregat,id-1494142405
+6091,5823,Casal Cívic de Canovelles,Departament de Benestar Social i Família,null,null,,,8420,Vallès Oriental,Canovelles,id-1494142405
+6092,5823,Casal Cívic de Fontsanta - Fatjó de Cornellà de Llobregat,Departament de Benestar Social i Família,null,null,,,8940,Baix Llobregat,Cornellà de Llobregat,id-1494142405
+6097,5823,Casal Cívic de Lleida,Departament de Benestar Social i Família,null,null,,,25003,Segrià,Lleida,id-1494142405
+15254,5823,Casal Cívic de Manlleu - Frederica Montseny,Departament de Benestar Social i Família,null,null,,,8560,Osona,Manlleu,id-1494142405
+15249,5823,Casal Cívic de Manresa - Mión/Puigberenguer,Departament de Benestar Social i Família,null,null,,,8242,Bages,Manresa,id-1494142405
+15247,5823,Casal Cívic de Ripoll - La Devesa del Pla,Departament de Benestar Social i Família,null,null,,,17500,Ripollès,Ripoll,id-1494142405
+14297,5823,Casal Cívic de Sallent - Verge de Fussimanya,Departament de Benestar Social i Família,null,null,,,8650,Bages,Sallent,id-1494142405
+6101,5823,Casal Cívic de Sant Josep Obrer de Reus,Departament de Benestar Social i Família,null,null,,,43204,Baix Camp,Reus,id-1494142405
+6088,5823,Casal Cívic de Sant Roc de Badalona,Departament de Benestar Social i Família,null,null,,,8918,Barcelonès,Badalona,id-1494142405
+15252,5823,Casal Cívic de Sant Vicenç dels Horts - Sant Josep,Departament de Benestar Social i Família,null,null,,,8620,Baix Llobregat,Sant Vicenç dels Horts,id-1494142405
+6103,5823,Casal Cívic de la Mina de Sant Adrià de Besòs,Departament de Benestar Social i Família,null,null,,,8930,Barcelonès,Sant Adrià de Besòs,id-1494142405
+6095,5823,Casal Cívic del Bon Pastor de Figueres,Departament de Benestar Social i Família,null,null,,,17600,Alt Empordà,Figueres,id-1494142405
+6093,5823,Casal Cívic del Delta del Llobregat del Prat de Llobregat,Departament de Benestar Social i Família,null,null,,,8820,Baix Llobregat,El Prat de Llobregat,id-1494142405
+6096,5823,Casal Cívic del Gornal de L'Hospitalet de Llobregat,Departament de Benestar Social i Família,null,null,,,8902,Barcelonès,L'Hospitalet de Llobregat,id-1494142405
+6098,5823,Casal Cívic del Pare Ignasi Puig de Manresa,Departament de Benestar Social i Família,null,null,,,8241,Bages,Manresa,id-1494142405
+6107,5823,Casal Cívic del Pla de Bonaire de Terrassa,Departament de Benestar Social i Família,null,null,,,8225,Vallès Occidental,Terrassa,id-1494142405
+6087,5823,Casal Cívic del Pomar de Badalona,Departament de Benestar Social i Família,null,null,,,8915,Barcelonès,Badalona,id-1494142405
+6094,5823,Casal Cívic del Vendrell,Departament de Benestar Social i Família,null,null,,,43700,Baix Penedès,El Vendrell,id-1494142405
+10534,5823,Casal Cívic del Verdum,Departament de Benestar Social i Família,null,null,,,8042,Barcelonès,Barcelona,id-1494142405
+10690,5823,Casal de Gent Gran \"Les Franqueses\"\"\",Departament de Benestar Social i Família,null,null,,,8520,Vallès Oriental,Les Franqueses del Vallès,id-889028183
+6175,5823,Casal de Gent Gran Albert Francàs,Departament de Benestar Social i Família,null,null,,,8922,Barcelonès,Santa Coloma de Gramenet,id-889028183
+10519,5823,Casal de Gent Gran Badalona - Nova Lloreda,Departament de Benestar Social i Família,Miracle Triay Marqués,Miracle,Triay,Marqués,8917,Barcelonès,Badalona,id-889028183
+13477,5823,Casal de Gent Gran Barcelona - Prosperitat,Departament de Benestar Social i Família,null,null,,,8016,Barcelonès,Barcelona,id-889028183
+6142,5823,Casal de Gent Gran Ca N'Anglada de Terrassa,Departament de Benestar Social i Família,null,null,,,8222,Vallès Occidental,Terrassa,id-889028183
+6180,5823,Casal de Gent Gran Can Vidalet d'Esplugues de Llobregat,Departament de Benestar Social i Família,null,null,,,8950,Baix Llobregat,Esplugues de Llobregat,id-889028183
+13661,5823,Casal de Gent Gran Cervera - La Segarra,Departament de Benestar Social i Família,null,null,,,25200,Segarra,Cervera,id-889028183
+6188,5823,Casal de Gent Gran Equipament Comunitari de Lleida,Departament de Benestar Social i Família,null,null,,,25003,Segrià,Lleida,id-889028183
+6164,5823,Casal de Gent Gran Equipament Delta del Prat de Llobregat,Departament de Benestar Social i Família,null,null,,,8820,Baix Llobregat,El Prat de Llobregat,id-889028183
+6154,5823,Casal de Gent Gran Font Verda de Granollers,Departament de Benestar Social i Família,null,null,,,8402,Vallès Oriental,Granollers,id-889028183
+6148,5823,Casal de Gent Gran Font dels Capellans de Manresa,Departament de Benestar Social i Família,null,null,,,8243,Bages,Manresa,id-889028183
+11713,5823,Casal de Gent Gran Hospitalet-Progrés,Departament de Benestar Social i Família,null,null,,,8903,Barcelonès,L'Hospitalet de Llobregat,id-889028183
+6177,5823,Casal de Gent Gran Jaume Nualart de Cornellà de Llobregat,Departament de Benestar Social i Família,null,null,,,8940,Baix Llobregat,Cornellà de Llobregat,id-889028183
+6152,5823,Casal de Gent Gran Jaume Terradas de Mataró,Departament de Benestar Social i Família,Begoña Monge Chueca,Begoña,Monge,Chueca,8302,Maresme,Mataró,id-889028183
+7686,5823,Casal de Gent Gran Les Bernardes,Departament de Benestar Social i Família,null,null,,,17190,Gironès,Salt,id-889028183
+7687,5823,Casal de Gent Gran Mare de Déu de la Mercè (Tarragona),Departament de Benestar Social i Família,null,null,,,43003,Tarragonès,Tarragona,id-889028183
+6176,5823,Casal de Gent Gran Ramon Berenguer de Santa Coloma de Gramenet,Departament de Benestar Social i Família,null,null,,,8924,Barcelonès,Santa Coloma de Gramenet,id-889028183
+7688,5823,Casal de Gent Gran Roureda,Departament de Benestar Social i Família,null,null,,,8207,Vallès Occidental,Sabadell,id-889028183
+12968,5823,Casal de Gent Gran Sabadell-Creu de Barberà,Departament de Benestar Social i Família,null,null,,,8204,Vallès Occidental,Sabadell,id-889028183
+12967,5823,Casal de Gent Gran Sabadell-Gràcia,Departament de Benestar Social i Família,null,null,,,8205,Vallès Occidental,Sabadell,id-889028183
+7684,5823,Casal de Gent Gran Sant Adrià,Departament de Benestar Social i Família,null,null,,,8930,Barcelonès,Sant Adrià de Besòs,id-889028183
+7685,5823,Casal de Gent Gran Sant Adrià-Centre,Departament de Benestar Social i Família,null,null,,,8930,Barcelonès,Sant Adrià de Besòs,id-889028183
+6147,5823,Casal de Gent Gran Sant Llorenç de Terrassa,Departament de Benestar Social i Família,null,null,,,8227,Vallès Occidental,Terrassa,id-889028183
+16768,5823,Casal de Gent Gran Sant Pere Nord de Terrassa,Departament de Benestar Social i Família,null,null,,,8226,Vallès Occidental,Terrassa,id-889028183
+6170,5823,Casal de Gent Gran Sant Roc de Badalona,Departament de Benestar Social i Família,null,null,,,8918,Barcelonès,Badalona,id-889028183
+17627,5823,Casal de Gent Gran Sort,Departament de Benestar Social i Família,null,null,,,25560,Pallars Sobirà,Sort,id-889028183
+10520,5823,Casal de Gent Gran Terrassa - La Maurina,Departament de Benestar Social i Família,Núria Català Torres,Núria,Català,Torres,8224,Vallès Occidental,Terrassa,id-889028183
+16578,5823,Casal de Gent Gran Terrassa Ca n'Aurell,Departament de Benestar Social i Família,Anna Cortina Juclà,Anna,Cortina,Juclà,8224,Vallès Occidental,Terrassa,id-889028183
+6181,5823,Casal de Gent Gran Torre Romeu de Sabadell,Departament de Benestar Social i Família,null,null,,,8202,Vallès Occidental,Sabadell,id-889028183
+7683,5823,Casal de Gent Gran Trinitat Vella,Departament de Benestar Social i Família,null,null,,,8033,Barcelonès,Barcelona,id-889028183
+6133,5823,Casal de Gent Gran Verdum-Artesania,Departament de Benestar Social i Família,null,null,,,8042,Barcelonès,Barcelona,id-889028183
+6135,5823,Casal de Gent Gran d'Horta,Departament de Benestar Social i Família,null,null,,,8032,Barcelonès,Barcelona,id-889028183
+6134,5823,Casal de Gent Gran d'Horta (Barcelona),Departament de Benestar Social i Família,null,null,,,8032,Barcelonès,Barcelona,id-889028183
+6162,5823,Casal de Gent Gran d'Igualada,Departament de Benestar Social i Família,null,null,,,8700,Anoia,Igualada,id-889028183
+6186,5823,Casal de Gent Gran d'Olot,Departament de Benestar Social i Família,null,null,,,17800,Garrotxa,Olot,id-889028183
+6127,5823,Casal de Gent Gran de Bac de Roda,Departament de Benestar Social i Família,null,null,,,8020,Barcelonès,Barcelona,id-889028183
+6200,5823,Casal de Gent Gran de Badalona-Joan Valera,Departament de Benestar Social i Família,null,null,,,8914,Barcelonès,Badalona,id-889028183
+6192,5823,Casal de Gent Gran de Balaguer,Departament de Benestar Social i Família,null,null,,,25600,Noguera,Balaguer,id-889028183
+6161,5823,Casal de Gent Gran de Balsareny,Departament de Benestar Social i Família,null,null,,,8660,Bages,Balsareny,id-889028183
+6187,5823,Casal de Gent Gran de Banyoles,Departament de Benestar Social i Família,null,null,,,17820,Pla de l'Estany,Banyoles,id-889028183
+6159,5823,Casal de Gent Gran de Berga,Departament de Benestar Social i Família,null,null,,,8600,Berguedà,Berga,id-889028183
+6212,5823,Casal de Gent Gran de Blanes - Benet Ribas,Departament de Benestar Social i Família,null,null,,,17300,Selva,Blanes,id-889028183
+6145,5823,Casal de Gent Gran de Can Boada de Terrassa,Departament de Benestar Social i Família,Marta Aguilar,Marta,,Aguilar,8225,Vallès Occidental,Terrassa,id-889028183
+6144,5823,Casal de Gent Gran de Can Roca de Terrassa,Departament de Benestar Social i Família,null,null,,,8225,Vallès Occidental,Terrassa,id-889028183
+6156,5823,Casal de Gent Gran de Canovelles,Departament de Benestar Social i Família,null,null,,,8420,Vallès Oriental,Canovelles,id-889028183
+6151,5823,Casal de Gent Gran de Cardona,Departament de Benestar Social i Família,null,null,,,8261,Bages,Cardona,id-889028183
+10186,5823,Casal de Gent Gran de Cerdanyola,Departament de Benestar Social i Família,null,null,,,8290,Vallès Occidental,Cerdanyola del Vallès,id-889028183
+6178,5823,Casal de Gent Gran de Cornellà de Llobregat,Departament de Benestar Social i Família,null,null,,,8940,Baix Llobregat,Cornellà de Llobregat,id-889028183
+6185,5823,Casal de Gent Gran de Figueres,Departament de Benestar Social i Família,null,null,,,17600,Alt Empordà,Figueres,id-889028183
+6155,5823,Casal de Gent Gran de Granollers,Departament de Benestar Social i Família,Joan Francesc Robledillo López,Joan,Francesc Robledillo,López,8400,Vallès Oriental,Granollers,id-889028183
+6124,5823,Casal de Gent Gran de Gràcia,Departament de Benestar Social i Família,null,null,,,8012,Barcelonès,Barcelona,id-889028183
+6199,5823,Casal de Gent Gran de L'Hospitalet-Bellvitge,Departament de Benestar Social i Família,null,null,,,8907,Barcelonès,L'Hospitalet de Llobregat,id-889028183
+6166,5823,Casal de Gent Gran de L'Hospitalet-Centre,Departament de Benestar Social i Família,null,null,,,8901,Barcelonès,L'Hospitalet de Llobregat,id-889028183
+6168,5823,Casal de Gent Gran de L'Hospitalet-La Florida,Departament de Benestar Social i Família,null,null,,,8905,Barcelonès,L'Hospitalet de Llobregat,id-889028183
+6125,5823,Casal de Gent Gran de La Verneda,Departament de Benestar Social i Família,null,null,,,8020,Barcelonès,Barcelona,id-889028183
+17432,5823,Casal de Gent Gran de Llinars del Vallès,Departament de Benestar Social i Família,null,null,,,8450,Vallès Oriental,Llinars del Vallès,id-889028183
+6171,5823,Casal de Gent Gran de Lloreda de Badalona,Departament de Benestar Social i Família,Joan Domènech Giménez,Joan,Domènech,Giménez,8914,Barcelonès,Badalona,id-889028183
+15255,5823,Casal de Gent Gran de Manlleu,Departament de Benestar Social i Família,null,null,,,8560,Osona,Manlleu,id-889028183
+6149,5823,Casal de Gent Gran de Manresa,Departament de Benestar Social i Família,Josefina Huguet  Ayma,Josefina,Huguet,Ayma,8240,Bages,Manresa,id-889028183
+6153,5823,Casal de Gent Gran de Mataró,Departament de Benestar Social i Família,null,null,,,8303,Maresme,Mataró,id-889028183
+6137,5823,Casal de Gent Gran de Montcada i Reixac,Departament de Benestar Social i Família,null,null,,,8110,Vallès Occidental,Montcada i Reixac,id-889028183
+11880,5823,Casal de Gent Gran de Ponts,Departament de Benestar Social i Família,null,null,,,25740,Noguera,Ponts,id-889028183
+6194,5823,Casal de Gent Gran de Reus,Departament de Benestar Social i Família,null,null,,,43202,Baix Camp,Reus,id-889028183
+6195,5823,Casal de Gent Gran de Reus II,Departament de Benestar Social i Família,null,null,,,43204,Baix Camp,Reus,id-889028183
+6184,5823,Casal de Gent Gran de Ripoll,Departament de Benestar Social i Família,null,null,,,17500,Ripollès,Ripoll,id-889028183
+6139,5823,Casal de Gent Gran de Rubí,Departament de Benestar Social i Família,null,null,,,8191,Vallès Occidental,Rubí,id-889028183
+13256,5823,Casal de Gent Gran de Rubí II,Departament de Benestar Social i Família,null,null,,,8191,Vallès Occidental,Rubí,id-889028183
+6140,5823,Casal de Gent Gran de Sabadell-Centre,Departament de Benestar Social i Família,Teófila Morchón Casasola,Teófila,Morchón,Casasola,8202,Vallès Occidental,Sabadell,id-889028183
+6141,5823,Casal de Gent Gran de Sabadell-Creu Alta,Departament de Benestar Social i Família,null,null,,,8208,Vallès Occidental,Sabadell,id-889028183
+6160,5823,Casal de Gent Gran de Sallent,Departament de Benestar Social i Família,Teresa Brugarolas i Camps,Teresa,,Brugarolas,8650,Bages,Sallent,id-889028183
+6131,5823,Casal de Gent Gran de Sant Andreu (Barcelona),Departament de Benestar Social i Família,null,null,,,8030,Barcelonès,Barcelona,id-889028183
+6165,5823,Casal de Gent Gran de Sant Boi,Departament de Benestar Social i Família,null,null,,,8830,Baix Llobregat,Sant Boi de Llobregat,id-889028183
+6138,5823,Casal de Gent Gran de Sant Cugat del Vallès,Departament de Benestar Social i Família,null,null,,,8172,Vallès Occidental,Sant Cugat del Vallès,id-889028183
+6182,5823,Casal de Gent Gran de Sant Joan Despí,Departament de Benestar Social i Família,null,null,,,8970,Baix Llobregat,Sant Joan Despí,id-889028183
+6150,5823,Casal de Gent Gran de Sant Joan de Vilatorrada,Departament de Benestar Social i Família,null,null,,,8250,Bages,Sant Joan de Vilatorrada,id-889028183
+6128,5823,Casal de Gent Gran de Sant Martí,Departament de Benestar Social i Família,null,null,,,8026,Barcelonès,Barcelona,id-889028183
+15251,5823,Casal de Gent Gran de Santa Perpetua de la Mogoda,Departament de Benestar Social i Família,null,null,,,8130,Vallès Occidental,Santa Perpètua de Mogoda,id-889028183
+6129,5823,Casal de Gent Gran de Sants,Departament de Benestar Social i Família,M Dolores Ayres de Palacio,M,Dolores Ayres de,Palacio,8028,Barcelonès,Barcelona,id-889028183
+6143,5823,Casal de Gent Gran de Terrassa-Centre,Departament de Benestar Social i Família,Ferran de Gràcia i Serrano,Ferran,de,Gràcia,8224,Vallès Occidental,Terrassa,id-889028183
+6158,5823,Casal de Gent Gran de Torelló,Departament de Benestar Social i Família,null,null,,,8570,Osona,Torelló,id-889028183
+6196,5823,Casal de Gent Gran de Tortosa,Departament de Benestar Social i Família,null,null,,,43500,Baix Ebre,Tortosa,id-889028183
+6193,5823,Casal de Gent Gran de Tremp,Departament de Benestar Social i Família,null,null,,,25620,Pallars Jussà,Tremp,id-889028183
+6189,5823,Casal de Gent Gran de Tàrrega,Departament de Benestar Social i Família,null,null,,,25300,Urgell,Tàrrega,id-889028183
+6213,5823,Casal de Gent Gran de Vallirana,Departament de Benestar Social i Família,null,null,,,8759,Baix Llobregat,Vallirana,id-889028183
+6157,5823,Casal de Gent Gran de Vic,Departament de Benestar Social i Família,Marta Valls i Garcia,Marta,,Valls,8500,Osona,Vic,id-889028183
+15250,5823,Casal de Gent Gran de Vic - Mn. Josep Guiteras,Departament de Benestar Social i Família,null,null,,,8500,Osona,Vic,id-889028183
+6163,5823,Casal de Gent Gran de Vilafranca del Penedès,Departament de Benestar Social i Família,null,null,,,8720,Alt Penedès,Vilafranca del Penedès,id-889028183
+6123,5823,Casal de Gent Gran de la Barceloneta,Departament de Benestar Social i Família,Constantina Sáinz i Terrones,Constantina,,Sáinz,8003,Barcelonès,Barcelona,id-889028183
+6132,5823,Casal de Gent Gran de la Guineueta-Centre,Departament de Benestar Social i Família,Carme López Cañero,Carme,López,Cañero,8042,Barcelonès,Barcelona,id-889028183
+6126,5823,Casal de Gent Gran de la Pau,Departament de Benestar Social i Família,Àngel Morano,Àngel,,Morano,8020,Barcelonès,Barcelona,id-889028183
+6191,5823,Casal de Gent Gran de la Pobla de Segur,Departament de Benestar Social i Família,null,null,,,25500,Pallars Jussà,La Pobla de Segur,id-889028183
+6136,5823,Casal de Gent Gran de la Trinitat,Departament de Benestar Social i Família,null,null,,,8033,Barcelonès,Barcelona,id-889028183
+6190,5823,Casal de Gent Gran de les Borges Blanques,Departament de Benestar Social i Família,Montserrat Andreu i Ribes,Montserrat,,Andreu,25400,Garrigues,Les Borges Blanques,id-889028183
+6130,5823,Casal de Gent Gran de les Corts,Departament de Benestar Social i Família,null,null,,,8029,Barcelonès,Barcelona,id-889028183
+6197,5823,Casal de Gent Gran del Baix Camp a Cambrils,Departament de Benestar Social i Família,null,null,,,43850,Baix Camp,Cambrils,id-889028183
+6172,5823,Casal de Gent Gran del Pomar de Badalona,Departament de Benestar Social i Família,null,null,,,8915,Barcelonès,Badalona,id-889028183
+6173,5823,Casal de Gent Gran del Sant Crist de Badalona,Departament de Benestar Social i Família,null,null,,,8917,Barcelonès,Badalona,id-889028183
+6179,5823,Casal de Gent Gran la Riera de Cornellà de Llobregat,Departament de Benestar Social i Família,Marián Teruel Miralles,Marián,Teruel,Miralles,8940,Baix Llobregat,Cornellà de Llobregat,id-889028183
+6146,5823,Casal de Gent Gran les Arenes de Terrassa,Departament de Benestar Social i Família,null,null,,,8227,Vallès Occidental,Terrassa,id-889028183
+6242,5823,Centre Especial de Treball per a Disminuïts Psíquics Adults  (ASPANIDE),Departament de Benestar Social i Família,Pedro-Jesús Marín Serrano,Pedro-Jesús,Marín,Serrano,8921,Barcelonès,Santa Coloma de Gramenet,id-1674626195
+17496,5823,Centre Ocupacional per a disminuïts psíquics Can Carreras,Departament de Benestar Social i Família,null,null,,,8042,Barcelonès,Barcelona,id-282974850
+17497,5823,Centre Ocupacional per a grans disminuïts físics Sínia,Departament de Benestar Social i Família,null,null,,,8003,Barcelonès,Barcelona,id-282974850
+17499,5823,Centre Residencial per a persones amb disminució Riudeperes,Departament de Benestar Social i Família,null,null,,,8500,Osona,Calldetenes,5921
+17487,5823,Centre d'Atenció Especialitzada per a disminuïts Els Roures,Departament de Benestar Social i Família,null,null,,,17150,Gironès,Sant Gregori,id-282974850
+17488,5823,Centre d'Atenció Especialitzada per a disminuïts físics La Gavina,Departament de Benestar Social i Família,null,null,,,8328,Maresme,Alella,id-282974850
+17489,5823,Centre d'Atenció Especialitzada per a disminuïts psíquics Josep Mas i Dalmau,Departament de Benestar Social i Família,null,null,,,8970,Baix Llobregat,Sant Joan Despí,id-282974850
+17490,5823,Centre d'Atenció Especialitzada per a disminuïts psíquics La Pineda,Departament de Benestar Social i Família,null,null,,,8225,Vallès Occidental,Terrassa,id-282974850
+17491,5823,Centre d'Atenció Especialitzada per a disminuïts psíquics Marinada,Departament de Benestar Social i Família,null,null,,,43206,Baix Camp,Reus,id-282974850
+17492,5823,Centre d'Atenció Especialitzada per a grans disminuïts psqíquics Valldoriolf,Departament de Benestar Social i Família,null,null,,,8430,Vallès Oriental,La Roca del Vallès,id-282974850
+5997,5823,Centre d'Autonomia Personal Sírius,Departament de Benestar Social i Família,null,null,,,8015,Barcelonès,Barcelona,id-1674626195
+5158,5823,Centre d'Estudis i Documentació de la Infància,Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,5157
+18766,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Alt Camp,Departament de Benestar Social i Família,null,null,,,43800,Alt Camp,Valls,id-334434390
+18752,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Alt Urgell,Departament de Benestar Social i Família,null,null,,,25700,Alt Urgell,La Seu d'Urgell,id-334434390
+18753,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Alta Ribagorça,Departament de Benestar Social i Família,null,null,,,25520,Alta Ribagorça,El Pont de Suert,id-334434390
+18696,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Anoia,Departament de Benestar Social i Família,null,null,,,8700,Anoia,Igualada,id-334434390
+18739,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - BAIX MONTSENY - Sant Celoni,Departament de Benestar Social i Família,null,null,,,8470,Vallès Oriental,Sant Celoni,id-334434390
+18722,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Badalona,Departament de Benestar Social i Família,null,null,,,8913,Barcelonès,Badalona,id-334434390
+18698,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Bages,Departament de Benestar Social i Família,null,null,,,8242,Bages,Manresa,id-334434390
+18767,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Baix Camp,Departament de Benestar Social i Família,null,null,,,43206,Baix Camp,Reus,id-334434390
+18744,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Baix Empordà,Departament de Benestar Social i Família,null,null,,,17230,Baix Empordà,Palamós,id-334434390
+18769,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Baix Penedès,Departament de Benestar Social i Família,null,null,,,43700,Baix Penedès,El Vendrell,id-334434390
+18716,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Barcelona: Ciutat Vella,Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,id-334434390
+18710,5823,"Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Barcelona: Dreta de l'Eixample, Sagrada Família i Fort Pienc (ASPANIAS)",Departament de Benestar Social i Família,null,null,,,,,,id-334434390
+18718,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Barcelona: EDAI Les Corts - Sarrià,Departament de Benestar Social i Família,null,null,,,8014,Barcelonès,Barcelona,id-334434390
+18719,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Barcelona: EDAI Sant Martí,Departament de Benestar Social i Família,null,null,,,8020,Barcelonès,Barcelona,id-334434390
+18712,5823,"Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Barcelona: Esquerra Eixample, Sant Antoni i Sarrià-Sant Gervasi (Fundació Catalana per a la Sindrome de Down)",Departament de Benestar Social i Família,null,null,,,8029,Barcelonès,Barcelona,id-334434390
+18711,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Barcelona: Gràcia (Fundació Eulàlia Torras de Beà),Departament de Benestar Social i Família,null,null,,,8012,Barcelonès,Barcelona,id-334434390
+18709,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Barcelona: Horta-Guinardó (AGALMA),Departament de Benestar Social i Família,null,null,,,8024,Barcelonès,Barcelona,id-334434390
+18717,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Barcelona: Nou Barris,Departament de Benestar Social i Família,null,null,,,8042,Barcelonès,Barcelona,id-334434390
+18714,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Barcelona: Passeig de Sant Joan,Departament de Benestar Social i Família,null,null,,,8009,Barcelonès,Barcelona,id-334434390
+18715,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Barcelona: Sant Andreu (RELLA),Departament de Benestar Social i Família,null,null,,,8027,Barcelonès,Barcelona,id-334434390
+18713,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Barcelona: Sants-Montjuïc (ASPACE),Departament de Benestar Social i Família,null,null,,,8038,Barcelonès,Barcelona,id-334434390
+18725,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Berguedà,Departament de Benestar Social i Família,null,null,,,8600,Berguedà,Berga,id-334434390
+18751,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Blanes (ASPRONIS),Departament de Benestar Social i Família,null,null,,,17300,Selva,Blanes,id-334434390
+18748,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - CAD Girona,Departament de Benestar Social i Família,null,null,,,17002,Gironès,Girona,id-334434390
+18735,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - CAD Terrassa,Departament de Benestar Social i Família,null,null,,,8222,Vallès Occidental,Terrassa,id-334434390
+18761,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - CAD de Lleida,Departament de Benestar Social i Família,null,null,,,25007,Segrià,Lleida,id-334434390
+18738,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Caldes de Montbui,Departament de Benestar Social i Família,null,null,,,8140,Vallès Oriental,Caldes de Montbui,id-334434390
+18768,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Cambrils,Departament de Benestar Social i Família,null,null,,,43850,Baix Camp,Cambrils,id-334434390
+18701,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Castelldefels (DELTA 2),Departament de Benestar Social i Família,null,null,,,8860,Baix Llobregat,Castelldefels,id-334434390
+18699,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Centre d'Estimulació Precoç Prat de Llobregat,Departament de Benestar Social i Família,null,null,,,8820,Baix Llobregat,El Prat de Llobregat,id-334434390
+18745,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Cerdanya,Departament de Benestar Social i Família,null,null,,,17520,Cerdanya,Puigcerdà,id-334434390
+18770,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Conca de Barberà,Departament de Benestar Social i Família,null,null,,,43400,Conca de Barberà,Montblanc,id-334434390
+18706,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Cornellà de Llobregat,Departament de Benestar Social i Família,null,null,,,8940,Baix Llobregat,Cornellà de Llobregat,id-334434390
+18732,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - DAPSI Cerdanyola del Vallès,Departament de Benestar Social i Família,null,null,,,8290,Vallès Occidental,Cerdanyola del Vallès,id-334434390
+18733,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - DAPSI Montcada i Reixac,Departament de Benestar Social i Família,null,null,,,8110,Vallès Occidental,Montcada i Reixac,id-334434390
+18731,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - DAPSI Rubí,Departament de Benestar Social i Família,null,null,,,8191,Vallès Occidental,Rubí,id-334434390
+18730,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - DAPSI Sant Cugat,Departament de Benestar Social i Família,null,null,,,8195,Vallès Occidental,Sant Cugat del Vallès,id-334434390
+18723,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - EDAI Sant Adrià del Besós,Departament de Benestar Social i Família,null,null,,,8930,Barcelonès,Sant Adrià de Besòs,id-334434390
+18743,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Figueres (PACEM),Departament de Benestar Social i Família,null,null,,,17600,Alt Empordà,Figueres,id-334434390
+18760,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - GSS - Servei d'atenció precoç - Lleida,Departament de Benestar Social i Família,null,null,,,25008,Segrià,Lleida,id-334434390
+18726,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Garraf,Departament de Benestar Social i Família,null,null,,,8800,Garraf,Vilanova i la Geltrú,id-334434390
+18695,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Gelida,Departament de Benestar Social i Família,null,null,,,8790,Alt Penedès,Gelida,id-334434390
+18747,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Gironès,Departament de Benestar Social i Família,null,null,,,17006,Barcelonès,Barcelona,id-334434390
+18707,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Hospital de Sant Joan de Déu - Esplugues de Llobregat,Departament de Benestar Social i Família,null,null,,,8950,Baix Llobregat,Esplugues de Llobregat,id-334434390
+18776,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - JONC - Móra d'Ebre,Departament de Benestar Social i Família,null,null,,,43740,Ribera d'Ebre,Móra d'Ebre,id-334434390
+18693,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - L'Espiga - Vilafranca del Penedés,Departament de Benestar Social i Família,null,null,,,8720,Alt Penedès,Vilafranca del Penedès,id-334434390
+18721,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - L'Hospitalet BAULA NORD,Departament de Benestar Social i Família,null,null,,,8905,Barcelonès,L'Hospitalet de Llobregat,id-334434390
+18720,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - L'Hospitalet BAULA SUD,Departament de Benestar Social i Família,null,null,,,8902,Barcelonès,L'Hospitalet de Llobregat,id-334434390
+18775,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - La Sénia,Departament de Benestar Social i Família,null,null,,,43560,Montsià,La Sénia,id-334434390
+18754,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Les Garrigues,Departament de Benestar Social i Família,null,null,,,25430,Garrigues,Juneda,id-334434390
+18734,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - MAGROC - Terrassa,Departament de Benestar Social i Família,null,null,,,8221,Vallès Occidental,Terrassa,id-334434390
+18727,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Maresme,Departament de Benestar Social i Família,null,null,,,8301,Maresme,Mataró,id-334434390
+18708,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Martorell,Departament de Benestar Social i Família,null,null,,,8760,Baix Llobregat,Martorell,id-334434390
+18697,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Masquefa,Departament de Benestar Social i Família,null,null,,,8783,Anoia,Masquefa,id-334434390
+18741,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Mollet del Vallès,Departament de Benestar Social i Família,null,null,,,8100,Vallès Oriental,Mollet del Vallès,id-334434390
+18774,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Montsià,Departament de Benestar Social i Família,null,null,,,43870,Montsià,Amposta,id-334434390
+18755,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Noguera,Departament de Benestar Social i Família,null,null,,,25600,Noguera,Balaguer,id-334434390
+18746,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Olot (Patronat Joan Sellas Cardelús),Departament de Benestar Social i Família,null,null,,,17800,Garrotxa,Olot,id-334434390
+18736,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - PARC TAULÍ - Sabadell,Departament de Benestar Social i Família,null,null,,,8208,Vallès Occidental,Sabadell,id-334434390
+18756,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Pallars Jussà,Departament de Benestar Social i Família,null,null,,,25620,Pallars Jussà,Tremp,id-334434390
+18757,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Pallars Sobirà,Departament de Benestar Social i Família,null,null,,,25560,Pallars Sobirà,Sort,id-334434390
+18758,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Pla d'Urgell,Departament de Benestar Social i Família,null,null,,,25230,Pla d'Urgell,Mollerussa,id-334434390
+18749,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Pla de l'Estany,Departament de Benestar Social i Família,null,null,,,17820,Pla de l'Estany,Banyoles,id-334434390
+18750,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Ripoll (MAP),Departament de Benestar Social i Família,null,null,,,17500,Ripollès,Ripoll,id-334434390
+18740,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - SPAI TR3S - Parets del Vallès,Departament de Benestar Social i Família,null,null,,,8150,Vallès Oriental,Parets del Vallès,id-334434390
+18704,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Sant Andreu de la Barca,Departament de Benestar Social i Família,null,null,,,8740,Baix Llobregat,Sant Andreu de la Barca,id-334434390
+18705,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Sant Boi de Llobregat,Departament de Benestar Social i Família,null,null,,,8830,Baix Llobregat,Sant Boi de Llobregat,id-334434390
+18702,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Sant Feliu de Llobregat,Departament de Benestar Social i Família,null,null,,,8980,Baix Llobregat,Sant Feliu de Llobregat,id-334434390
+18694,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Sant Sadurní,Departament de Benestar Social i Família,null,null,,,8770,Alt Penedès,Sant Sadurní d'Anoia,id-334434390
+18703,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Sant Vicenç dels Horts,Departament de Benestar Social i Família,null,null,,,8620,Baix Llobregat,Sant Vicenç dels Horts,id-334434390
+18724,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Santa Coloma de Gramenet (ASPANIDE),Departament de Benestar Social i Família,null,null,,,8922,Barcelonès,Santa Coloma de Gramenet,id-334434390
+18772,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Santa Tecla - Tarragona,Departament de Benestar Social i Família,null,null,,,43002,Tarragonès,Tarragona,id-334434390
+18759,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Segarra,Departament de Benestar Social i Família,null,null,,,25200,Segarra,Cervera,id-334434390
+18762,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Segrià i Barri antic - Lleida,Departament de Benestar Social i Família,null,null,,,25003,Segrià,Lleida,id-334434390
+18763,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Solsonès,Departament de Benestar Social i Família,null,null,,,25280,Solsonès,Solsona,id-334434390
+18729,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - TRIS TRAS - Manlleu,Departament de Benestar Social i Família,null,null,,,8560,Osona,Manlleu,id-334434390
+18728,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - TRIS TRAS - Vic,Departament de Benestar Social i Família,null,null,,,8500,Osona,Vic,id-334434390
+18771,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Tarragona i Tarragonès,Departament de Benestar Social i Família,null,null,,,43005,Tarragonès,Tarragona,id-334434390
+18764,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Urgell,Departament de Benestar Social i Família,null,null,,,25300,Urgell,Tàrrega,id-334434390
+18765,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Val d'Aran,Departament de Benestar Social i Família,null,null,,,25530,Vielha e Mijaran,Vielha,id-334434390
+18737,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Vallès Oriental,Departament de Benestar Social i Família,null,null,,,,,,id-334434390
+18773,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Verge de la Cinta - Tortosa,Departament de Benestar Social i Família,null,null,,,43500,Baix Ebre,Tortosa,id-334434390
+18700,5823,Centre de Desenvolupament Infantil i Atenció Precoç (CDIAP) - Viladecans (DELTA),Departament de Benestar Social i Família,null,null,,,8840,Baix Llobregat,Viladecans,id-334434390
+8568,5823,Centre de Dia de per a gent gran Sant Josep de Lleida,Departament de Benestar Social i Família,null,null,,,25003,Segrià,Lleida,id-189268394
+17495,5823,Centre de Dia per a disminuïts psíquics profunds Can Serra,Departament de Benestar Social i Família,null,null,,,8906,Barcelonès,L'Hospitalet de Llobregat,id-282974850
+10691,5823,Centre de Dia per a gent gran \"Les Franqueses\"\"\",Departament de Benestar Social i Família,null,null,,,8520,Vallès Oriental,Les Franqueses del Vallès,id-189268394
+10521,5823,Centre de Dia per a gent gran Badalona - Nova Lloreda,Departament de Benestar Social i Família,null,null,,,8917,Barcelonès,Badalona,id-189268394
+8545,5823,Centre de Dia per a gent gran Baix Camp,Departament de Benestar Social i Família,null,null,,,43850,Baix Camp,Cambrils,id-189268394
+18679,5823,Centre de Dia per a gent gran Bon Pastor,Departament de Benestar Social i Família,null,null,,,8030,Barcelonès,Barcelona,id-189268394
+8572,5823,Centre de Dia per a gent gran Ca N'Anglada,Departament de Benestar Social i Família,Núria Gamell,Núria,,Gamell,8222,Vallès Occidental,Terrassa,id-189268394
+8567,5823,Centre de Dia per a gent gran Comarcal de Campdevànol,Departament de Benestar Social i Família,null,null,,,17530,Ripollès,Campdevànol,id-189268394
+8564,5823,Centre de Dia per a gent gran Comtes d'Urgell,Departament de Benestar Social i Família,Montse Andreu,Montse,,Andreu,25600,Noguera,Balaguer,id-189268394
+8558,5823,Centre de Dia per a gent gran Conca de Barberà,Departament de Benestar Social i Família,null,null,,,43400,Conca de Barberà,Montblanc,id-189268394
+17633,5823,Centre de Dia per a gent gran El Nadal,Departament de Benestar Social i Família,null,null,,,8500,Osona,Vic,id-189268394
+8579,5823,Centre de Dia per a gent gran Font Verda de Granollers,Departament de Benestar Social i Família,null,null,,,8402,Vallès Oriental,Granollers,id-189268394
+8544,5823,Centre de Dia per a gent gran Font dels Capellans,Departament de Benestar Social i Família,null,null,,,8240,Bages,Manresa,id-189268394
+8551,5823,Centre de Dia per a gent gran Jaume Batlle,Departament de Benestar Social i Família,null,null,,,8005,Barcelonès,Barcelona,id-189268394
+8559,5823,Centre de Dia per a gent gran Jaume I,Departament de Benestar Social i Família,null,null,,,43440,Conca de Barberà,L'Espluga de Francolí,id-189268394
+8548,5823,Centre de Dia per a gent gran Jaume Nualart,Departament de Benestar Social i Família,null,null,,,8940,Baix Llobregat,Cornellà de Llobregat,id-189268394
+8569,5823,Centre de Dia per a gent gran Mare de Déu de la Mercè,Departament de Benestar Social i Família,null,null,,,43003,Tarragonès,Tarragona,id-189268394
+8556,5823,Centre de Dia per a gent gran Parc Serentill,Departament de Benestar Social i Família,null,null,,,8915,Barcelonès,Badalona,id-189268394
+10522,5823,Centre de Dia per a gent gran Terrassa - La Maurina,Departament de Benestar Social i Família,null,null,,,8224,Vallès Occidental,Terrassa,id-189268394
+8578,5823,Centre de Dia per a gent gran Torre Romeu,Departament de Benestar Social i Família,Célia Sanramon Solà,Célia,Sanramon,Solà,8202,Vallès Occidental,Sabadell,id-189268394
+8550,5823,Centre de Dia per a gent gran d'Horta,Departament de Benestar Social i Família,null,null,,,8035,Barcelonès,Barcelona,id-189268394
+8562,5823,Centre de Dia per a gent gran d'Onyar de Girona,Departament de Benestar Social i Família,M. Antònia Valle,M.,Antònia,Valle,17003,Gironès,Girona,id-189268394
+8570,5823,Centre de Dia per a gent gran de Bellpuig,Departament de Benestar Social i Família,null,null,,,25250,Urgell,Bellpuig,id-189268394
+8580,5823,Centre de Dia per a gent gran de Granollers Centre,Departament de Benestar Social i Família,Teófila Morchon,Teófila,,Morchon,8400,Vallès Oriental,Granollers,id-189268394
+8549,5823,Centre de Dia per a gent gran de Gràcia,Departament de Benestar Social i Família,null,null,,,8012,Barcelonès,Barcelona,id-189268394
+8586,5823,Centre de Dia per a gent gran de Manresa,Departament de Benestar Social i Família,null,null,,,8240,Bages,Manresa,id-189268394
+8582,5823,Centre de Dia per a gent gran de Mataró,Departament de Benestar Social i Família,null,null,,,8303,Maresme,Mataró,id-189268394
+8581,5823,Centre de Dia per a gent gran de Mollet del Vallès,Departament de Benestar Social i Família,null,null,,,8100,Vallès Oriental,Mollet del Vallès,id-189268394
+8574,5823,Centre de Dia per a gent gran de Montcada i Reixac,Departament de Benestar Social i Família,null,null,,,8110,Vallès Occidental,Montcada i Reixac,id-189268394
+8546,5823,Centre de Dia per a gent gran de Reus,Departament de Benestar Social i Família,null,null,,,43203,Baix Camp,Reus,id-189268394
+8575,5823,Centre de Dia per a gent gran de Rubí,Departament de Benestar Social i Família,null,null,,,8191,Vallès Occidental,Rubí,id-189268394
+8576,5823,Centre de Dia per a gent gran de Sabadell Centre,Departament de Benestar Social i Família,Pilar Puente,Pilar,,Puente,8202,Vallès Occidental,Sabadell,id-189268394
+8590,5823,Centre de Dia per a gent gran de Sabadell Roureda,Departament de Benestar Social i Família,null,null,,,8207,Vallès Occidental,Sabadell,id-189268394
+8589,5823,Centre de Dia per a gent gran de Sant Adrià Centre,Departament de Benestar Social i Família,null,null,,,8930,Barcelonès,Sant Adrià de Besòs,id-189268394
+8557,5823,Centre de Dia per a gent gran de Sant Adrià de Besòs,Departament de Benestar Social i Família,Lourdes Ferrer,Lourdes,,Ferrer,8930,Barcelonès,Sant Adrià de Besòs,id-189268394
+8577,5823,Centre de Dia per a gent gran de Sant Cugat del Vallès,Departament de Benestar Social i Família,null,null,,,8190,Vallès Occidental,Sant Cugat del Vallès,id-189268394
+8566,5823,Centre de Dia per a gent gran de Tremp,Departament de Benestar Social i Família,Josep Castells i Ferré,Josep,,Castells,25620,Pallars Jussà,Tremp,id-189268394
+8587,5823,Centre de Dia per a gent gran de Vallirana,Departament de Benestar Social i Família,Enric Sànchez,Enric,,Sànchez,8759,Baix Llobregat,Vallirana,id-189268394
+8571,5823,Centre de Dia per a gent gran de Vielha,Departament de Benestar Social i Família,null,null,,,25530,Val d'Aran,Vielha e Mijaran,id-189268394
+8543,5823,Centre de Dia per a gent gran de Vilafranca del Penedès,Departament de Benestar Social i Família,Beatriu Forn i Ferrer,Beatriu,,Forn,8720,Alt Penedès,Vilafranca del Penedès,id-189268394
+8563,5823,Centre de Dia per a gent gran de la Sénia,Departament de Benestar Social i Família,null,null,,,43560,Montsià,La Sénia,id-189268394
+8588,5823,Centre de Dia per a gent gran de la Trinitat Vella,Departament de Benestar Social i Família,null,null,,,8033,Barcelonès,Barcelona,id-189268394
+8547,5823,Centre de Dia per a gent gran del Delta del Llobregat,Departament de Benestar Social i Família,Albert Lozano,Albert,,Lozano,8820,Baix Llobregat,El Prat de Llobregat,id-189268394
+8555,5823,Centre de Dia per a gent gran del Mil·lenari,Departament de Benestar Social i Família,Mercè Darnell,Mercè,,Darnell,8001,Barcelonès,Barcelona,id-189268394
+8542,5823,Centre de Dia per a gent gran els Arcs,Departament de Benestar Social i Família,null,null,,,17600,Alt Empordà,Figueres,id-189268394
+8565,5823,Centre de Dia per a gent gran la Pobla de Segur,Departament de Benestar Social i Família,Josep Castells i Ferré,Josep,,Castells,25500,Pallars Jussà,La Pobla de Segur,id-189268394
+8552,5823,Centre de Dia per a gent gran la Trinitat,Departament de Benestar Social i Família,null,null,,,8033,Barcelonès,Barcelona,id-189268394
+8553,5823,Centre de Dia per a gent gran la Verneda,Departament de Benestar Social i Família,null,null,,,8020,Barcelonès,Barcelona,id-189268394
+8573,5823,Centre de Dia per a gent gran les Arenes,Departament de Benestar Social i Família,null,null,,,8227,Vallès Occidental,Terrassa,id-189268394
+8561,5823,Centre de Dia per a gent gran les Bernardes de Salt,Departament de Benestar Social i Família,Aurora Sànchez,Aurora,,Sànchez,17190,Gironès,Salt,id-189268394
+8554,5823,Centre de Dia per a gent gran les Corts,Departament de Benestar Social i Família,null,null,,,8028,Barcelonès,Barcelona,id-189268394
+8560,5823,Centre de Dia per a gent gran les Garrigues,Departament de Benestar Social i Família,null,null,,,25400,Garrigues,Les Borges Blanques,id-189268394
+2487,5823,Centre de Documentació Juvenil,Departament de Benestar Social i Família,Roser Paredes Baulida,Roser,Paredes,Baulida,8015,Barcelonès,Barcelona,15111
+17591,5823,Centre de dia Barcelona - Porta,Departament de Benestar Social i Família,null,null,,,8016,Barcelonès,Barcelona,id-749219717037162070
+17697,5823,Centre de dia Barcelona-Font Florida,Departament de Benestar Social i Família,null,null,,,8004,Barcelonès,Barcelona,id-749219717037162070
+17698,5823,Centre de dia Flix Escoles Velles,Departament de Benestar Social i Família,null,null,,,43750,Ribera d'Ebre,Flix,id-749219717037162070
+17696,5823,Centre de dia Sant Cosme,Departament de Benestar Social i Família,null,null,,,8820,Baix Llobregat,El Prat de Llobregat,id-749219717037162070
+17578,5823,Centre de dia de Lleida - Balàfia,Departament de Benestar Social i Família,null,null,,,25005,Segrià,Lleida,id-749219717037162070
+17579,5823,Centre de dia de Móra la Nova,Departament de Benestar Social i Família,null,null,,,43770,Ribera d'Ebre,Móra la Nova,id-749219717037162070
+17590,5823,Centre de dia de la Residència Feixa Llarga - Laia González,Departament de Benestar Social i Família,null,null,,,8907,Barcelonès,L'Hospitalet de Llobregat,id-749219717037162070
+17494,5823,Centre de dia per a discapacitats de Mollet del Vallès,Departament de Benestar Social i Família,null,null,,,8100,Vallès Oriental,Mollet del Vallès,id-249421060537965186
+15374,5823,Centre de dia per a disminuïts psíquics profunds Can Ruti,Departament de Benestar Social i Família,null,null,,,8916,Barcelonès,Badalona,id-249421060537965186
+17574,5823,Centre de dia per a gent gran Barberà - Sabadell,Departament de Benestar Social i Família,null,null,,,8204,Vallès Occidental,Sabadell,id-749219717037162070
+17593,5823,Centre de dia per a gent gran Barcelona - Poblenou,Departament de Benestar Social i Família,null,null,,,8005,Barcelonès,Barcelona,id-749219717037162070
+17587,5823,Centre de dia per a gent gran Barcelona - Prosperitat,Departament de Benestar Social i Família,null,null,,,8016,Barcelonès,Barcelona,id-749219717037162070
+17588,5823,Centre de dia per a gent gran Barceloneta - Bertran Oriola,Departament de Benestar Social i Família,null,null,,,8039,Barcelonès,Barcelona,id-749219717037162070
+17589,5823,Centre de dia per a gent gran Espanya Industrial,Departament de Benestar Social i Família,null,null,,,8014,Barcelonès,Barcelona,id-749219717037162070
+17598,5823,Centre de dia per a gent gran Falguera,Departament de Benestar Social i Família,null,null,,,8980,Baix Llobregat,Sant Feliu de Llobregat,id-749219717037162070
+17592,5823,Centre de dia per a gent gran Francisco Padilla (Hospitalet de Llobregat),Departament de Benestar Social i Família,null,null,,,8906,Barcelonès,L'Hospitalet de Llobregat,id-749219717037162070
+17573,5823,Centre de dia per a gent gran Gràcia - Sabadell,Departament de Benestar Social i Família,null,null,,,8205,Vallès Occidental,Sabadell,id-749219717037162070
+17595,5823,Centre de dia per a gent gran Mossèn Vidal i Aunòs,Departament de Benestar Social i Família,null,null,,,8014,Barcelonès,Barcelona,id-749219717037162070
+17596,5823,Centre de dia per a gent gran Onze de Setembre,Departament de Benestar Social i Família,null,null,,,8820,Baix Llobregat,El Prat de Llobregat,id-749219717037162070
+17586,5823,Centre de dia per a gent gran Pare Batllori,Departament de Benestar Social i Família,null,null,,,8004,Barcelonès,Barcelona,id-749219717037162070
+17576,5823,Centre de dia per a gent gran Ripollet - Can Vargas,Departament de Benestar Social i Família,null,null,,,8291,Vallès Occidental,Ripollet,id-749219717037162070
+17584,5823,Centre de dia per a gent gran Sant Antoni,Departament de Benestar Social i Família,null,null,,,8015,Barcelonès,Barcelona,id-749219717037162070
+17599,5823,Centre de dia per a gent gran Sant Vicenç de Castellet,Departament de Benestar Social i Família,null,null,,,8295,Bages,Sant Vicenç de Castellet,id-749219717037162070
+17583,5823,Centre de dia per a gent gran Verdum,Departament de Benestar Social i Família,null,null,,,8042,Barcelonès,Barcelona,id-749219717037162070
+17570,5823,Centre de dia per a gent gran de Badia del Vallès,Departament de Benestar Social i Família,null,null,,,8214,Vallès Occidental,Badia del Vallès,id-749219717037162070
+17575,5823,Centre de dia per a gent gran de Cerdanyola,Departament de Benestar Social i Família,null,null,,,8290,Vallès Occidental,Cerdanyola del Vallès,id-749219717037162070
+17577,5823,Centre de dia per a gent gran de Gandesa,Departament de Benestar Social i Família,null,null,,,43780,Terra Alta,Gandesa,id-749219717037162070
+17597,5823,Centre de dia per a gent gran de Gavà,Departament de Benestar Social i Família,null,null,,,8850,Baix Llobregat,Gavà,id-749219717037162070
+17580,5823,Centre de dia per a gent gran de Natzaret,Departament de Benestar Social i Família,null,null,,,43740,Ribera d'Ebre,Móra d'Ebre,id-749219717037162070
+17582,5823,Centre de dia per a gent gran de Ponts,Departament de Benestar Social i Família,null,null,,,25740,Noguera,Ponts,id-749219717037162070
+17572,5823,Centre de dia per a gent gran de Rubí,Departament de Benestar Social i Família,null,null,,,8191,Vallès Occidental,Rubí,id-749219717037162070
+17571,5823,Centre de dia per a gent gran de Santa Perpètua de la Mogoda,Departament de Benestar Social i Família,null,null,,,8130,Vallès Occidental,Santa Perpètua de Mogoda,id-749219717037162070
+17581,5823,Centre de dia per a gent gran de Serafí Casanovas Sansa,Departament de Benestar Social i Família,null,null,,,25560,Pallars Sobirà,Sort,id-749219717037162070
+17600,5823,Centre de dia per a gent gran de l'Alta Ribagorça,Departament de Benestar Social i Família,null,null,,,25520,Alta Ribagorça,El Pont de Suert,id-749219717037162070
+17569,5823,Centre de dia per a gent gran de l'Ametlla de Mar,Departament de Benestar Social i Família,null,null,,,8480,Vallès Oriental,L'Ametlla del Vallès,id-749219717037162070
+17585,5823,Centre de dia per a gent gran del Casc Antic,Departament de Benestar Social i Família,null,null,,,8003,Barcelonès,Barcelona,id-749219717037162070
+17594,5823,Centre de dia per a gent gran la Sagrera,Departament de Benestar Social i Família,null,null,,,8027,Barcelonès,Barcelona,id-749219717037162070
+17493,5823,Centre de dia per a grans disminuïts psíquics a Santpedor  Julio Payás,Departament de Benestar Social i Família,null,null,,,8251,Bages,Santpedor,id-249421060537965186
+18685,5823,Centre de dia per a persones amb discapacitats Tres Pins,Departament de Benestar Social i Família,null,null,,,,,,id-249421060537965186
+9972,5823,Centre de documentació (ICD),Departament de Benestar Social i Família,Montse Argente i Jimenez,Montse,,Argente,8001,Barcelonès,Barcelona,9800
+17498,5823,Centre per a discapacitats psíquics Tamariu,Departament de Benestar Social i Família,null,null,,,8820,Baix Llobregat,El Prat de Llobregat,id-249421060537965186
+5955,5823,Comissió Interdepartamental d'Immigració,Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,11327
+5960,5823,Comissió Interdepartamental de Suport a les Famílies,Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,10859
+14492,5823,Comissió Interdepartamental del Pla Integral del Poble Gitano,Departament de Benestar Social i Família,null,null,,,8039,Barcelonès,Barcelona,18103
+9802,5823,Comissió Interdepartamental per a la Igualtat d'Oportunitats per a les Dones,Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,62
+17946,5823,Comissió Nacional per a una Intervenció Coordinada contra la Violència Masclista,Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,62
+5962,5823,Comissió d'Assessorament i Supervisió de les Persones Jurídiques sense Ànim de Lucre que tinguin atribuïda la Tutela de Menors o Incapacitats,Departament de Benestar Social i Família,null,null,,,8039,Barcelonès,Barcelona,5921
+5957,5823,Comissió de Subministraments del Departament de Benestar i Família,Departament de Benestar Social i Família,null,null,,,8039,Barcelonès,Barcelona,5828
+13506,5823,Comitè Tècnic d'Avaluació,Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,8908
+17688,5823,Comitè d'Ètica dels Serveis Socials de Catalunya,Departament de Benestar Social i Família,null,null,,,8039,Barcelonès,Barcelona,5828
+14075,5823,Consell Assessor de Formació d'Educació en el Lleure,Departament de Benestar Social i Família,null,null,,,8015,Barcelonès,Barcelona,13766
+17314,5823,Consell Assessor de les Polítiques de Joventut,Departament de Benestar Social i Família,null,null,,,8015,Barcelonès,Barcelona,13766
+14493,5823,Consell Assessor del Poble Gitano,Departament de Benestar Social i Família,null,null,,,8039,Barcelonès,Barcelona,18103
+5972,5823,Consell General de Serveis Socials,Departament de Benestar Social i Família,Núria Giralt i Page,Núria,,Giralt,8039,Barcelonès,Barcelona,5828
+521,5823,Consell Nacional de Dones de Catalunya,Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,62
+2475,5823,Consell Nacional de la Joventut de Catalunya (CNJC),Departament de Benestar Social i Família,Sergi Contreras i Mota,Sergi,,Contreras,8006,Barcelonès,Barcelona,13766
+17272,5823,"Consell Nacional de lesbianes, gais i homes i dones bisexuals i transsexuals (LGBT)",Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,10859
+18911,5823,Consell Rector del Pla nacional de joventut de Catalunya,Departament de Benestar Social i Família,null,null,,,8015,Barcelonès,Barcelona,13766
+18033,5823,Consell d'Equipaments Cívics de Catalunya,Departament de Benestar Social i Família,null,null,,,8039,Barcelonès,Barcelona,18103
+17689,5823,Consell de l'Associacionisme i el Voluntariat de Catalunya,Departament de Benestar Social i Família,null,null,,,8039,Barcelonès,Barcelona,18103
+12224,5823,Consell de la Gent Gran de Catalunya,Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,10859
+5961,5823,Consell per a la Promoció de l'Accessibilitat i la Supressió de Barreres Arquitectòniques,Departament de Benestar Social i Família,M. Gemma Pifarré Matas,M.,Gemma Pifarré,Matas,8039,Barcelonès,Barcelona,5828
+5989,5823,"Consorci Sant Gregori, de Girona",Departament de Benestar Social i Família,null,null,,,17150,Gironès,Sant Gregori,5921
+15944,5823,Consorci de Serveis Socials de Barcelona,Departament de Benestar Social i Família,null,null,,,8009,Barcelonès,Barcelona,5823
+11715,5823,Consorci del Barri de la Mina,Departament de Benestar Social i Família,Núria Giralt i Page,Núria,,Giralt,8930,Barcelonès,Sant Adrià de Besòs,5823
+11065,5823,Coordinació Territorial de Joventut a Barcelona,Departament de Benestar Social i Família,Oriol Martín Berbois,Oriol,Martín,Berbois,8015,Barcelonès,Barcelona,2454
+11066,5823,Coordinació Territorial de Joventut a Girona,Departament de Benestar Social i Família,Anna Prior i Tió,Anna,,Prior,17002,Gironès,Girona,2454
+11067,5823,Coordinació Territorial de Joventut a Lleida,Departament de Benestar Social i Família,Anna Feliu i Moragues,Anna,,Feliu,25002,Segrià,Lleida,2454
+11068,5823,Coordinació Territorial de Joventut a Tarragona,Departament de Benestar Social i Família,Joan Plana i Pons,Joan,,Plana,43003,Tarragonès,Tarragona,2454
+13410,5823,Coordinació Territorial de Joventut a les Terres de l'Ebre,Departament de Benestar Social i Família,Teresa Marcelino i Obiol,Teresa,,Marcelino,43500,Baix Ebre,Tortosa,2454
+17270,5823,Coordinació Territorial de l'Institut Català de les Dones a Barcelona,Departament de Benestar Social i Família,Ivet Castaño Vilella,Ivet,Castaño,Vilella,8001,Barcelonès,Barcelona,66
+16843,5823,Coordinació Territorial de l'Institut Català de les Dones a Girona,Departament de Benestar Social i Família,Josefina Surina Gelis,Josefina,Surina,Gelis,17002,Gironès,Girona,66
+16844,5823,Coordinació Territorial de l'Institut Català de les Dones a Lleida,Departament de Benestar Social i Família,Carme Castelló i Gistau,Carme,,Castelló,25007,Segrià,Lleida,66
+16845,5823,Coordinació Territorial de l'Institut Català de les Dones a Tarragona,Departament de Benestar Social i Família,Lidia Bargas i Musoy,Lidia,,Bargas,43003,Tarragonès,Tarragona,66
+16846,5823,Coordinació Territorial de l'Institut Català de les Dones a les Terres de l'Ebre,Departament de Benestar Social i Família,null,null,,,43500,Baix Ebre,Tortosa,66
+19002,5823,DIXIT Centre de Documentació de Serveis Socials,Departament de Benestar Social i Família,null,null,,,8039,Barcelonès,Barcelona,5835
+5823,5823,Departament de Benestar Social i Família,Departament de Benestar Social i Família,Neus Munté i Fernàndez,Neus,,Munté,8039,Barcelonès,Barcelona,15008
+9800,5823,Direcció Executiva de l'Institut Català de les Dones (ICD),Departament de Benestar Social i Família,Núria Balada i Cardona,Núria,,Balada,8001,Barcelonès,Barcelona,62
+18103,5823,Direcció General d'Acció Cívica i Comunitària,Departament de Benestar Social i Família,Ramon Terrassa i Cusí,Ramon,,Terrassa,8039,Barcelonès,Barcelona,5165
+5157,5823,Direcció General d'Atenció a la Infància i l'Adolescència,Departament de Benestar Social i Família,M. Mercè Santmartí i Miró,M.,Mercè,Santmartí,8001,Barcelonès,Barcelona,18237
+13766,5823,Direcció General de Joventut,Departament de Benestar Social i Família,Antoni Reig i Casassas,Antoni,,Reig,8015,Barcelonès,Barcelona,5165
+11327,5823,Direcció General per a la Immigració,Departament de Benestar Social i Família,Xavier Bosch i Garcia,Xavier,,Bosch,8015,Barcelonès,Barcelona,5165
+10646,5823,Direcció de Serveis,Departament de Benestar Social i Família,Xavier Baiget i Cantons,Xavier,,Baiget,8039,Barcelonès,Barcelona,5828
+16037,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) Alt Penedès,Departament de Benestar Social i Família,null,null,,,8720,Alt Penedès,Vilafranca del Penedès,id-7229008302035737270
+11560,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) Anoia,Departament de Benestar Social i Família,null,null,,,8700,Anoia,Igualada,id-7229008302035737270
+8788,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) Bages - Berguedà,Departament de Benestar Social i Família,null,null,,,8241,Bages,Manresa,id-7229008302035737270
+8787,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) Garraf,Departament de Benestar Social i Família,null,null,,,8800,Garraf,Vilanova i la Geltrú,id-7229008302035737270
+13692,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) Gironès,Departament de Benestar Social i Família,null,null,,,17003,Gironès,Girona,id-7229008302035737270
+11561,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) Sant Adrià de Besòs,Departament de Benestar Social i Família,null,null,,,8930,Barcelonès,Sant Adrià de Besòs,id-7229008302035737270
+5318,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) Segrià-La Noguera,Departament de Benestar Social i Família,null,null,,,25007,Segrià,Lleida,id-7229008302035737270
+13526,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) Terres de l'Ebre Supracomarcal,Departament de Benestar Social i Família,null,null,,,43500,Baix Ebre,Tortosa,id-7229008302035737270
+12574,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) d'Osona,Departament de Benestar Social i Família,null,null,,,8500,Osona,Vic,id-7229008302035737270
+5308,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Badalona,Departament de Benestar Social i Família,null,null,,,8911,Barcelonès,Badalona,id-7229008302035737270
+7654,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Barcelona: Casc Antic,Departament de Benestar Social i Família,null,null,,,8003,Barcelonès,Barcelona,id-7229008302035737270
+18153,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Barcelona: Central,Departament de Benestar Social i Família,null,null,,,8009,Barcelonès,Barcelona,id-7229008302035737270
+5296,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Barcelona: Eixample (Districtes 2),Departament de Benestar Social i Família,null,null,,,8010,Barcelonès,Barcelona,id-7229008302035737270
+17287,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Barcelona: Gràcia (Districte 6),Departament de Benestar Social i Família,null,null,,,8024,Barcelonès,Barcelona,id-7229008302035737270
+7653,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Barcelona: Gòtic-Barceloneta,Departament de Benestar Social i Família,null,null,,,8003,Barcelonès,Barcelona,id-7229008302035737270
+5299,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Barcelona: Horta-Guinardó (Districte 7),Departament de Benestar Social i Família,null,null,,,8025,Barcelonès,Barcelona,id-7229008302035737270
+5298,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Barcelona: Les Corts-Sarrià-Sant Gervasi (Districtes 4 i 5),Departament de Benestar Social i Família,null,null,,,8028,Barcelonès,Barcelona,id-7229008302035737270
+5300,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Barcelona: Nou Barris (Districte 8),Departament de Benestar Social i Família,null,null,,,8042,Barcelonès,Barcelona,id-7229008302035737270
+5295,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Barcelona: Raval Nord,Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,id-7229008302035737270
+9885,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Barcelona: Raval Sud,Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,id-7229008302035737270
+5301,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Barcelona: Sant Andreu (Districte 9),Departament de Benestar Social i Família,null,null,,,8030,Barcelonès,Barcelona,id-7229008302035737270
+5302,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Barcelona: Sant Martí (Districte 10),Departament de Benestar Social i Família,null,null,,,8026,Barcelonès,Barcelona,id-7229008302035737270
+5297,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Barcelona: Sants-Montjuïc (Districte 3),Departament de Benestar Social i Família,null,null,,,null,Barcelonès,Barcelona,id-7229008302035737270
+5312,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Girona,Departament de Benestar Social i Família,null,null,,,17004,Gironès,Girona,id-7229008302035737270
+7657,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Lleida,Departament de Benestar Social i Família,null,null,,,25001,Segrià,Lleida,id-7229008302035737270
+5317,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Lleida Nord supracomarcal,Departament de Benestar Social i Família,null,null,,,25620,Pallars Jussà,Tremp,id-7229008302035737270
+5316,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Lleida Sud supracomarcal,Departament de Benestar Social i Família,null,null,,,25230,Pla d'Urgell,Mollerussa,id-7229008302035737270
+16694,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Mataró,Departament de Benestar Social i Família,null,null,,,8302,Maresme,Mataró,id-7229008302035737270
+16036,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Reus,Departament de Benestar Social i Família,null,null,,,43202,Baix Camp,Reus,id-7229008302035737270
+5303,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Sabadell,Departament de Benestar Social i Família,null,null,,,8201,Vallès Occidental,Sabadell,id-7229008302035737270
+5309,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Santa Coloma de Gramenet,Departament de Benestar Social i Família,null,null,,,8921,Barcelonès,Santa Coloma de Gramenet,id-7229008302035737270
+5319,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Tarragona,Departament de Benestar Social i Família,null,null,,,43006,Tarragonès,Tarragona,id-7229008302035737270
+16035,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Tarragonès,Departament de Benestar Social i Família,null,null,,,43003,Tarragonès,Tarragona,id-7229008302035737270
+5304,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de Terrassa,Departament de Benestar Social i Família,null,null,,,8221,Vallès Occidental,Terrassa,id-7229008302035737270
+18151,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de l'Alt Camp - Conca de Barberà,Departament de Benestar Social i Família,null,null,,,43800,Alt Camp,Valls,id-7229008302035737270
+13693,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de l'Alt Empordà,Departament de Benestar Social i Família,null,null,,,17600,Alt Empordà,Figueres,id-7229008302035737270
+5307,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de l'Hospitalet de Llobregat,Departament de Benestar Social i Família,null,null,,,8901,Barcelonès,L'Hospitalet de Llobregat,id-7229008302035737270
+5315,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de la Garrotxa,Departament de Benestar Social i Família,null,null,,,17800,Garrotxa,Olot,id-7229008302035737270
+5314,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) de la Selva,Departament de Benestar Social i Família,null,null,,,17430,Selva,Santa Coloma de Farners,id-7229008302035737270
+5320,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) del Baix Camp,Departament de Benestar Social i Família,null,null,,,43202,Baix Camp,Reus,id-7229008302035737270
+5321,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) del Baix Ebre,Departament de Benestar Social i Família,null,null,,,43500,Baix Ebre,Tortosa,id-7229008302035737270
+5313,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) del Baix Empordà,Departament de Benestar Social i Família,null,null,,,17100,Baix Empordà,La Bisbal d'Empordà,id-7229008302035737270
+5310,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) del Baix Llobregat -Sector 1-,Departament de Benestar Social i Família,null,null,,,8940,Baix Llobregat,Cornellà de Llobregat,id-7229008302035737270
+5311,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) del Baix Llobregat -Sector 2-,Departament de Benestar Social i Família,null,null,,,8840,Baix Llobregat,Viladecans,id-7229008302035737270
+7656,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) del Baix Llobregat -Sector 3-,Departament de Benestar Social i Família,null,null,,,8620,Baix Llobregat,Sant Vicenç dels Horts,id-7229008302035737270
+12573,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) del Baix Llobregat -Sector 4-,Departament de Benestar Social i Família,null,null,,,8740,Baix Llobregat,Sant Andreu de la Barca,id-7229008302035737270
+18782,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) del Baix Llobregat -Sector 5-,Departament de Benestar Social i Família,null,null,,,8940,Baix Llobregat,Cornellà de Llobregat,id-7229008302035737270
+18783,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) del Baix Llobregat -Sector 6-,Departament de Benestar Social i Família,null,null,,,8840,Baix Llobregat,Viladecans,id-7229008302035737270
+5322,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) del Baix Penedès,Departament de Benestar Social i Família,null,null,,,43700,Baix Penedès,El Vendrell,id-7229008302035737270
+5306,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) del Maresme,Departament de Benestar Social i Família,null,null,,,8301,Maresme,Mataró,id-7229008302035737270
+17999,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) del Montsià,Departament de Benestar Social i Família,null,null,,,43870,Montsià,Amposta,id-7229008302035737270
+5305,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) del Vallès Occidental,Departament de Benestar Social i Família,null,null,,,8227,Vallès Occidental,Terrassa,id-7229008302035737270
+7655,5823,Equip d'Atenció a la Infància i Adolescència (EAIA) del Vallès Oriental,Departament de Benestar Social i Família,null,null,,,8401,Vallès Oriental,Granollers,id-7229008302035737270
+6231,5823,Equip de Valoració d'Adults de Barcelona - CAD Paral·lel,Departament de Benestar Social i Família,Montserrat García i Triviño,Montserrat,,García,8004,Barcelonès,Barcelona,id-3374342466526299283
+9932,5823,Equip de Valoració i Orientació Laboral de Barcelona (EVO Barcelona),Departament de Benestar Social i Família,Olga Velasco i Díaz,Olga,,Velasco,8004,Barcelonès,Barcelona,id-3374342466526299283
+5835,5823,Gabinet Tècnic,Departament de Benestar Social i Família,Cristina Gene i Alegret,Cristina,,Gene,8039,Barcelonès,Barcelona,5828
+5824,5823,Gabinet de la Consellera de Benestar Social i Família,Departament de Benestar Social i Família,Alexis Serra i Rovira,Alexis,,Serra,8039,Barcelonès,Barcelona,5823
+17567,5823,Habitatges Tutelats Creu de Palau,Departament de Benestar Social i Família,null,null,,,17003,Gironès,Girona,id-35496303276804625
+17564,5823,Habitatges Tutelats Teresina Torra i Sanmartí,Departament de Benestar Social i Família,null,null,,,8212,Bages,Manresa,id-35496303276804625
+8584,5823,Habitatges Tutelats de Balaguer,Departament de Benestar Social i Família,null,null,,,25600,Noguera,Balaguer,id-35496303276804625
+17568,5823,Habitatges Tutelats de Ponts,Departament de Benestar Social i Família,null,null,,,25740,Noguera,Ponts,id-35496303276804625
+8585,5823,Habitatges Tutelats de Rubí,Departament de Benestar Social i Família,null,null,,,8191,Vallès Occidental,Rubí,id-35496303276804625
+8583,5823,Habitatges Tutelats del Pont de Suert,Departament de Benestar Social i Família,null,null,,,25520,Alta Ribagorça,El Pont de Suert,id-35496303276804625
+17565,5823,Habitatges Tutelats l'Hospitalet - Bellvitge,Departament de Benestar Social i Família,null,null,,,8907,Barcelonès,L'Hospitalet de Llobregat,id-35496303276804625
+17566,5823,Habitatges Tutelats per a gent gran Espanya Industrial,Departament de Benestar Social i Família,null,null,,,8014,Barcelonès,Barcelona,id-35496303276804625
+13376,5823,Hotel d'Entitats Badia,Departament de Benestar Social i Família,null,null,,,8214,Vallès Occidental,Badia del Vallès,id-3448371490309746431
+6015,5823,Hotel d'Entitats Bellvitge de l'Hospitalet de Llobregat,Departament de Benestar Social i Família,null,null,,,8907,Barcelonès,L'Hospitalet de Llobregat,id-3448371490309746431
+6010,5823,Hotel d'Entitats Can Guardiola de Barcelona,Departament de Benestar Social i Família,null,null,,,8030,Barcelonès,Barcelona,id-3448371490309746431
+15123,5823,Hotel d'Entitats El Prat de Llobregat,Departament de Benestar Social i Família,null,null,,,8820,Baix Llobregat,El Prat de Llobregat,id-3448371490309746431
+7679,5823,Hotel d'Entitats Rogelio Soto,Departament de Benestar Social i Família,null,null,,,8204,Vallès Occidental,Sabadell,id-3448371490309746431
+6016,5823,Hotel d'Entitats Sanfeliu de l'Hospitalet de Llobregat,Departament de Benestar Social i Família,null,null,,,8906,Barcelonès,L'Hospitalet de Llobregat,id-3448371490309746431
+6011,5823,Hotel d'Entitats de Gràcia de Barcelona,Departament de Benestar Social i Família,null,null,,,8024,Barcelonès,Barcelona,id-3448371490309746431
+15248,5823,Hotel d'Entitats de Ripoll,Departament de Benestar Social i Família,null,null,,,17500,Ripollès,Ripoll,id-3448371490309746431
+6018,5823,Hotel d'Entitats de Salt,Departament de Benestar Social i Família,null,null,,,17190,Gironès,Salt,id-3448371490309746431
+6017,5823,Hotel d'Entitats de Sant Boi de Llobregat,Departament de Benestar Social i Família,null,null,,,8830,Baix Llobregat,Sant Boi de Llobregat,id-3448371490309746431
+10487,5823,Hotel d'Entitats del Verdum,Departament de Benestar Social i Família,null,null,,,8042,Barcelonès,Barcelona,id-3448371490309746431
+6012,5823,Hotel d'Entitats la Pau de Barcelona,Departament de Benestar Social i Família,null,null,,,8020,Barcelonès,Barcelona,id-3448371490309746431
+6014,5823,Hotel d'Entitats la Rutlla de Girona,Departament de Benestar Social i Família,null,null,,,17002,Gironès,Girona,id-3448371490309746431
+17453,5823,ICIF - CEL OBERT,Departament de Benestar Social i Família,null,null,,,8027,Barcelonès,Barcelona,17440
+12422,5823,ICIF - Consell Comarcal del Ripollès,Departament de Benestar Social i Família,null,null,,,17500,Ripollès,Ripoll,17440
+12417,5823,ICIF - Creu Roja,Departament de Benestar Social i Família,null,null,,,8018,Barcelonès,Barcelona,17440
+12418,5823,ICIF - Drecera,Departament de Benestar Social i Família,null,null,,,8029,Barcelonès,Barcelona,17440
+12416,5823,ICIF - Fundació Concepció Juvanteny,Departament de Benestar Social i Família,null,null,,,8902,Barcelonès,Barcelona,17440
+15057,5823,ICIF - Infància i Família (Barcelona),Departament de Benestar Social i Família,null,null,,,8013,Barcelonès,Barcelona,17440
+12421,5823,ICIF - Institut de Reinserció Social (IRES),Departament de Benestar Social i Família,null,null,,,8005,Barcelonès,Barcelona,17440
+12419,5823,ICIF - Intress (Lleida),Departament de Benestar Social i Família,null,null,,,25006,Segrià,Lleida,17440
+12420,5823,ICIF - Serveis d'Acolliments Familiars,Departament de Benestar Social i Família,null,null,,,43002,Tarragonès,Tarragona,17440
+15612,5823,ICIF - Terres de l'Ebre,Departament de Benestar Social i Família,null,null,,,43500,Baix Ebre,Tortosa,17440
+12415,5823,ICIF- Associació d'Iniciatives Socials AD,Departament de Benestar Social i Família,null,null,,,17002,Gironès,Girona,17440
+13458,5823,Infància respon 900 300 777,Departament de Benestar Social i Família,null,null,,,,,,5157
+17440,5823,Institucions Col·laboradores d'Integració Familiar (ICIF),Departament de Benestar Social i Família,null,null,,,,,,8908
+5921,5823,Institut Català d'Assistència i Serveis Socials (ICASS),Departament de Benestar Social i Família,Carmela Fortuny i Camarena,Carmela,,Fortuny,8039,Barcelonès,Barcelona,9694
+8908,5823,Institut Català de l'Acolliment i de l'Adopció,Departament de Benestar Social i Família,Núria Canal i Pubill,Núria,,Canal,8001,Barcelonès,Barcelona,5894
+62,5823,Institut Català de les Dones (ICD),Departament de Benestar Social i Família,Montserrat Gatell i Pérez,Montserrat,,Gatell,8001,Barcelonès,Barcelona,15853
+17505,5823,Llar-Residència Torrent de Llops,Departament de Benestar Social i Família,null,null,,,8760,Baix Llobregat,Martorell,17486
+17501,5823,Llar-Residència per a disminuïts psíquics Valldaura,Departament de Benestar Social i Família,null,null,,,8031,Barcelonès,Barcelona,17486
+17502,5823,Llar-Residència per a malalts mentals Manlleu,Departament de Benestar Social i Família,null,null,,,8560,Osona,Manlleu,17486
+18682,5823,Llar-Residència per a malalts mentals Sant Roc,Departament de Benestar Social i Família,null,null,,,8918,Barcelonès,Badalona,17486
+18681,5823,Llar-Residència per a malalts mentals les Corts,Departament de Benestar Social i Família,null,null,,,8029,Barcelonès,Barcelona,17486
+17503,5823,Llar-Residència per a persones amb discapacitats d'Esplugues,Departament de Benestar Social i Família,null,null,,,8950,Baix Llobregat,Esplugues de Llobregat,17486
+17504,5823,Llar-Residència per a persones disminuïdes Torremar,Departament de Benestar Social i Família,null,null,,,8339,Maresme,Vilassar de Dalt,17486
+16769,5823,Ludoteca Sant Pere Nord de Terrassa,Departament de Benestar Social i Família,null,null,,,8226,Vallès Occidental,Terrassa,id-8875145176361093399
+18005,5823,Ludoteca Tremp - La Cuca,Departament de Benestar Social i Família,null,null,,,25620,Pallars Jussà,Tremp,id-8875145176361093399
+6114,5823,Ludoteca d'Arenys del Segre de Lleida,Departament de Benestar Social i Família,null,null,,,25006,Segrià,Lleida,id-8875145176361093399
+6113,5823,Ludoteca de Sant Miquel d'Igualada,Departament de Benestar Social i Família,null,null,,,8700,Anoia,Igualada,id-8875145176361093399
+6112,5823,Ludoteca de la Casa Bloc de Barcelona,Departament de Benestar Social i Família,null,null,,,8030,Barcelonès,Barcelona,id-8875145176361093399
+6111,5823,Ludoteca del Carrer Ample de Barcelona,Departament de Benestar Social i Família,null,null,,,8002,Barcelonès,Barcelona,id-8875145176361093399
+6115,5823,Ludoteca les Bernardes de Salt,Departament de Benestar Social i Família,null,null,,,17190,Gironès,Salt,id-8875145176361093399
+6121,5823,Menjador Social (Amposta),Departament de Benestar Social i Família,Josefa Ramon Navarro,Josefa,Ramon,Navarro,43870,Montsià,Amposta,id-7458362723815786868
+6119,5823,Menjador Social (Lleida),Departament de Benestar Social i Família,Carme Giménez i Jorge,Carme,,Giménez,25002,Segrià,Lleida,id-7458362723815786868
+6120,5823,Menjador Social (Tarragona),Departament de Benestar Social i Família,Isidre Badia i Pastrana,Isidre,,Badia,43006,Tarragonès,Tarragona,id-7458362723815786868
+5851,5823,Negociat de Contractació,Departament de Benestar Social i Família,null,null,,,8039,Barcelonès,Barcelona,5847
+5848,5823,Negociat de Control Pressupostari i Pagaments,Departament de Benestar Social i Família,Pelai Manel Alonso Isern,Pelai,Manel Alonso,Isern,8039,Barcelonès,Barcelona,5853
+5849,5823,Negociat de Nòmines,Departament de Benestar Social i Família,Carme López Blanch,Carme,López,Blanch,8039,Barcelonès,Barcelona,5847
+5854,5823,Negociat de Plantilles,Departament de Benestar Social i Família,Rafael Fabregat Vidiella,Rafael,Fabregat,Vidiella,8039,Barcelonès,Barcelona,5853
+5864,5823,Negociat de Registre,Departament de Benestar Social i Família,Maria Teresa Ricart i Aznar,Maria,Teresa,Ricart,8039,Barcelonès,Barcelona,5863
+5844,5823,Negociat de Tresoreria i Ordenació de Pagaments,Departament de Benestar Social i Família,Marta Perostes Carbonell,Marta,Perostes,Carbonell,8039,Barcelonès,Barcelona,15377
+7670,5823,Observatori Català de la Família,Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,10859
+11571,5823,Observatori dels Drets de la Infància,Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,5157
+69,5823,Oficina d'Informació a Barcelona (ICD),Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,66
+70,5823,Oficina d'Informació a Girona (ICD),Departament de Benestar Social i Família,Montserrat Blanco Carbó,Montserrat,Blanco,Carbó,17002,Gironès,Girona,16843
+71,5823,Oficina d'Informació a Lleida (ICD),Departament de Benestar Social i Família,Carme Castelló Gistau,Carme,Castelló,Gistau,25007,Segrià,Lleida,16844
+72,5823,Oficina d'Informació a Tarragona (ICD),Departament de Benestar Social i Família,Dolors Daroca Cruset,Dolors,Daroca,Cruset,43003,Tarragonès,Tarragona,16845
+13522,5823,Oficina d'Informació a les Terres de l'Ebre (ICD),Departament de Benestar Social i Família,null,null,,,43500,Baix Ebre,Tortosa,16846
+9663,5823,Oficina de Benestar Social i Família Mòbil,Departament de Benestar Social i Família,null,null,,,8039,Barcelonès,Barcelona,
+6054,5823,Oficina de Benestar Social i Família d'Esplugues de Llobregat,Departament de Benestar Social i Família,null,null,,,8950,Baix Llobregat,Esplugues de Llobregat,id-1138173901211672256
+6073,5823,Oficina de Benestar Social i Família d'Igualada,Departament de Benestar Social i Família,null,null,,,8700,Anoia,Igualada,id-1138173901211672256
+6057,5823,Oficina de Benestar Social i Família d'Olot,Departament de Benestar Social i Família,null,null,,,17800,Garrotxa,Olot,id-1138173901211672256
+6028,5823,Oficina de Benestar Social i Família de Badalona - Llefià,Departament de Benestar Social i Família,null,null,,,8913,Barcelonès,Badalona,id-1138173901211672256
+6029,5823,Oficina de Benestar Social i Família de Badalona - Lloreda,Departament de Benestar Social i Família,null,null,,,8917,Barcelonès,Badalona,id-1138173901211672256
+6060,5823,Oficina de Benestar Social i Família de Badalona - Pomar,Departament de Benestar Social i Família,null,null,,,8915,Barcelonès,Badalona,id-1138173901211672256
+6065,5823,Oficina de Benestar Social i Família de Badalona - Sant Roc,Departament de Benestar Social i Família,null,null,,,8918,Barcelonès,Badalona,id-1138173901211672256
+6024,5823,Oficina de Benestar Social i Família de Badia del Vallès,Departament de Benestar Social i Família,null,null,,,8214,Vallès Occidental,Badia del Vallès,id-1138173901211672256
+6071,5823,Oficina de Benestar Social i Família de Balaguer,Departament de Benestar Social i Família,null,null,,,25600,Noguera,Balaguer,id-1138173901211672256
+6046,5823,Oficina de Benestar Social i Família de Barcelona - Camp de l'Arpa,Departament de Benestar Social i Família,null,null,,,8026,Barcelonès,Barcelona,id-1138173901211672256
+6025,5823,Oficina de Benestar Social i Família de Barcelona - Ciutat Meridiana,Departament de Benestar Social i Família,null,null,,,8033,Barcelonès,Barcelona,id-1138173901211672256
+6034,5823,Oficina de Benestar Social i Família de Barcelona - Ciutat Vella,Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,id-1138173901211672256
+6023,5823,Oficina de Benestar Social i Família de Barcelona - El Carmel,Departament de Benestar Social i Família,null,null,,,8032,Barcelonès,Barcelona,id-1138173901211672256
+6063,5823,Oficina de Benestar Social i Família de Barcelona - Gràcia,Departament de Benestar Social i Família,null,null,,,8024,Barcelonès,Barcelona,id-1138173901211672256
+6027,5823,Oficina de Benestar Social i Família de Barcelona - La Guineueta,Departament de Benestar Social i Família,null,null,,,8042,Barcelonès,Barcelona,id-1138173901211672256
+6040,5823,Oficina de Benestar Social i Família de Barcelona - La Verneda,Departament de Benestar Social i Família,null,null,,,8020,Barcelonès,Barcelona,id-1138173901211672256
+6058,5823,Oficina de Benestar Social i Família de Barcelona - Poblenou,Departament de Benestar Social i Família,null,null,,,8005,Barcelonès,Barcelona,id-1138173901211672256
+6059,5823,Oficina de Benestar Social i Família de Barcelona - Sant Andreu,Departament de Benestar Social i Família,null,null,,,8030,Barcelonès,Barcelona,id-1138173901211672256
+12773,5823,Oficina de Benestar Social i Família de Barcelona - Sants / Eixample,Departament de Benestar Social i Família,null,null,,,8014,Barcelonès,Barcelona,id-1138173901211672256
+6045,5823,Oficina de Benestar Social i Família de Barcelona - Sants / Hostafrancs,Departament de Benestar Social i Família,null,null,,,8014,Barcelonès,Barcelona,id-1138173901211672256
+6041,5823,Oficina de Benestar Social i Família de Barcelona - Zona Franca,Departament de Benestar Social i Família,null,null,,,8038,Barcelonès,Barcelona,id-1138173901211672256
+7682,5823,Oficina de Benestar Social i Família de Berga,Departament de Benestar Social i Família,null,null,,,8600,Berguedà,Berga,id-1138173901211672256
+6072,5823,Oficina de Benestar Social i Família de Blanes,Departament de Benestar Social i Família,null,null,,,17300,Selva,Blanes,id-1138173901211672256
+6075,5823,Oficina de Benestar Social i Família de Canovelles,Departament de Benestar Social i Família,null,null,,,8420,Vallès Oriental,Canovelles,id-1138173901211672256
+6049,5823,Oficina de Benestar Social i Família de Cerdanyola del Vallès,Departament de Benestar Social i Família,null,null,,,8290,Vallès Occidental,Cerdanyola del Vallès,id-1138173901211672256
+13630,5823,Oficina de Benestar Social i Família de Cervera,Departament de Benestar Social i Família,null,null,,,25200,Segarra,Cervera,id-1138173901211672256
+6036,5823,Oficina de Benestar Social i Família de Cornellà de Llobregat,Departament de Benestar Social i Família,null,null,,,8940,Baix Llobregat,Cornellà de Llobregat,id-1138173901211672256
+6069,5823,Oficina de Benestar Social i Família de Falset,Departament de Benestar Social i Família,null,null,,,43730,Priorat,Falset,id-1138173901211672256
+6050,5823,Oficina de Benestar Social i Família de Figueres,Departament de Benestar Social i Família,null,null,,,17600,Alt Empordà,Figueres,id-1138173901211672256
+6062,5823,Oficina de Benestar Social i Família de Granollers,Departament de Benestar Social i Família,null,null,,,8401,Vallès Oriental,Granollers,id-1138173901211672256
+6021,5823,Oficina de Benestar Social i Família de L'Hospitalet de Llobregat - Bellvitge,Departament de Benestar Social i Família,null,null,,,8907,Barcelonès,L'Hospitalet de Llobregat,id-1138173901211672256
+6033,5823,Oficina de Benestar Social i Família de L'Hospitalet de Llobregat - La Florida,Departament de Benestar Social i Família,null,null,,,8905,Barcelonès,L'Hospitalet de Llobregat,id-1138173901211672256
+6061,5823,Oficina de Benestar Social i Família de La Seu d'Urgell,Departament de Benestar Social i Família,null,null,,,25700,Alt Urgell,La Seu d'Urgell,id-1138173901211672256
+6043,5823,Oficina de Benestar Social i Família de Manresa,Departament de Benestar Social i Família,null,null,,,8242,Bages,Manresa,id-1138173901211672256
+6083,5823,Oficina de Benestar Social i Família de Martorell,Departament de Benestar Social i Família,null,null,,,8760,Baix Llobregat,Martorell,id-1138173901211672256
+6056,5823,Oficina de Benestar Social i Família de Mataró,Departament de Benestar Social i Família,null,null,,,8303,Maresme,Mataró,id-1138173901211672256
+6067,5823,Oficina de Benestar Social i Família de Mollet del Vallès,Departament de Benestar Social i Família,null,null,,,8100,Vallès Oriental,Mollet del Vallès,id-1138173901211672256
+13631,5823,Oficina de Benestar Social i Família de Móra d'Ebre,Departament de Benestar Social i Família,null,null,,,43740,Ribera d'Ebre,Móra d'Ebre,id-1138173901211672256
+17285,5823,Oficina de Benestar Social i Família de Pineda de Mar,Departament de Benestar Social i Família,null,null,,,8397,Maresme,Pineda de Mar,id-1138173901211672256
+6079,5823,Oficina de Benestar Social i Família de Reus,Departament de Benestar Social i Família,null,null,,,43204,Baix Camp,Reus,id-1138173901211672256
+6077,5823,Oficina de Benestar Social i Família de Ripoll,Departament de Benestar Social i Família,null,null,,,17500,Ripollès,Ripoll,id-1138173901211672256
+6022,5823,Oficina de Benestar Social i Família de Sabadell - Ca n'Oriac,Departament de Benestar Social i Família,null,null,,,8207,Vallès Occidental,Sabadell,id-1138173901211672256
+6026,5823,Oficina de Benestar Social i Família de Sabadell - Creu de Barberà,Departament de Benestar Social i Família,null,null,,,8204,Vallès Occidental,Sabadell,id-1138173901211672256
+12969,5823,Oficina de Benestar Social i Família de Sabadell - Gràcia,Departament de Benestar Social i Família,null,null,,,8205,Vallès Occidental,Sabadell,id-1138173901211672256
+6066,5823,Oficina de Benestar Social i Família de Salt,Departament de Benestar Social i Família,null,null,,,17190,Gironès,Salt,id-1138173901211672256
+7680,5823,Oficina de Benestar Social i Família de Sant Adrià de Besòs,Departament de Benestar Social i Família,null,null,,,8930,Barcelonès,Sant Adrià de Besòs,id-1138173901211672256
+6035,5823,Oficina de Benestar Social i Família de Sant Boi Llobregat,Departament de Benestar Social i Família,null,null,,,8830,Baix Llobregat,Sant Boi de Llobregat,id-1138173901211672256
+16040,5823,Oficina de Benestar Social i Família de Sant Carles de la Ràpita,Departament de Benestar Social i Família,null,null,,,43540,Montsià,Sant Carles de la Ràpita,id-1138173901211672256
+15243,5823,Oficina de Benestar Social i Família de Sant Feliu de Llobregat,Departament de Benestar Social i Família,null,null,,,8980,Baix Llobregat,Sant Feliu de Llobregat,id-1138173901211672256
+6037,5823,Oficina de Benestar Social i Família de Santa Coloma de Gramenet - Centre,Departament de Benestar Social i Família,null,null,,,8922,Barcelonès,Santa Coloma de Gramenet,id-1138173901211672256
+6038,5823,Oficina de Benestar Social i Família de Santa Coloma de Gramenet - Singuerlín,Departament de Benestar Social i Família,null,null,,,8924,Barcelonès,Santa Coloma de Gramenet,id-1138173901211672256
+16372,5823,Oficina de Benestar Social i Família de Terrassa - Ca n'Aurell,Departament de Benestar Social i Família,null,null,,,8224,Vallès Occidental,Terrassa,id-1138173901211672256
+15244,5823,Oficina de Benestar Social i Família de Terrassa - La Farinera,Departament de Benestar Social i Família,null,null,,,8222,Vallès Occidental,Terrassa,id-1138173901211672256
+6039,5823,Oficina de Benestar Social i Família de Terrassa - Les Arenes,Departament de Benestar Social i Família,null,null,,,8227,Vallès Occidental,Terrassa,id-1138173901211672256
+6074,5823,Oficina de Benestar Social i Família de Tortosa,Departament de Benestar Social i Família,null,null,,,43500,Baix Ebre,Tortosa,id-1138173901211672256
+17417,5823,Oficina de Benestar Social i Família de Tremp,Departament de Benestar Social i Família,null,null,,,25620,Pallars Jussà,Tremp,id-1138173901211672256
+13426,5823,Oficina de Benestar Social i Família de Tàrrega,Departament de Benestar Social i Família,null,null,,,25300,Urgell,Tàrrega,id-1138173901211672256
+7681,5823,Oficina de Benestar Social i Família de Vic,Departament de Benestar Social i Família,null,null,,,8500,Osona,Vic,id-1138173901211672256
+6070,5823,Oficina de Benestar Social i Família de Viladecans,Departament de Benestar Social i Família,null,null,,,8840,Baix Llobregat,Viladecans,id-1138173901211672256
+6084,5823,Oficina de Benestar Social i Família de Vilafranca del Penedès,Departament de Benestar Social i Família,null,null,,,8720,Alt Penedès,Vilafranca del Penedès,id-1138173901211672256
+6068,5823,Oficina de Benestar Social i Família de Vilanova i la Geltrú,Departament de Benestar Social i Família,null,null,,,8800,Garraf,Vilanova i la Geltrú,id-1138173901211672256
+6082,5823,Oficina de Benestar Social i Família del Masnou,Departament de Benestar Social i Família,null,null,,,8320,Maresme,El Masnou,id-1138173901211672256
+6032,5823,Oficina de Benestar Social i Família del Prat de Llobregat,Departament de Benestar Social i Família,null,null,,,8820,Baix Llobregat,El Prat de Llobregat,id-1138173901211672256
+6080,5823,Oficina de Benestar Social i Família del Vendrell,Departament de Benestar Social i Família,null,null,,,43700,Baix Penedès,El Vendrell,id-1138173901211672256
+5826,5823,Oficina de Comunicació,Departament de Benestar Social i Família,Susagna Caseras i Vives,Susagna,,Caseras,8039,Barcelonès,Barcelona,5824
+5827,5823,Oficina de Protocol,Departament de Benestar Social i Família,Sònia Claveras i Orcau,Sònia,,Claveras,8039,Barcelonès,Barcelona,5824
+13862,5823,Oficina de Relacions Institucionals,Departament de Benestar Social i Família,Georgina Pou i Hervàs,Georgina,,Pou,8039,Barcelonès,Barcelona,5824
+15767,5823,Oficina de la Gent Gran Activa,Departament de Benestar Social i Família,Agustí Vilà i Segura,Agustí,,Vilà,8001,Barcelonès,Barcelona,10859
+11362,5823,Oficina de la Secretaria de la Consellera,Departament de Benestar Social i Família,Marta Riera i Bruguera,Marta,,Riera,8039,Barcelonès,Barcelona,5824
+6044,5823,Punt d'Atenció Ciutadana de Barcelona,Departament de Benestar Social i Família,null,null,,,8039,Barcelonès,Barcelona,5863
+15355,5823,Punt d'Atenció Ciutadana del Servei Territorial de Lleida,Departament de Benestar Social i Família,null,null,,,25007,Segrià,Lleida,5878
+15356,5823,Punt d'Atenció Ciutadana del Servei Territorial de Tarragona,Departament de Benestar Social i Família,null,null,,,43002,Tarragonès,Tarragona,5883
+17610,5823,Residència Assistida Barcelona - Porta,Departament de Benestar Social i Família,null,null,,,8016,Barcelonès,Barcelona,id-3546763848070503154
+17607,5823,Residència Assistida Barcelona Poble-Nou,Departament de Benestar Social i Família,null,null,,,8005,Barcelonès,Barcelona,id-3546763848070503154
+17612,5823,Residència Assistida Barceloneta - Bertran Oriola,Departament de Benestar Social i Família,null,null,,,8039,Barcelonès,Barcelona,id-3546763848070503154
+17603,5823,Residència Assistida Falguera,Departament de Benestar Social i Família,null,null,,,8980,Baix Llobregat,Sant Feliu de Llobregat,id-3546763848070503154
+17606,5823,Residència Assistida Mossèn Vidal i Aunòs,Departament de Benestar Social i Família,null,null,,,8014,Barcelonès,Barcelona,id-3546763848070503154
+17614,5823,Residència Assistida Pare Batllori,Departament de Benestar Social i Família,null,null,,,8004,Barcelonès,Barcelona,id-3546763848070503154
+17619,5823,Residència Assistida Rubí,Departament de Benestar Social i Família,null,null,,,8191,Vallès Occidental,Rubí,id-3546763848070503154
+17613,5823,Residència Assistida Vallbona,Departament de Benestar Social i Família,null,null,,,8033,Barcelonès,Barcelona,id-3546763848070503154
+17618,5823,Residència Assistida de Gandesa,Departament de Benestar Social i Família,null,null,,,43780,Terra Alta,Gandesa,id-3546763848070503154
+17604,5823,Residència Assistida de Gavà,Departament de Benestar Social i Família,null,null,,,8850,Baix Llobregat,Gavà,id-3546763848070503154
+17615,5823,Residència Assistida de Ponts,Departament de Benestar Social i Família,null,null,,,25740,Noguera,Ponts,id-3546763848070503154
+17601,5823,Residència Assistida de l'Alta Ribagorça,Departament de Benestar Social i Família,null,null,,,25520,Alta Ribagorça,El Pont de Suert,id-3546763848070503154
+17611,5823,Residència Assistida la Sagrera,Departament de Benestar Social i Família,null,null,,,8027,Barcelonès,Barcelona,id-3546763848070503154
+8510,5823,Residència Assistida per a gent gran  Jaume I,Departament de Benestar Social i Família,Josepa Martí Rovira,Josepa,Martí,Rovira,43440,Conca de Barberà,L'Espluga de Francolí,id-3546763848070503154
+6221,5823,Residència Assistida per a gent gran Baix Camp,Departament de Benestar Social i Família,Glòria Vila i Ferré,Glòria,,Vila,43850,Baix Camp,Cambrils,id-3546763848070503154
+17609,5823,Residència Assistida per a gent gran Barcelona - Font Florida,Departament de Benestar Social i Família,null,null,,,8004,Barcelonès,Barcelona,id-3546763848070503154
+17693,5823,Residència Assistida per a gent gran Barcelona-Poblenou,Departament de Benestar Social i Família,null,null,,,8005,Barcelonès,Barcelona,id-3546763848070503154
+18678,5823,Residència Assistida per a gent gran Bon Pastor,Departament de Benestar Social i Família,null,null,,,8030,Barcelonès,Barcelona,id-3546763848070503154
+8516,5823,Residència Assistida per a gent gran Comarcal de Campdevànol,Departament de Benestar Social i Família,Eva Torrejon Bernardo,Eva,Torrejon,Bernardo,17530,Ripollès,Campdevànol,id-3546763848070503154
+8513,5823,Residència Assistida per a gent gran Comtes d'Urgell,Departament de Benestar Social i Família,M. Dolores Morera i Roset,M.,Dolores,Morera,25600,Noguera,Balaguer,id-3546763848070503154
+8509,5823,Residència Assistida per a gent gran Conca de Barberà,Departament de Benestar Social i Família,Josep M. Bové Ribé,Josep,M. Bové,Ribé,43400,Conca de Barberà,Montblanc,id-3546763848070503154
+17694,5823,Residència Assistida per a gent gran Creu de Palau,Departament de Benestar Social i Família,M. Montserrat Domínguez i Font,M.,Montserrat,Domínguez,17003,Gironès,Girona,id-3546763848070503154
+6217,5823,Residència Assistida per a gent gran El Mil·lenari,Departament de Benestar Social i Família,Rosa M. Peña i Salvador,Rosa,M.,Peña,8001,Barcelonès,Barcelona,id-3546763848070503154
+17632,5823,Residència Assistida per a gent gran El Nadal,Departament de Benestar Social i Família,null,null,,,8500,Osona,Vic,id-3546763848070503154
+17695,5823,Residència Assistida per a gent gran Flix-Escoles Velles,Departament de Benestar Social i Família,null,null,,,43750,Ribera d'Ebre,Flix,id-3546763848070503154
+6219,5823,Residència Assistida per a gent gran Font dels Capellans,Departament de Benestar Social i Família,Nuria Saladre Margalef,Nuria,Saladre,Margalef,8240,Bages,Manresa,id-3546763848070503154
+17608,5823,Residència Assistida per a gent gran Francisco Padilla,Departament de Benestar Social i Família,null,null,,,8906,Barcelonès,L'Hospitalet de Llobregat,id-3546763848070503154
+6227,5823,Residència Assistida per a gent gran Girona,Departament de Benestar Social i Família,Esther Celda,Esther,,Celda,17003,Gironès,Girona,id-3546763848070503154
+6216,5823,Residència Assistida per a gent gran Gràcia,Departament de Benestar Social i Família,M. Pilar Bel Cortés,M.,Pilar Bel,Cortés,8012,Barcelonès,Barcelona,id-3546763848070503154
+8505,5823,Residència Assistida per a gent gran Jaume Batlle,Departament de Benestar Social i Família,Ana Lobo Jurado,Ana,Lobo,Jurado,8005,Barcelonès,Barcelona,id-3546763848070503154
+6229,5823,Residència Assistida per a gent gran Jaume Nualart,Departament de Benestar Social i Família,Montserrat Comabella i Mas,Montserrat,,Comabella,8940,Baix Llobregat,Cornellà de Llobregat,id-3546763848070503154
+6215,5823,Residència Assistida per a gent gran La Trinitat,Departament de Benestar Social i Família,Cristina Soler Hernández,Cristina,Soler,Hernández,8033,Barcelonès,Barcelona,id-3546763848070503154
+6218,5823,Residència Assistida per a gent gran La Verneda,Departament de Benestar Social i Família,Laura Casademont,Laura,,Casademont,8020,Barcelonès,Barcelona,id-3546763848070503154
+6222,5823,Residència Assistida per a gent gran Laia Gonzàlez Feixa Llarga,Departament de Benestar Social i Família,Concepció Barbeta Mir,Concepció,Barbeta,Mir,8907,Barcelonès,L'Hospitalet de Llobregat,id-3546763848070503154
+6220,5823,Residència Assistida per a gent gran Les Garrigues,Departament de Benestar Social i Família,Montserrat Aixalà Fàbregas,Montserrat,Aixalà,Fàbregas,25400,Garrigues,Les Borges Blanques,id-3546763848070503154
+17617,5823,Residència Assistida per a gent gran Lleida - Balàfia,Departament de Benestar Social i Família,null,null,,,25005,Segrià,Lleida,id-3546763848070503154
+8518,5823,Residència Assistida per a gent gran Mare Déu de la Mercè,Departament de Benestar Social i Família,Anton López Bastida,Anton,López,Bastida,43003,Tarragonès,Tarragona,id-3546763848070503154
+6223,5823,Residència Assistida per a gent gran Mataró,Departament de Benestar Social i Família,Teresa Amenós i Fabregat,Teresa,,Amenós,8303,Maresme,Mataró,id-3546763848070503154
+17616,5823,Residència Assistida per a gent gran Móra la Nova,Departament de Benestar Social i Família,null,null,,,43770,Ribera d'Ebre,Móra la Nova,id-3546763848070503154
+8515,5823,Residència Assistida per a gent gran Natzaret,Departament de Benestar Social i Família,Blai Rosell i Cabrol,Blai,,Rosell,43740,Ribera d'Ebre,Móra d'Ebre,id-3546763848070503154
+17605,5823,Residència Assistida per a gent gran Onze de Setembre,Departament de Benestar Social i Família,null,null,,,8820,Baix Llobregat,El Prat de Llobregat,id-3546763848070503154
+8507,5823,Residència Assistida per a gent gran Parc Serentill,Departament de Benestar Social i Família,Laura Anzizu i Furest,Laura,,Anzizu,8915,Barcelonès,Badalona,id-3546763848070503154
+8511,5823,Residència Assistida per a gent gran Puig d'En Roca,Departament de Benestar Social i Família,Jordi Josep Latorre i Sotus,Jordi,Josep,Latorre,17007,Gironès,Girona,id-3546763848070503154
+6228,5823,Residència Assistida per a gent gran Reus,Departament de Benestar Social i Família,Jesús Francesc Cabestany i Robusté,Jesús,Francesc,Cabestany,43202,Baix Camp,Reus,id-3546763848070503154
+8521,5823,Residència Assistida per a gent gran Sant Antoni de Viella,Departament de Benestar Social i Família,Lourdes Teixidó i Jover,Lourdes,,Teixidó,25530,Val d'Aran,Vielha e Mijaran,id-3546763848070503154
+8517,5823,Residència Assistida per a gent gran Sant Josep de Lleida,Departament de Benestar Social i Família,Mercè Segura,Mercè,,Segura,25003,Segrià,Lleida,id-3546763848070503154
+6224,5823,Residència Assistida per a gent gran Sant Llorenç Savall,Departament de Benestar Social i Família,Simeó Caba i Camprubí,Simeó,,Caba,8212,Vallès Occidental,Sant Llorenç Savall,id-3546763848070503154
+8519,5823,Residència Assistida per a gent gran Sant Pere Claver,Departament de Benestar Social i Família,Gna. Angela Maria Ibarra i Lastra,Gna.,Angela Maria,Ibarra,25340,Urgell,Verdú,id-3546763848070503154
+8508,5823,Residència Assistida per a gent gran Sant Roc,Departament de Benestar Social i Família,Júlia Beltran de Nicolàs,Júlia,Beltran de,Nicolàs,8918,Barcelonès,Badalona,id-3546763848070503154
+17602,5823,Residència Assistida per a gent gran Sant Vicenç de Castellet,Departament de Benestar Social i Família,null,null,,,8295,Bages,Sant Vicenç de Castellet,id-3546763848070503154
+6225,5823,Residència Assistida per a gent gran Santa Coloma de Gramenet,Departament de Benestar Social i Família,Francesc Vélez i Giménez,Francesc,,Vélez,8924,Barcelonès,Santa Coloma de Gramenet,id-3546763848070503154
+8524,5823,Residència Assistida per a gent gran Santa Rosa,Departament de Benestar Social i Família,Josep Paris i Giménez,Josep,,Paris,8100,Vallès Oriental,Mollet del Vallès,id-3546763848070503154
+8514,5823,Residència Assistida per a gent gran Serafí Casanovas Sansa,Departament de Benestar Social i Família,Aura Estela Díez i Vélez,Aura,Estela,Díez,25560,Pallars Sobirà,Sort,id-3546763848070503154
+6226,5823,Residència Assistida per a gent gran Terrassa,Departament de Benestar Social i Família,Inés Rodríguez Baeza,Inés,Rodríguez,Baeza,8227,Vallès Occidental,Terrassa,id-3546763848070503154
+8504,5823,Residència Assistida per a gent gran d'Horta,Departament de Benestar Social i Família,Gemma Castillo i Redón,Gemma,,Castillo,8035,Barcelonès,Barcelona,id-3546763848070503154
+8520,5823,Residència Assistida per a gent gran de Bellpuig,Departament de Benestar Social i Família,Enric de Monteys i de Llinàs,Enric,de Monteys i de,Llinàs,25250,Urgell,Bellpuig,id-3546763848070503154
+9950,5823,Residència Assistida per a gent gran de Cerdanyola del Vallès,Departament de Benestar Social i Família,Africa Sandra Vazquez,Africa,Sandra,Vazquez,8290,Vallès Occidental,Cerdanyola del Vallès,id-3546763848070503154
+8522,5823,Residència Assistida per a gent gran de Sant Cugat del Vallès,Departament de Benestar Social i Família,Lluís Ollé,Lluís,,Ollé,8190,Vallès Occidental,Sant Cugat del Vallès,id-3546763848070503154
+8523,5823,Residència Assistida per a gent gran de l'Ametlla del Vallès,Departament de Benestar Social i Família,Salvador Llistar i Verdú,Salvador,,Llistar,8480,Vallès Oriental,L'Ametlla del Vallès,id-3546763848070503154
+8502,5823,Residència Assistida per a gent gran els Arcs,Departament de Benestar Social i Família,Roser Copa i Sàez,Roser,,Copa,17600,Alt Empordà,Figueres,id-3546763848070503154
+8512,5823,Residència Assistida per a gent gran la Sénia,Departament de Benestar Social i Família,Pilar Balazote i Martínez,Pilar,,Balazote,43560,Montsià,La Sénia,id-3546763848070503154
+8506,5823,Residència Assistida per a gent gran les Corts,Departament de Benestar Social i Família,Belen Soler Miguez,Belen,Soler,Miguez,8028,Barcelonès,Barcelona,id-3546763848070503154
+17506,5823,Residència de disminuïts psíquics amb transtorns de conducta Empresseguera,Departament de Benestar Social i Família,null,null,,,25192,Segrià,Lleida,17486
+17507,5823,Residència de disminuïts psíquics severs i profunds Íbera,Departament de Benestar Social i Família,null,null,,,43870,Montsià,Amposta,17486
+18859,5823,Residència i Centre de Dia d'atenció especialitzada per a persones amb discapacitat intel·lectual \"La Vinyota\"\"\",Departament de Benestar Social i Família,null,null,,,8100,Vallès Oriental,Mollet del Vallès,17486
+17508,5823,Residència per a discapacitats psíquics el Tamariu,Departament de Benestar Social i Família,null,null,,,8820,Baix Llobregat,El Prat de Llobregat,17486
+17509,5823,Residència per a disminuïts Els Roures,Departament de Benestar Social i Família,null,null,,,17150,Gironès,Sant Gregori,17486
+17521,5823,Residència per a disminuïts psíquics profunds Can Ruti,Departament de Benestar Social i Família,null,null,,,8916,Barcelonès,Badalona,17486
+17510,5823,Residència per a disminuïts psíquics profunds Can Serra,Departament de Benestar Social i Família,null,null,,,8906,Barcelonès,L'Hospitalet de Llobregat,17486
+17511,5823,Residència per a disminuïts psíquics profunds Josep Mas i Dalmau,Departament de Benestar Social i Família,null,null,,,8970,Baix Llobregat,Sant Joan Despí,17486
+17512,5823,Residència per a disminuïts psíquics profunds La Pineda,Departament de Benestar Social i Família,null,null,,,,,,17486
+17513,5823,Residència per a disminuïts psíquics profunds Marinada,Departament de Benestar Social i Família,null,null,,,43206,Baix Camp,Reus,17486
+17514,5823,Residència per a grans disminuïts físics La Gavina,Departament de Benestar Social i Família,null,null,,,8328,Maresme,Alella,17486
+17515,5823,Residència per a grans disminuïts físics Pla d'en Boet,Departament de Benestar Social i Família,null,null,,,8302,Maresme,Mataró,17486
+17516,5823,Residència per a grans disminuïts físics Sant Salvador,Departament de Benestar Social i Família,null,null,,,43130,Tarragonès,Tarragona,17486
+17519,5823,Residència per a grans disminuïts psíquics Valldoriolf,Departament de Benestar Social i Família,null,null,,,8430,Vallès Oriental,La Roca del Vallès,17486
+17517,5823,Residència per a grans disminuïts psíquics a Santpedor Julio Payás,Departament de Benestar Social i Família,null,null,,,8251,Bages,Santpedor,17486
+17518,5823,Residència per a grans disminuïts psíquics de grau profund i sever Joan XXIII,Departament de Benestar Social i Família,null,null,,,8290,Vallès Occidental,Cerdanyola del Vallès,17486
+17520,5823,Residència per a greus disminucions físiques Terres de Ponent,Departament de Benestar Social i Família,null,null,,,25230,Pla d'Urgell,Mollerussa,17486
+18686,5823,Residència per a persones amb discapacitats Tres Pins,Departament de Benestar Social i Família,null,null,,,,,,17486
+17486,5823,Residències per a persones amb discapacitats,Departament de Benestar Social i Família,null,null,,,,,,5921
+12578,5823,S.T. Andorra,Departament de Benestar Social i Família,null,null,,,AD500,Andorra,Santa Coloma,13766
+11525,5823,Sala d'Art Jove de la Generalitat,Departament de Benestar Social i Família,null,null,,,8015,Barcelonès,Barcelona,11065
+5847,5823,Secció d'Administració de Personal,Departament de Benestar Social i Família,Sònia Lobato de la Torre,Sònia,Lobato de la,Torre,8039,Barcelonès,Barcelona,5846
+7644,5823,Secció d'Assumptes Econòmics,Departament de Benestar Social i Família,Xavier Valls i Pascual,Xavier,,Valls,8001,Barcelonès,Barcelona,7642
+11592,5823,Secció d'Atenció a Menors Estrangers sense Referents Familiars,Departament de Benestar Social i Família,Araceli Bescós i Urbina,Araceli,,Bescós,8001,Barcelonès,Barcelona,5172
+11593,5823,Secció d'Atenció a Menors de Barcelona Ciutat,Departament de Benestar Social i Família,Begoña Pujana Fernández,Begoña,Pujana,Fernández,8001,Barcelonès,Barcelona,5172
+15331,5823,Secció d'Atenció a Menors de Comarques,Departament de Benestar Social i Família,Mercè Sarro Català,Mercè,Sarro,Català,8009,Barcelonès,Barcelona,15329
+15330,5823,Secció d'Atenció a Menors de l'Àrea Metropolitana,Departament de Benestar Social i Família,Núria Ardèvol Aragonés,Núria,Ardèvol,Aragonés,8009,Barcelonès,Barcelona,15329
+16102,5823,Secció d'Avaluació i Coordinació de Plans,Departament de Benestar Social i Família,Ignasi Samper i Castelló,Ignasi,,Samper,8039,Barcelonès,Barcelona,5913
+11711,5823,Secció d'Informació i Orientació de les Comarques de Barcelona,Departament de Benestar Social i Família,Josepa Vergara i Beltran,Josepa,,Vergara,8014,Barcelonès,Barcelona,11708
+11709,5823,Secció d'Informació i Orientació del Barcelonès,Departament de Benestar Social i Família,José Antonio Romero Pedroche,José,Antonio Romero,Pedroche,8014,Barcelonès,Barcelona,11707
+11701,5823,"Secció d'Informació, Valoració i Seguiment de Girona",Departament de Benestar Social i Família,Jordi Solé i Carrizo,Jordi,,Solé,17002,Gironès,Girona,11694
+11702,5823,"Secció d'Informació, Valoració i Seguiment de Lleida",Departament de Benestar Social i Família,Inés Camats i Roca,Inés,,Camats,25007,Segrià,Lleida,11697
+11703,5823,"Secció d'Informació, Valoració i Seguiment de Tarragona",Departament de Benestar Social i Família,Anna Vendrell i Maños,Anna,,Vendrell,43002,Tarragonès,Tarragona,11700
+5833,5823,Secció d'Obres i Manteniment,Departament de Benestar Social i Família,José Maria Codina i Farre,José,Maria,Codina,8039,Barcelonès,Barcelona,5830
+11685,5823,Secció de Compra de Serveis,Departament de Benestar Social i Família,Maria Concepció Pérez i García,Maria,Concepció,Pérez,8039,Barcelonès,Barcelona,11683
+15377,5823,Secció de Comptabilitat i Habilitació,Departament de Benestar Social i Família,M. Montserrat Panadés Valls,M.,Montserrat Panadés,Valls,8039,Barcelonès,Barcelona,5840
+5857,5823,Secció de Contractació,Departament de Benestar Social i Família,Jorge Alberto Diaz Alvarez,Jorge,Alberto Diaz,Alvarez,8039,Barcelonès,Barcelona,5856
+15545,5823,Secció de Gestió de Prestacions,Departament de Benestar Social i Família,Carme Llonch Fontanet,Carme,Llonch,Fontanet,8001,Barcelonès,Barcelona,14416
+16103,5823,Secció de Gestió de Recursos i Subvencions,Departament de Benestar Social i Família,Ascensió Soto Mezquita,Ascensió,Soto,Mezquita,8039,Barcelonès,Barcelona,5913
+5863,5823,Secció de Logística i Serveis Generals,Departament de Benestar Social i Família,Jordi Cabanes i Orriols,Jordi,,Cabanes,8039,Barcelonès,Barcelona,5860
+11688,5823,Secció de Nòmines,Departament de Benestar Social i Família,Maria del Mar Fernández i Sánchez,Maria,del Mar,Fernández,8039,Barcelonès,Barcelona,11684
+5859,5823,Secció de Patrimoni,Departament de Benestar Social i Família,Maria Isabel Illa Saún,Maria,Isabel Illa,Saún,8039,Barcelonès,Barcelona,5856
+5853,5823,Secció de Planificació i Provisió de Llocs de Treball,Departament de Benestar Social i Família,Xavier López López,Xavier,López,López,8039,Barcelonès,Barcelona,5846
+5841,5823,Secció de Pressupostos,Departament de Benestar Social i Família,Ester Pérez Casas,Ester,Pérez,Casas,8039,Barcelonès,Barcelona,18232
+9701,5823,Secció de Programes de Foment i Assumptes Administratius,Departament de Benestar Social i Família,Isabel Ana Escandell Sánchez,Isabel,Ana Escandell,Sánchez,8001,Barcelonès,Barcelona,7642
+5831,5823,Secció de Projectes i Equipaments,Departament de Benestar Social i Família,Jordi Marçal Font Estruch,Jordi,Marçal Font,Estruch,8039,Barcelonès,Barcelona,5830
+5861,5823,"Secció de Publicacions, Assessorament Lingüístic i Gestió Documental",Departament de Benestar Social i Família,Mª Carme Rodes Coma,Mª,Carme Rodes,Coma,8039,Barcelonès,Barcelona,5860
+11591,5823,Secció de Registre i Règim Sancionador,Departament de Benestar Social i Família,Elisabeth Domènech Bagaria,Elisabeth,Domènech,Bagaria,8039,Barcelonès,Barcelona,5869
+11689,5823,Secció de Revisió i Seguiment,Departament de Benestar Social i Família,Aurora Lorente Puertolas,Aurora,Lorente,Puertolas,8039,Barcelonès,Barcelona,11684
+11705,5823,Secció de Secretaria dels Serveis Territorials a Barcelona,Departament de Benestar Social i Família,Elena García Pérez,Elena,García,Pérez,8014,Barcelonès,Barcelona,11704
+11692,5823,Secció de Secretaria dels Serveis Territorials a Girona,Departament de Benestar Social i Família,null,null,,,17002,Gironès,Girona,5873
+11695,5823,Secció de Secretaria dels Serveis Territorials a Lleida,Departament de Benestar Social i Família,Rosa Maria Ordi Gomà,Rosa,Maria Ordi,Gomà,25007,Segrià,Lleida,5878
+11698,5823,Secció de Secretaria dels Serveis Territorials a Tarragona,Departament de Benestar Social i Família,Noemí Llauradó Sans,Noemí,Llauradó,Sans,43002,Tarragonès,Tarragona,5883
+18236,5823,Secció de Secretaria dels Serveis Territorials a les Terres de l'Ebre,Departament de Benestar Social i Família,null,null,,,,,,12366
+5845,5823,Secció de Subvencions,Departament de Benestar Social i Família,Marc Dominguez i Panadero,Marc,,Dominguez,8039,Barcelonès,Barcelona,5840
+5892,5823,Secció de Suport Tècnic i Manteniment,Departament de Benestar Social i Família,Daniel Mont-Roig Mirabent,Daniel,Mont-Roig,Mirabent,8039,Barcelonès,Barcelona,5890
+11712,5823,Secció de Valoració i Seguiment de les Comarques de Barcelona,Departament de Benestar Social i Família,Eva Herbera Codina,Eva,Herbera,Codina,8014,Barcelonès,Barcelona,11708
+11710,5823,Secció de Valoració i Seguiment del Barcelonès,Departament de Benestar Social i Família,Francesca Burgos Ruiz,Francesca,Burgos,Ruiz,8014,Barcelonès,Barcelona,11707
+5828,5823,Secretaria General de Benestar Social i Família,Departament de Benestar Social i Família,Maria Dolors Rusinés i Bonet,Maria,Dolors,Rusinés,8039,Barcelonès,Barcelona,5823
+10859,5823,Secretaria de Família,Departament de Benestar Social i Família,Dolors Gordi i Julià,Dolors,,Gordi,8001,Barcelonès,Barcelona,12366
+18239,5823,Servei d'Associacionisme i Educació en el Lleure,Departament de Benestar Social i Família,Joaquim Parera i Iglesias,Joaquim,,Parera,,,,2454
+6232,5823,Servei d'Atenció Precoç,Departament de Benestar Social i Família,Montse Faus Griso,Montse,Faus,Griso,8009,Barcelonès,Barcelona,id-3374342466526299283
+5172,5823,Servei d'Atenció a la Infància i l'Adolescència de Barcelona Ciutat,Departament de Benestar Social i Família,Rosa Maria Pérez i Girbent,Rosa,Maria,Pérez,8001,Barcelonès,Barcelona,5165
+5159,5823,Servei d'Atenció a la Infància i l'Adolescència de Girona,Departament de Benestar Social i Família,Sílvia Casellas Serra,Sílvia,Casellas,Serra,17002,Gironès,Girona,5873
+5160,5823,Servei d'Atenció a la Infància i l'Adolescència de Lleida,Departament de Benestar Social i Família,Maria Dolors Camí Solé,Maria,Dolors Camí,Solé,25004,Segrià,Lleida,5878
+5161,5823,Servei d'Atenció a la Infància i l'Adolescència de Tarragona,Departament de Benestar Social i Família,M. Isabel Carrasco i Panadés,M.,Isabel,Carrasco,43002,Tarragonès,Tarragona,5883
+15329,5823,Servei d'Atenció a la Infància i l'Adolescència de les comarques de Barcelona,Departament de Benestar Social i Família,Miquel José Martos i Tovar,Miquel,José,Martos,8001,Barcelonès,Barcelona,11704
+11694,5823,Servei d'Atenció a les Persones de Girona,Departament de Benestar Social i Família,Miquel Àngel Gusart Ponsà,Miquel,Àngel Gusart,Ponsà,17002,Gironès,Girona,5873
+11697,5823,Servei d'Atenció a les Persones de Lleida,Departament de Benestar Social i Família,Ramir Bonet Farran,Ramir,Bonet,Farran,25007,Segrià,Lleida,5878
+11700,5823,Servei d'Atenció a les Persones de Tarragona,Departament de Benestar Social i Família,M. Lourdes González-Casabon Usieto,M.,Lourdes González-Casabon,Usieto,43002,Tarragonès,Tarragona,5883
+11708,5823,Servei d'Atenció a les Persones de les Comarques de Barcelona,Departament de Benestar Social i Família,Carlos Jacobo Masip,Carlos,Jacobo,Masip,8014,Barcelonès,Barcelona,11704
+11707,5823,Servei d'Atenció a les Persones del Barcelonès,Departament de Benestar Social i Família,Maria del Valle Vinardell Arbuló,Maria,del Valle Vinardell,Arbuló,8014,Barcelonès,Barcelona,11704
+5869,5823,Servei d'Inspecció i Registre,Departament de Benestar Social i Família,Rosa Llor Serra,Rosa,Llor,Serra,8039,Barcelonès,Barcelona,5860
+15479,5823,Servei d'Intervenció Especialitzada (SIE) de Girona,Departament de Benestar Social i Família,null,null,,,17190,Gironès,Salt,id-7489222248376527593
+19028,5823,Servei d'Intervenció Especialitzada (SIE) de Lleida,Departament de Benestar Social i Família,null,null,,,25007,Segrià,Lleida,id-7489222248376527593
+18853,5823,Servei d'Intervenció Especialitzada (SIE) de Tarragona,Departament de Benestar Social i Família,null,null,,,43001,Tarragonès,Tarragona,id-7489222248376527593
+18856,5823,Servei d'Intervenció Especialitzada (SIE) de l'Alt Pirineu Aran,Departament de Benestar Social i Família,null,null,,,25700,Alt Urgell,La Seu d'Urgell,id-7489222248376527593
+18854,5823,Servei d'Intervenció Especialitzada (SIE) de la Catalunya Central,Departament de Benestar Social i Família,null,null,,,8700,Anoia,Igualada,id-7489222248376527593
+18855,5823,Servei d'Intervenció Especialitzada (SIE) de les Terres de l'Ebre,Departament de Benestar Social i Família,null,null,,,43870,Montsià,Amposta,id-7489222248376527593
+15946,5823,Servei d'Intervenció Especialitzada (SIE) del Baix Llobregat,Departament de Benestar Social i Família,null,null,,,8980,Baix Llobregat,Sant Feliu de Llobregat,id-7489222248376527593
+17500,5823,Servei de Centre de Dia d'Atenció Especialitzada per a persones amb disminució Riudeperes,Departament de Benestar Social i Família,null,null,,,8500,Osona,Calldetenes,id-249421060537965186
+5856,5823,Servei de Contractació i Patrimoni,Departament de Benestar Social i Família,Rosa Maria Tuldrà i Casasa,Rosa,Maria,Tuldrà,8039,Barcelonès,Barcelona,15375
+12368,5823,Servei de Coordinació Territorial,Departament de Benestar Social i Família,Marius Josep Pont Fandos,Marius,Josep Pont,Fandos,43870,Montsià,Amposta,12366
+5913,5823,Servei de Desenvolupament i Cooperació Social,Departament de Benestar Social i Família,Marta Jové i Sentelles,Marta,,Jové,8039,Barcelonès,Barcelona,5894
+15111,5823,Servei de Documentació i Arxiu,Departament de Benestar Social i Família,Pilar París Pujol,Pilar,París,Pujol,8015,Barcelonès,Barcelona,13766
+18234,5823,Servei de Formació i Gestió del Coneixement Especialitzat,Departament de Benestar Social i Família,M. Pia Ferrer i Jeremías,M.,Pia,Ferrer,,,,5835
+7642,5823,Servei de Gestió Administrativa,Departament de Benestar Social i Família,Izascun Angulo Barroso,Izascun,Angulo,Barroso,8001,Barcelonès,Barcelona,5165
+16101,5823,Servei de Gestió Administrativa,Departament de Benestar Social i Família,Laura Veciana Martínez,Laura,Veciana,Martínez,8039,Barcelonès,Barcelona,18103
+5840,5823,Servei de Gestió Econòmica,Departament de Benestar Social i Família,Oswald Vega Aguila,Oswald,Vega,Aguila,8039,Barcelonès,Barcelona,18231
+11706,5823,Servei de Gestió Territorial a Barcelona,Departament de Benestar Social i Família,Gemma Ruiz i Fernàndez,Gemma,,Ruiz,8014,Barcelonès,Barcelona,11704
+11693,5823,Servei de Gestió Territorial a Girona,Departament de Benestar Social i Família,Carles Soler Casals,Carles,Soler,Casals,17002,Gironès,Girona,5873
+11696,5823,Servei de Gestió Territorial a Lleida,Departament de Benestar Social i Família,Antoni Reinoso Gil,Antoni,Reinoso,Gil,25007,Segrià,Lleida,5878
+11699,5823,Servei de Gestió Territorial a Tarragona,Departament de Benestar Social i Família,Eva Ferran Roig,Eva,Ferran,Roig,43002,Tarragonès,Tarragona,5883
+18233,5823,Servei de Planificació i Avaluació Estratègica,Departament de Benestar Social i Família,Carme Correa i Gegundez,Carme,,Correa,,,,5835
+18232,5823,Servei de Pressupostos i Avaluació Econòmica,Departament de Benestar Social i Família,Raquel Gabarrón i García,Raquel,,Gabarrón,8039,Barcelonès,Barcelona,18231
+11684,5823,Servei de Prestacions,Departament de Benestar Social i Família,Júlia Pueyo,Júlia,,Pueyo,8039,Barcelonès,Barcelona,15853
+14416,5823,Servei de Prestacions Econòmiques i Subvencions,Departament de Benestar Social i Família,Ma. Pau Vidal-Folch de Balanzó,Ma.,Pau Vidal-Folch de,Balanzó,8001,Barcelonès,Barcelona,18237
+11082,5823,Servei de Prevenció de Riscos Laborals,Departament de Benestar Social i Família,Albert Xavier Imaz i García,Albert,Xavier,Imaz,8039,Barcelonès,Barcelona,5853
+11682,5823,Servei de Programació,Departament de Benestar Social i Família,Maria José Baron Castellar,Maria,José Baron,Castellar,8039,Barcelonès,Barcelona,11679
+5893,5823,Servei de Programació i Dinamització d'Activitats,Departament de Benestar Social i Família,Montserrat Suñol Cuní,Montserrat,Suñol,Cuní,8039,Barcelonès,Barcelona,13838
+11681,5823,Servei de Programes Sectorials,Departament de Benestar Social i Família,Roger Cuscó i Segarra,Roger,,Cuscó,8039,Barcelonès,Barcelona,11679
+5830,5823,"Servei de Projectes, Obres i Equipaments",Departament de Benestar Social i Família,Rosario Manjón Doncel,Rosario,Manjón,Doncel,8039,Barcelonès,Barcelona,15375
+15440,5823,Servei de Promoció de l'Associacionisme i el Voluntariat,Departament de Benestar Social i Família,Eva Ribera i Sendra,Eva,,Ribera,8039,Barcelonès,Barcelona,5894
+18240,5823,Servei de Promoció de l'Autonomia Personal,Departament de Benestar Social i Família,Sergi Andreu Guiral i Alonso,Sergi,Andreu,Guiral,8039,Barcelonès,Barcelona,11678
+11683,5823,Servei de Recursos Aliens,Departament de Benestar Social i Família,Adela Vives Belmonte,Adela,Vives,Belmonte,8039,Barcelonès,Barcelona,11680
+5846,5823,Servei de Recursos Humans,Departament de Benestar Social i Família,David Coromina Pérez,David,Coromina,Pérez,8039,Barcelonès,Barcelona,15376
+18242,5823,Servei de Recursos Propis,Departament de Benestar Social i Família,Lídia Martí i Pastor,Lídia,,Martí,,,,11680
+5860,5823,Servei de Règim Interior,Departament de Benestar Social i Família,Yolanda Bertomeu i Ginata,Yolanda,,Bertomeu,8039,Barcelonès,Barcelona,5853
+5162,5823,Servei de Suport Jurídic,Departament de Benestar Social i Família,Àngel Lázaro Riol,Àngel,Lázaro,Riol,8001,Barcelonès,Barcelona,5165
+5890,5823,Servei de Suport Tècnic i Informació,Departament de Benestar Social i Família,Albert Ferrer i Arpí,Albert,,Ferrer,8039,Barcelonès,Barcelona,13838
+17522,5823,Servei de Teràpia Ocupacional de Sant Adrià de Besòs,Departament de Benestar Social i Família,null,null,,,8930,Barcelonès,Sant Adrià de Besòs,id-3374342466526299283
+18241,5823,Servei de Valoracions,Departament de Benestar Social i Família,Cecília Fàbregues i Arbués,Cecília,,Fàbregues,8039,Barcelonès,Barcelona,11678
+11704,5823,Serveis Territorials de Benestar Social i Família a Barcelona,Departament de Benestar Social i Família,Carme Canela i Farré,Carme,,Canela,8014,Barcelonès,Barcelona,5869
+5873,5823,Serveis Territorials de Benestar Social i Família a Girona,Departament de Benestar Social i Família,Montserrat Roura i Massaneda,Montserrat,,Roura,17002,Gironès,Girona,15329
+5878,5823,Serveis Territorials de Benestar Social i Família a Lleida,Departament de Benestar Social i Família,Joan Ramon Saura i Aranda,Joan,Ramon,Saura,25007,Segrià,Lleida,11694
+5883,5823,Serveis Territorials de Benestar Social i Família a Tarragona,Departament de Benestar Social i Família,null,null,,,43002,Tarragonès,Tarragona,11697
+12366,5823,Serveis Territorials de Benestar Social i Família a les Terres de l'Ebre,Departament de Benestar Social i Família,Manuela Cid Espuny,Manuela,Cid,Espuny,43870,Montsià,Amposta,11700
+11587,5823,Serveis Turístics SA,Departament de Benestar Social i Família,null,null,,,AD500,Andorra,Andorra la Vella,13766
+6240,5823,Serveis de Valoració i Orientació a Persones amb Discapacitat (CAD Infantil Grassot),Departament de Benestar Social i Família,Carme Tormo,Carme,,Tormo,8025,Barcelonès,Barcelona,id-3374342466526299283
+6233,5823,Serveis de Valoració i Orientació a Persones amb Discapacitat de Badal (CAD Badal),Departament de Benestar Social i Família,Núria Soler Duch,Núria,Soler,Duch,8014,Barcelonès,Barcelona,id-3374342466526299283
+6239,5823,Serveis de Valoració i Orientació a Persones amb Discapacitat de Badalona (CAD Badalona),Departament de Benestar Social i Família,Josep Farrés i Quesada,Josep,,Farrés,8912,Barcelonès,Badalona,id-3374342466526299283
+6235,5823,Serveis de Valoració i Orientació a Persones amb Discapacitat de Girona (CAD Girona),Departament de Benestar Social i Família,Esther Parramon i Vigatà,Esther,,Parramon,17002,Gironès,Girona,id-3374342466526299283
+6236,5823,Serveis de Valoració i Orientació a Persones amb Discapacitat de Lleida (CAD Lleida),Departament de Benestar Social i Família,Rosa Rodríguez,Rosa,,Rodríguez,25007,Segrià,Lleida,id-3374342466526299283
+6237,5823,Serveis de Valoració i Orientació a Persones amb Discapacitat de Tarragona (CAD Tarragona),Departament de Benestar Social i Família,Valentí Canadell i Gran,Valentí,,Canadell,43002,Tarragonès,Tarragona,id-3374342466526299283
+6234,5823,Serveis de Valoració i Orientació a Persones amb Discapacitat de Terrassa (CAD Terrassa),Departament de Benestar Social i Família,Empar Lopez Herranz,Empar,Lopez,Herranz,8222,Vallès Occidental,Terrassa,id-3374342466526299283
+13431,5823,Serveis de Valoració i Orientació a Persones amb Discapacitat de Terres de l'Ebre (CAD Terres de l'Ebre),Departament de Benestar Social i Família,null,null,,,43870,Montsià,Amposta,id-3374342466526299283
+11679,5823,Subdirecció General d'Anàlisi i Programació,Departament de Benestar Social i Família,Lluís Grande i Ratia,Lluís,,Grande,8039,Barcelonès,Barcelona,5921
+5165,5823,Subdirecció General d'Atenció a la Infància i l'Adolescència,Departament de Benestar Social i Família,Joan Mayoral i Simón,Joan,,Mayoral,8001,Barcelonès,Barcelona,5157
+11678,5823,Subdirecció General d'Atenció a les Persones i Promoció de l'Autonomia Personal,Departament de Benestar Social i Família,Mònica Ribas i Gironès,Mònica,,Ribas,8039,Barcelonès,Barcelona,5921
+13838,5823,Subdirecció General d'Equipaments Cívics i Activitats,Departament de Benestar Social i Família,Francesc Molina i Núñez,Francesc,,Molina,8039,Barcelonès,Barcelona,18103
+15375,5823,Subdirecció General de Contractació i Equipaments,Departament de Benestar Social i Família,Juli Ausàs i Coll,Juli,,Ausàs,8039,Barcelonès,Barcelona,18232
+5894,5823,Subdirecció General de Cooperació Social i Voluntariat,Departament de Benestar Social i Família,Marc Viñas Artola,Marc,Viñas,Artola,8039,Barcelonès,Barcelona,18103
+18237,5823,Subdirecció General de Família,Departament de Benestar Social i Família,Montserrat Solé i Aubia,Montserrat,,Solé,,,,10859
+11680,5823,Subdirecció General de Gestió de Recursos,Departament de Benestar Social i Família,M. Carmen Milian i Peña,M.,Carmen,Milian,8039,Barcelonès,Barcelona,5921
+2454,5823,Subdirecció General de Joventut,Departament de Benestar Social i Família,Manel Ros i Biosca,Manel,,Ros,8015,Barcelonès,Barcelona,13766
+18231,5823,Subdirecció General de Planificació i Gestió Pressupostària,Departament de Benestar Social i Família,Montserrat Lupón i Rosés,Montserrat,,Lupón,8039,Barcelonès,Barcelona,10646
+15853,5823,Subdirecció General de Prestacions Socials,Departament de Benestar Social i Família,Rafael Arderiu Monnà,Rafael,Arderiu,Monnà,8039,Barcelonès,Barcelona,5921
+15376,5823,Subdirecció General de Recursos Humans i Administració,Departament de Benestar Social i Família,Raquel Sistaré Lanas,Raquel,Sistaré,Lanas,8039,Barcelonès,Barcelona,5830
+13744,5823,Tagus Viajes SA,Departament de Benestar Social i Família,null,null,,,8193,Vallès Occidental,Cerdanyola del Vallès,13766
+12911,5823,Telèfon d'informació i Reserves XANASCAT,Departament de Benestar Social i Família,null,null,,,8015,Barcelonès,Barcelona,15437
+14566,5823,Telèfon del Programa d'Atenció Postadoptiva,Departament de Benestar Social i Família,null,null,,,,,,8908
+9697,5823,Unitat d'Acoblaments i Seguiments dels Menors,Departament de Benestar Social i Família,Dolors Prats i Martínez,Dolors,,Prats,8001,Barcelonès,Barcelona,9694
+9696,5823,Unitat d'Atenció a les Famílies,Departament de Benestar Social i Família,Núria Blanxart i Maneus,Núria,,Blanxart,8001,Barcelonès,Barcelona,9694
+9698,5823,Unitat d'Informació i Programació,Departament de Benestar Social i Família,Marta Rossell i Toneu,Marta,,Rossell,8001,Barcelonès,Barcelona,8908
+2459,5823,Unitat de Suport,Departament de Benestar Social i Família,Ricard Julià i Capdevila,Ricard,,Julià,8015,Barcelonès,Barcelona,2454
+9695,5823,Unitat de Tramitació de les Adopcions Internacionals,Departament de Benestar Social i Família,Elvira Molinero i Blanco,Elvira,,Molinero,8001,Barcelonès,Barcelona,9693
+9801,5823,Àrea Economicoadministrativa (ICD),Departament de Benestar Social i Família,Victor Álvarez i López,Victor,,Álvarez,8001,Barcelonès,Barcelona,9800
+9693,5823,Àrea Juridicoadministrativa,Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,8908
+9694,5823,Àrea d'Acolliments Familiars i d'Adopcions,Departament de Benestar Social i Família,Anna Domenech i Bresca,Anna,,Domenech,8001,Barcelonès,Barcelona,8908
+13253,5823,Àrea d'Organització,Departament de Benestar Social i Família,Jordi Domínguez i Vasallo,Jordi,,Domínguez,8039,Barcelonès,Barcelona,5860
+66,5823,Àrea de Planificació i Seguiment del Pla d'Actuació del Govern (ICD),Departament de Benestar Social i Família,Núria Cañellas Pascual,Núria,Cañellas,Pascual,8001,Barcelonès,Barcelona,9800
+11726,5823,Àrea de Programes Europeus (ICD),Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,9800
+11725,5823,Àrea de Promoció d'Activitats i Entitats (ICD),Departament de Benestar Social i Família,Montserrat Vila Albet,Montserrat,Vila,Albet,8001,Barcelonès,Barcelona,9800
+18104,5823,Àrea de Promoció de l'Accessibilitat i de Supressió de Barreres,Departament de Benestar Social i Família,Mª Gemma Pifarré i Matas,Mª,Gemma,Pifarré,8039,Barcelonès,Barcelona,5828
+15327,5823,Àrea de Suport als Joves Tutelats i Extutelats,Departament de Benestar Social i Família,null,null,,,8001,Barcelonès,Barcelona,5157
+15398,5823,Àrea de Tecnologies de la Informació i les Comunicacions,Departament de Benestar Social i Família,Sergi Rubí i Carnacea,Sergi,,Rubí,8039,Barcelonès,Barcelona,5860
+18235,5823,Àrea del Sistema d'Informació Social,Departament de Benestar Social i Família,null,null,,,,,,5835
+18238,5823,"Àrea per a la igualtat de tracte i no-discriminació de persones Lesbianes, Gais, Transsexuals i Bisexuals (LGTB)",Departament de Benestar Social i Família,Jordi Budó i Salellas,Jordi,,Budó,8001,Barcelonès,Barcelona,10859
