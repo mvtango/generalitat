@@ -1,6 +1,6 @@
 
 <!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-<title>Presidencia</title>
+<title>Organigrama</title>
 
 	<script type="text/javascript" src="js/d3.v3.min.js"></script> 
 	<script type="text/javascript" src="js/underscore.min.js"></script>
@@ -141,8 +141,8 @@ a.hidden:hover { opacity: 0.4; }
 	var state={};
 	var tabindex=[];
 	window.state=state;
-	window.state.tree=frag.get("tree") || "presidencia.json";
-	window.state.tabs=window.state.tree.replace(/\..+$/,"");
+	window.state.tabs=frag.get("tree") || "presidencia";
+	window.state.tree=window.state.tree=window.state.tabs+".json";
 
 
 
@@ -156,14 +156,13 @@ var _shorts=[
 	["Direcció General ","DG "],
 	["Subdirecció General ","SDG "],
 	["Secretaria ","Secr. "],
-	["General ","Gen. "],
 	["Generalitat de Catalunya ","Generalitat "],
 	["Territorial del Govern de la Generalitat ",""],
 	["Govern de la Generalitat ","Govern "],
 	["de Medicina de l'Esport i d'Activitat Física ",""],
 	["del Patronat Catalunya Món ",""],
 	["Consell de Diplomàcia Pública de Catalunya ",""],
-	["Oficina Comarcal d[e'] ?","of. "],
+	["Oficina Comarcal ","SC "],
     ["Serveis Territorials d'Agricultura, Ramaderia, Pesca, Alimentació i Medi Natural ","ST "],
 	["Consell Regulador de la Denominació d'Origen Protegida","DOC"],
 	["Consell Regulador de la Denominació d'Origen","DOC"],
@@ -171,7 +170,18 @@ var _shorts=[
 	['"""','"'],
 	["Taula Sectorial Agrària ","TSA "],
 	["Comissió Assessora ","CA "],
-	["Confraria de Pescadors ","CP "]
+	["Consell Assessor ","CA "],
+	["Confraria de Pescadors ","CP "],
+	["Representació Territorial ","RT "],
+	["Centre d'Atenció Primària (CAP)","CAP "],
+	["Cambra (Oficial )?de .* de","CC "],
+	["Centre d'Innovació i Formació Ocupacional \\(CIFO\\)","CIFO"],
+	["Direcció Territorial ","DT "],
+	["Oficina de Treball de la Generalitat ","OT "],
+	["Oficina de Treball ","OT "],
+    ["del Servei d'Ocupació de Catalunya \\(SOC\\)","del SOC"],
+	["General ","Gen. "],
+
 ]
     
 function makeshort(a) {
@@ -644,6 +654,16 @@ Tabletop.init( { key: spreadsheet,
                          debug: false } );
 
 
+function init_after_load() { 
+	if (frag.get("node")) {
+			console.log(nodes.index[frag.get("node")]);
+			switchTo(nodes.index[frag.get("node")]);
+		} else {
+			click(root);
+	}
+}
+
+
 
 function populateTabs(data,tt ) {
 	if (typeof data[window.state.tabs] != "undefined") {
@@ -668,13 +688,8 @@ function populateTabs(data,tt ) {
 		});
 		tabindex=$("#tabs").find("li a").get().map(function(a) { return($(a).attr("data-node")) });
 		$("#tabs").fadeIn();
-		if (frag.get("node")) {
-			switchTo(nodes.index[frag.get("node")]);
-		} else {
-			click(root);
-		}
+		init_after_load();
 	}
-
 
 }
 
