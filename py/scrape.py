@@ -7,15 +7,21 @@ here=os.path.split(__file__)[0]
 
 datadir=os.path.join(here,"../data")
 
-files={ "in" : "unitatssac-scraped-20130525.csv",
-        "out" : "unitatssac-scraped-20130525-out.csv"
+files={ "in" : "unitatssac-scraped-20130525-out.csv",
+        "out" : "unitatssac-scraped-20130525-salud.csv"
        }
        
 # generalitat.cache=simplejson.load(open(os.path.join(datadir,"generalitat.cache.json")))
 entitats=csvstore.csvstore(os.path.join(datadir,files["in"]))
+analyze=False
+
 try  :
 	for e in entitats.data : 
-		if e["iddep"]=="4163" :
+		if not analyze :
+			if e["id"] != "7290" :
+				continue
+			analyze=True
+		if e["iddep"]=="2803" :
 				p=e["iddep-scraped"]
 				try :
 					e["iddep-scraped"] = generalitat.depende_de(e["id"]) 
