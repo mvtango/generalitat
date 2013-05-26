@@ -25,7 +25,25 @@ jobs= [ { 'find'  : 'Presidència',
 		{ 'find'  : 'Agricultura',
           'files' : [ os.path.join(datadir,"agricultura.json"),
 					  os.path.join(here,"../opengov.cat/generalitat/0.3/agricultura.json") ]
+		},
+		{ 'find'  : 'Salut',
+          'files' : [ os.path.join(datadir,"salut.json"),
+					  os.path.join(here,"../opengov.cat/generalitat/0.3/salut.json") ]
+		},
+		{ 'find'  : 'Empresa',
+          'files' : [ os.path.join(datadir,"empresa.json"),
+					  os.path.join(here,"../opengov.cat/generalitat/0.3/empresa.json") ]
+		},
+		{ 'find'  : 'Benestar',
+          'files' : [ os.path.join(datadir,"benestar.json"),
+					  os.path.join(here,"../opengov.cat/generalitat/0.3/benestar.json") ]
+		},
+		{ 'find'  : 'Territori',
+          'files' : [ os.path.join(datadir,"territori.json"),
+					  os.path.join(here,"../opengov.cat/generalitat/0.3/territori.json") ]
 		}
+
+
 	  ]
 
 for fn in args["infile"] :
