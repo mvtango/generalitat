@@ -212,9 +212,11 @@ d3.json(window.state.tree || "tree.json", function(json) {
   json.y0 = 0;
   update(root = json);
   nodes.list=nodelist(root);
-  nodes.names=_.union(_.map(nodes.list,function(n) { return ({ label: n.name, value : n }) }),
-					  _.map(nodes.list,function(n) { var nr=n.data.resp; if (nr) { return ({ label: nr, value : n }) }})
-  );
+  nodes.names=_.map(nodes.list,function(n) { return ({ label: n.name, value : n }) });
+//					  _.map(nodes.list,
+//						    _.filter(function(n) { return typeof n != "undefined" },
+//						             function(n) { var nd=n.data; if (nd) { var nr=n.data.resp; if (nr) { return ({ label: nr, value : n }) }}}))
+//  );
   nodes.index={};
   _.each(nodes.list,function(e) { nodes.index[e.id]=e });
   
@@ -265,9 +267,13 @@ function parents(p) {
 	var c=p;
 	while (c.id != root.id) {
 		par=nodes.index[c.data["iddep-scraped"]];
-		ps.push(par);
-		// console.log("parent "+par.name);
-		c=par;
+		if (typeof par != "undefined") {
+			ps.push(par);
+			// console.log("parent "+par.name);
+			c=par;
+		} else {
+			break;
+		}
 	}
 	return ps;
 }
@@ -716,11 +722,14 @@ function populateTabs(data,tt ) {
 </script>   
 <script id="infoTemplate" type="text/template">
 <div>
-  <p><b><%= d.data.nom %></b><br /><span style="font-size: 80%">[<a href="http://www10.gencat.cat/sac/AppJava/organisme_fitxa.jsp?codi=<%= d.id %>" target="_blank"><%= d.id %> en gencat.cat</a>]</span></p>
-  <div ><%= d.data.resp != "null"  ? d.data.resp : "responsable no especificat" %></div>
-  <% if (has_children(d)) { %><i style="font-size:80%"><b><%= has_children(d) %></b> dependència<%= has_children(d)==1 ? "" : "s" %><% } %></i><br/>
-  <!-- <a class="hidden" target="_blank" href="http://www10.gencat.cat/sac/AppJava/organigrama_query.jsp?codi=<%=d.id %>">organigrama</a> -->
-  
+  <% if (d.data.nom) { %>
+	<p><b><%= d.data.nom %></b><br /><span style="font-size: 80%">[<a href="http://www10.gencat.cat/sac/AppJava/organisme_fitxa.jsp?codi=<%= d.id %>" target="_blank"><%= d.id %> en gencat.cat</a>]</span></p>
+	<div ><%= d.data.resp != "null"  ? d.data.resp : "responsable no especificat" %></div>
+	<% if (has_children(d)) { %><i style="font-size:80%"><b><%= has_children(d) %></b> dependència<%= has_children(d)==1 ? "" : "s" %><% } %></i><br/>
+	<!-- <a class="hidden" target="_blank" href="http://www10.gencat.cat/sac/AppJava/organigrama_query.jsp?codi=<%=d.id %>">organigrama</a> -->
+  <% } else { %>
+    <p><b><%= d.name %></b></p>
+  <% } %>
   </div>
 </script>   
 <script id="tabBodyTemplate" type="text/template">
