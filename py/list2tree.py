@@ -1,14 +1,15 @@
 import simplejson
 
 def log(*args) :
-	print args
+	pass # print args
 
 def dict2node(item) :
 		return({ "name" : item["nom"], "id" : item["id"], "data" : item })
 
 
 def list2tree(lista,children="children") :
-	rootnode={ children: [], "name": "Entitats", "id" : "0gen" }
+	rootnode={ "name": "Entitats", "id" : "0gen", "data" : {} }
+	rootnode[children]=[]
 	index={}
 	depindex={}
 	for item in lista :
