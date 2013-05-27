@@ -113,7 +113,7 @@ a.hidden:hover { opacity: 0.4; }
 	<button onClick="$('#autocomplete').select()">cerca</button>
 	<br/>
 	<button disabled title="nivells"><span class="treedepth"></span></button>
-	<button class="simpler" onClick="maxlevels(0);_t('navegation','inicio');" title="mostrar arrel i un nivell">início</button>
+	<button class="simpler" onClick="maxlevels(0);_t('navegation','inicio');" title="mostrar arrel i un nivell">iníci</button>
 	<button class="changeroot"  title="mostrar nivell superior a l'arrel" onClick="incrlevel();_t('navegation','root-up');">[&lt; </button>
 	<button class="simpler" onClick="decrlevel();_t('navegation','leafs-up');" title="treure l'últim nivell">]&lt; </button>
 	</div>	
@@ -719,7 +719,7 @@ function populateTabs(data,tt ) {
 <script id="tooltipTemplate" type="text/template">
 <div>
   <%= d.data.nom %> [<%= d.id %>]<br/>	
-  <% if (has_children(d)) { %><i><b><%= has_children(d) %></b> dependència<%= has_children(d)==1 ? "" : "s" %><% } %></i><br/>
+  <% if (has_children(d)) { %><i><b><%= has_children(d) %></b> dependènci<%= has_children(d)==1 ? "a" : "es" %><% } %></i><br/>
   <div style="font-size:80%;">Responsable: <%= d.data.resp != "null"  ? d.data.resp : "no especificat" %></div>
 </div>
 </script>   
@@ -728,7 +728,7 @@ function populateTabs(data,tt ) {
   <% if (d.data.nom) { %>
 	<p><b><%= d.data.nom %></b><br /><span style="font-size: 80%">[<a href="http://www10.gencat.cat/sac/AppJava/organisme_fitxa.jsp?codi=<%= d.id %>" target="_blank"><%= d.id %> en gencat.cat</a>]</span></p>
 	<div ><%= d.data.resp != "null"  ? d.data.resp : "responsable no especificat" %></div>
-	<% if (has_children(d)) { %><i style="font-size:80%"><b><%= has_children(d) %></b> dependència<%= has_children(d)==1 ? "" : "s" %><% } %></i><br/>
+	<% if (has_children(d)) { %><i style="font-size:80%"><b><%= has_children(d) %></b> dependènci<%= has_children(d)==1 ? "a" : "es" %><% } %></i><br/>
 	<!-- <a class="hidden" target="_blank" href="http://www10.gencat.cat/sac/AppJava/organigrama_query.jsp?codi=<%=d.id %>">organigrama</a> -->
   <% } else { %>
     <p><b><%= d.name %></b></p>
