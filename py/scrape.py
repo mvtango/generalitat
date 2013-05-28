@@ -7,8 +7,8 @@ here=os.path.split(__file__)[0]
 
 datadir=os.path.join(here,"../data")
 
-files={ "in" : "unitatssac-scraped-20130525-out.csv",
-        "out" : "unitatssac-scraped-20130525-salud.csv"
+files={ "in" : "unitatssac-scraped-20130525-salud.csv",
+        "out" : "unitatssac-scraped-output.csv"
        }
        
 # generalitat.cache=simplejson.load(open(os.path.join(datadir,"generalitat.cache.json")))
@@ -17,11 +17,7 @@ analyze=False
 
 try  :
 	for e in entitats.data : 
-		if not analyze :
-			if e["id"] != "7290" :
-				continue
-			analyze=True
-		if e["iddep"]=="2803" :
+		if True :
 				p=e["iddep-scraped"]
 				try :
 					e["iddep-scraped"] = generalitat.depende_de(e["id"]) 
@@ -35,7 +31,8 @@ try  :
 						print "Same!",
 					else :
 						print "Different - ",
-					print "%s -> %s" % (e["id"],e["iddep-scraped"])
+					print "%s [%s] -> %s" % (e["id"],e["nom"],e["iddep-scraped"])
 finally :
 	entitats.store(os.path.join(datadir,files["out"]))
 	print "stored"
+
