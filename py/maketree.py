@@ -42,6 +42,10 @@ jobs= [ { 'find'  : 'Presidència',
           'files' : [ os.path.join(datadir,"territori.json"),
 					  os.path.join(here,"../opengov.cat/generalitat/0.3/territori.json") ]
 		},
+		{ 'find'  : 'Ensenyament',
+          'files' : [ os.path.join(datadir,"ensenyament.json"),
+					  os.path.join(here,"../opengov.cat/generalitat/0.3/ensenyament.json") ]
+		},
 		{ 'find'  : ' ',
           'files' : [ os.path.join(datadir,"generalitat.json"),
 					  os.path.join(here,"../opengov.cat/generalitat/0.3/generalitat.json") ]
