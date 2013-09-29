@@ -27,6 +27,8 @@ class AddToEditorChainClass :
 	def makestring(self,a) :
 		if type(a)==types.ListType :
 			a="".join([unicode(b) for b in a])
+		elif a is None :
+			a=""
 		return a
 		
 		
@@ -84,7 +86,7 @@ class TextParser(AddToEditorChainClass) :
 			m=r.search(i)
 			if m :
 				return m.groupdict()
-		return None 
+		return {} 
 
 
 	def __call__(self,i) :

@@ -9,10 +9,14 @@ done
 DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 
-cd $DIR
+
+
+cd $DIR/../py
 od=../data/xml
 of=$od/`date +%Y-%m-%d`-unitatssac.xml
 
 wget --output-file=/dev/null http://www20.gencat.cat/dadesobertes/recursos/organismes/unitatssac.xml --output-document=$of
+# python ./maketree.py $of >../data/maketree.log
+
 
 
