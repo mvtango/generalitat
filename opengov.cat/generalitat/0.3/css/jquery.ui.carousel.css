@@ -1,0 +1,56 @@
+/*!
+ * jQuery UI Carousel 0.3.0
+ *
+ * Copyright 2010, George Paterson
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ *
+ * Depends:
+ *	jquery.ui.core.js
+ *	jquery.ui.widget.js
+ * Optional:
+ *  jquery.effects.core.js
+ */
+.ui-carousel {
+	width: 380px;
+	padding: 5px;
+	margin: 0 0 15px;
+}
+.ui-carousel-header {
+	overflow:hidden;
+	padding: 5px 0;
+	margin: 0 0 5px;
+}
+.ui-carousel-navigation {
+	float: right;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.ui-carousel-navigation li {
+	float: left;
+	list-style: none;
+	margin: 0 5px;
+}
+.ui-carousel-tracker {
+	float: right;
+	padding: 1px 0 0;
+	margin: 0 5px 0 0;
+}
+.ui-carousel-clip {
+	overflow: hidden;
+}
+.ui-carousel-slide {
+	width: 10000px;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+.ui-carousel-item {
+	float: left;
+	overflow: hidden;
+	list-style: none;
+	line-height: 0;
+	width: 120px;
+	margin: 0 10px 0 0;
+	padding: 0;
+}
