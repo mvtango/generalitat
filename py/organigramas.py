@@ -34,10 +34,10 @@ for s in init_db :
 		
 		
 		
-def leer_organigrama(d) :
+def leer_organigrama(d,date) :
 	if os.path.exists(d) :
 		t=TreeScraper(open(d),base=lxml.etree.XMLParser)
-		d=re.search(r"/(?P<date>2[01]\d\d-[01]\d-[0123]\d)",d).groupdict()["date"]
+		d=date
 	else :
 		t=TreeScraper("../data/xml/%s-unitatssac.xml" % d ,base=lxml.etree.XMLParser)
 	for e in t.extract("//item",
@@ -78,7 +78,8 @@ def update_db(d) :
     stats=defaultdict(lambda : 0)
     jobs=[]
     newest=dict([(a["id"],{ 'present' : False, 'rowid' : a['rowid'], 'id' : a['id']} ) for a in store.execute("select id,rowid from entitats where stamp=(select max(stamp) from entitats)")])
-    for o in leer_organigrama(d) :
+    date=re.search(r"/(?P<date>2[01]\d\d-[01]\d-[0123]\d)",d).groupdict()["date"]
+    for o in leer_organigrama(d,date) :
         r=upsert_entidad(o)
         if r :
             jobs.append(r)
@@ -91,13 +92,12 @@ def update_db(d) :
         z[0].update({'newid': z[1]})
         canvis.append(z[0])
     store.insert(canvis,'canvis')
-    d=canvis[0]["stamp"]
     deleted=filter(lambda a: a["present"]==False, newest.values())
     if len(deleted) :
         stats["deleted"]=len(deleted)
         cs=[]
         for dele in deleted :
-            cs.append({ 'type' : 'delete', 'oldid' : dele['rowid'], 'newid' : None, 'stamp' : d, 'id' : dele['id'] })
+            cs.append({ 'type' : 'delete', 'oldid' : dele['rowid'], 'newid' : None, 'stamp' : date, 'id' : dele['id'] })
         store.insert(cs,'canvis')
     else :
         stats["deleted"]=0

@@ -18,7 +18,7 @@ here=os.path.split(__file__)[0]
 datadir=os.path.join(here,"../data")
 
 
-jobs= [ { 'find'  : u'President',
+jobs= [ { 'find'  : u'Departament de la Presidència',
           'files' : [ os.path.join(datadir,"presidencia.json"),
 					  os.path.join(here,"../opengov.cat/generalitat/0.3/tree.json"),
 					  os.path.join(here,"../data/web/presidencia.json"),
