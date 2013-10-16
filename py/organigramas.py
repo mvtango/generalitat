@@ -24,6 +24,10 @@ init_db=[
 """CREATE INDEX if not exists entitats_id ON `entitats` (`id`);""",
 """CREATE UNIQUE INDEX if not exists entitats_id_stamp ON `entitats` (`id`,`stamp`);""",
 """CREATE INDEX if not exists entitats_stamp ON `entitats` (`stamp`);""",
+"""CREATE VIEW if not exists canvisdep as select a.nom as nom, a.id as id, a.stamp as stamp, a.resp as resp,b.stamp as oldstamp, b.iddep as oldiddep,a.iddep as iddep, a.centres as centres from entitats as a, entitats as b, canvis where canvis.type="change" and canvis.newid=a.rowid and canvis.oldid=b.rowid and a.iddep != b.iddep;""",
+"""CREATE VIEW if not exists canvisnom as select a.nom as nom, a.id as id, a.stamp as stamp, a.resp as resp,b.stamp as oldstamp, b.nom as oldnom,a.iddep as iddep, a.centres as centres from entitats as a, entitats as b, canvis where canvis.type="change" and canvis.newid=a.rowid and canvis.oldid=b.rowid and a.nom != b.nom;""",
+"""CREATE VIEW if not exists canvisresp as select a.nom as nom, a.id as id, a.stamp as stamp, a.resp as resp,b.stamp as oldstamp, b.resp as oldresp,a.iddep as iddep, a.centres as centres from entitats as a, entitats as b, canvis where canvis.type="change" and canvis.newid=a.rowid and canvis.oldid=b.rowid and a.resp != b.resp;""",
+"""CREATE VIEW if not exists nuevos as select a.nom as nom, a.id as id, a.stamp as stamp, a.resp as resp, a.iddep as iddep, a.centres as centres from entitats as a, canvis where canvis.type="new" and canvis.newid=a.rowid and canvis.stamp>"2013-04-30";""",
 ]
 
 for s in init_db :
