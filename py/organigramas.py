@@ -27,7 +27,8 @@ init_db=[
 """CREATE VIEW if not exists canvisdep as select a.nom as nom, a.id as id, a.stamp as stamp, a.resp as resp,b.stamp as oldstamp, b.iddep as oldiddep,a.iddep as iddep, a.centres as centres from entitats as a, entitats as b, canvis where canvis.type="change" and canvis.newid=a.rowid and canvis.oldid=b.rowid and a.iddep != b.iddep;""",
 """CREATE VIEW if not exists canvisnom as select a.nom as nom, a.id as id, a.stamp as stamp, a.resp as resp,b.stamp as oldstamp, b.nom as oldnom,a.iddep as iddep, a.centres as centres from entitats as a, entitats as b, canvis where canvis.type="change" and canvis.newid=a.rowid and canvis.oldid=b.rowid and a.nom != b.nom;""",
 """CREATE VIEW if not exists canvisresp as select a.nom as nom, a.id as id, a.stamp as stamp, a.resp as resp,b.stamp as oldstamp, b.resp as oldresp,a.iddep as iddep, a.centres as centres from entitats as a, entitats as b, canvis where canvis.type="change" and canvis.newid=a.rowid and canvis.oldid=b.rowid and a.resp != b.resp;""",
-"""CREATE VIEW if not exists nuevos as select a.nom as nom, a.id as id, a.stamp as stamp, a.resp as resp, a.iddep as iddep, a.centres as centres from entitats as a, canvis where canvis.type="new" and canvis.newid=a.rowid and canvis.stamp>"2013-04-30";""",
+"""CREATE VIEW if not exists nuevos as select a.nom as nom, a.id as id, a.stamp as stamp, a.resp as resp, a.iddep as iddep, a.centres as centres from entitats as a, canvis where canvis.type="new" and canvis.newid=a.rowid and canvis.stamp>(select min(stamp) from canvis);""",
+"""CREATE VIEW if not exists borrados as select a.nom as nom, a.id as id, a.stamp as stamp, a.resp as resp, a.iddep as iddep, a.centres as centres from entitats as a, canvis where canvis.type="delete" and canvis.oldid=a.rowid and canvis.stamp>(select min(stamp) from canvis);""",
 ]
 
 for s in init_db :
@@ -90,21 +91,26 @@ def update_db(d) :
             stats[r["canvis"]["type"]]+=1
         if o["id"] in newest :
             newest[o["id"]]["present"]=True        
-    ids=store.insert([a['entitats'] for a in jobs],'entitats')
-    canvis=[]
-    for z in zip([a["canvis"] for a in jobs],ids) :
-        z[0].update({'newid': z[1]})
-        canvis.append(z[0])
-    store.insert(canvis,'canvis')
-    deleted=filter(lambda a: a["present"]==False, newest.values())
-    if len(deleted) :
-        stats["deleted"]=len(deleted)
-        cs=[]
-        for dele in deleted :
-            cs.append({ 'type' : 'delete', 'oldid' : dele['rowid'], 'newid' : None, 'stamp' : date, 'id' : dele['id'] })
-        store.insert(cs,'canvis')
+    try :
+    	ids=store.insert([a['entitats'] for a in jobs],'entitats')
+    except sqlite3.IntegrityError,e :
+	stats["error"] = "already stored : %s" % date
     else :
-        stats["deleted"]=0
+    	canvis=[]
+    	for z in zip([a["canvis"] for a in jobs],ids) :
+        	z[0].update({'newid': z[1]})
+        	canvis.append(z[0])
+    	store.insert(canvis,'canvis')
+    	deleted=filter(lambda a: a["present"]==False, newest.values())
+    	if len(deleted) :
+        	stats["deleted"]=len(deleted)
+        	cs=[]
+        	for dele in deleted :
+            		cs.append({ 'type' : 'delete', 'oldid' : dele['rowid'], 'newid' : None, 'stamp' : date, 'id' : dele['id'] })
+        	store.insert(cs,'canvis')
+    	else :
+        	stats["deleted"]=0
+	stats["error"]=''
     return stats
 
 
@@ -116,5 +122,5 @@ if __name__=='__main__'  :
 	for f in files :
 		r=update_db(f)
 		print "%s: " % f,
-		print "%(new)s new %(change)s changed %(delete)s deleted" % r
+		print "%(error)s %(new)s new %(change)s changed %(delete)s deleted" % r
 		

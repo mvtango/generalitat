@@ -1,0 +1,15 @@
+@font-face {
+        font-family: 'FunctionProBook';
+        src: url('../fonts/FunctionPro-Book-webfont.eot');
+        src: local('☺'), url('../fonts/FunctionPro-Book-webfont.woff') format('woff'), url('../fonts/FunctionPro-Book-webfont.ttf') format('truetype'), url('../fonts/FunctionPro-Book-webfont.svg#webfont') format('svg');
+        font-weight: normal;
+        font-style: normal;
+}
+@font-face {
+        font-family: 'FunctionProLight';
+        src: url('../fonts/FunctionPro-Light-webfont.eot');
+        src: local('☺'), url('../fonts/FunctionPro-Light-webfont.woff') format('woff'), url('../fonts/FunctionPro-Light-webfont.ttf') format('truetype'), url('../fonts/FunctionPro-Light-webfont.svg#webfont') format('svg');
+        font-weight: normal;
+        font-style: normal;
+}
+

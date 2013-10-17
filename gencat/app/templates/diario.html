@@ -1,0 +1,97 @@
+{% extends "site.html" %}
+{% import "macros.html" as macros %}
+
+{% block title %}
+ {% if dep %}
+     {{ config.DEPTS[dep] }}
+ {% endif %} 
+ {{ start }} - {{ end }} 
+{% endblock %}
+
+{% block content %}
+<div class="row">
+ <div class="col-lg-2"></div>
+ <div class="col-lg-8">
+  <h2>{{ total }} moviment{% if total>1 or total==0 %}s{% endif %} <small>dal {{ start }} al {{ end }}</small> 
+  {% if dep %}
+     <button class="btn btn-default">{{ config.DEPTS[dep] }} <a href="{{ url_for('diario',start=start) }}">suprimir filtro</a></button>
+  {% endif %}
+  <br/>
+  {% for n in nav %}
+     <a class="btn btn-primary {{ n.disabled }}" href="{{ n.link }}">{{ n.text }}</a> 
+  {% endfor %}
+  </h2>
+  {% if resultados.nuevos %}
+  <h4>{{ resultados.nuevos|length }} noves entitats creades</h4>
+  <ul>
+    {% for ent in resultados.nuevos %}
+		<li>{{ macros.nom(ent,start,dep) }} <p>{{ ent.stamp }} - Resp. {{ macros.resp(ent.resp) }}</p></li>
+    {% endfor %}  
+  </ul>
+  {% endif %}
+  {% if resultados.borrados %}
+  <h4>{{ resultados.borrados|length }} entitats suprimides</h4>
+  <ul>
+    {% for ent in resultados.borrados %}
+		<li>{{ macros.nom(ent,start,dep) }} <p> {{ ent.stamp }} - Resp. {{ macros.resp(ent.resp) }}
+		</p></li>
+    {% endfor %}  
+  </ul>
+  {% endif %}
+  {% if resultados.canvisresp %}
+  <h4>{{ resultados.canvisresp|length }} entitats amb responsabilitats cambiads</h4>
+  <ul>
+    {% for ent in resultados.canvisresp %}
+		<li>{{ macros.nom(ent,start,dep) }} <p>{{ ent.stamp }} - Resp. {{ macros.resp(ent.resp) }} (anterior {{ macros.resp(ent.oldresp) }})</p>
+		</li>
+    {% endfor %}  
+  </ul>
+  {% endif %}
+
+  {% if resultados.canvisnom %}
+  <h4>{{ resultados.canvisnom|length }} entitats rebatejades</h4>
+  <ul>
+    {% for ent in resultados.canvisnom %}
+		<li>{{ macros.nom(ent,start,dep) }} <p>nom anterior: {{ ent.oldnom }} <br/> {{ ent.stamp }}  - Resp. {{ macros.resp(ent.resp) }} <br/>
+		 
+		</p></li>
+    {% endfor %}  
+  </ul>
+  {% endif %}
+
+
+
+  
+ </div>
+ 
+
+
+</div>
+{% endblock %}
+{% block javascript %}
+<script>
+$(document).ready(function() {
+
+	$('.popover-ajax').popover({
+        "html": true,
+        "trigger" : "hover",
+        "title" : "Història",
+        "container" : "body",
+        "content": function()
+        {   
+            var div_id =  "div-id-" + $.now();
+            return details_in_popover($(this).data('getcontent'), div_id)
+        }});
+
+	function details_in_popover(link, div_id)
+	{
+		$.ajax({
+        url: link,
+        success: function(response){
+            $('#'+div_id).html(response)}});
+    return '<div style="height: 250px; width: 250px" id="'+ div_id +'">càrrega...</div>'
+	}
+})
+
+</script>
+{% endblock %}

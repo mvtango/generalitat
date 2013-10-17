@@ -39,6 +39,13 @@ def depto(idd) :
 		raise OperationalError, r
 
 
+def scrape_list(ids) :
+	res=[]
+	for tid in ids :
+		res.append(depto(tid))
+	return database.upsert(res,"departaments")
+
+
 if __name__=='__main__' :
 	import dumptruck, random,sys
 	database=dumptruck.DumpTruck("../data/generalitat.sqlite")

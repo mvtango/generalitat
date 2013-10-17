@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sismógraf de la Generalitat">
+    <meta name="author" content="Martin Virtel">
+    <link rel="shortcut icon" href="{{ url_for('static',filename='favicon.ico') }}">
+
+    <title>{% block title %} {% endblock %} | Sismógraf de la Generalitat </title>
+    <link href="{{ url_for('static',filename='css/functionpro.css')}}" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static',filename='css/bootstrap-dpa.css')}}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static',filename='css/application.css')}}" rel="stylesheet">
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="{{ url_for('static',filename='js/html5shiv.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/respond.min.js')}}"></script>
+    <![endif]-->
+    {% block header %} {% endblock %}
+  </head>
+
+  <body>
+  {% block body %}
+    <div class="container">
+
+      <div class="masthead">
+        <h3 style="cursor: pointer" onClick="document.location.href='{{ url_for('diario',start=None) }}'">Sismógraf de la Generalitat</h3>
+ <!--       <ul class="nav nav-justified">
+          <li><a href="{{ url_for('diario',start=None) }}"><span class="glyphicon glyphicon-home"></span></a></li>
+          {% for e in config.EVENTS %}
+          <li><a href="{{ url_for('event',slug=e.slug) }}">{{ e.title }}</a></li>
+          {% endfor %}
+        </ul> -->
+      </div>
+	 {% block content %} 	  
+
+      <!-- Site footer -->
+	  {% endblock %}
+
+	  </div> <!-- /container -->
+	  <div class="container transparent" >
+        <h4>&copy; 2013 <a href="http://opengov.cat">opengov.cat</a></h4>
+      </div>
+    {% endblock %}
+	<script src="{{ url_for('static',filename='js/jquery.js')}}"></script>
+	<script src="{{ url_for('static',filename='js/bootstrap.min.js')}}"></script>
+	<script src="{{ url_for('static',filename='js/application.js')}}"></script>
+    {% block javascript %} {% endblock %}
+ </body>
+</html>

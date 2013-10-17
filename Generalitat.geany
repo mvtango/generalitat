@@ -16,7 +16,7 @@ indent_mode=2
 name=Generalitat
 base_path=/home/martin/projekte/generalitat/
 description=
-file_patterns=*.py,;*.html,;*.js;
+file_patterns=*.py,;*.html;*.js;
 
 [long line marker]
 long_line_behaviour=1

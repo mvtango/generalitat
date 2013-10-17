@@ -1,0 +1,15 @@
+{% macro nom(ent,start=None,dep=None) -%}
+	<a class="popover-ajax" data-getcontent="{{ url_for('entidad',idd=ent.id) }}" title="{{ ent.nom|truncate(40) }}"  href="http://www10.gencat.cat/sac/AppJava/organisme_fitxa.jsp?codi={{ ent.id }}" target="_blank">{{ ent.nom }}</a> 
+	{% if not dep %}
+	  <a class="btn btn-default btn-xs" href="{{ url_for('diario',dep=ent.iddep,start=start) }}" title="Moviments en {{ config.DEPTS[ent.iddep]}}">{{ config.DEPTS[ent.iddep] }} </a>
+	{% endif %}
+{%- endmacro %}
+{% macro resp(r) -%}
+   {% if r!="null" %}
+   <b>{{ r }}</b>
+   {% else %}
+   <i>no especificat</i>
+   {% endif %} 
+{%- endmacro %}
+
+

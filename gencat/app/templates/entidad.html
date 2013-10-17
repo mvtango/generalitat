@@ -1,0 +1,39 @@
+{% import "macros.html" as macros %}
+
+  {% if resultados.nuevos %}
+  <h5>entitat creada</h5>
+  <ul>
+    {% for ent in resultados.nuevos %}
+		<li><p>{{ ent.stamp }} - Resp. {{ macros.resp(ent.resp) }}</p></li>
+    {% endfor %}  
+  </ul>
+  {% endif %}
+  {% if resultados.borrados %}
+  <h5>entitats suprimida</h5>
+  <ul>
+    {% for ent in resultados.borrados %}
+		<li><p> {{ ent.stamp }} - Resp. {{ macros.resp(ent.resp) }}
+		</p></li>
+    {% endfor %}  
+  </ul>
+  {% endif %}
+  {% if resultados.canvisresp %}
+  <h5>{{ resultados.canvisresp|length }} responsabilitats cambiads</h5>
+  <ul>
+    {% for ent in resultados.canvisresp %}
+		<li><p>{{ ent.stamp }} - Resp. {{ macros.resp(ent.resp) }} (anterior {{ macros.resp(ent.oldresp) }})</p>
+		</li>
+    {% endfor %}  
+  </ul>
+  {% endif %}
+
+  {% if resultados.canvisnom %}
+  <h5>{{ resultados.canvisnom|length }} rebatejades</h5>
+  <ul>
+    {% for ent in resultados.canvisnom %}
+		<li><p>nom anterior: {{ ent.oldnom }} <br/> {{ ent.stamp }}  - Resp. {{ macros.resp(ent.resp) }} <br/>
+		 
+		</p></li>
+    {% endfor %}  
+  </ul>
+  {% endif %}
