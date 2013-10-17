@@ -42,7 +42,19 @@
   <h4>{{ resultados.canvisresp|length }} entitats amb responsabilitats cambiads</h4>
   <ul>
     {% for ent in resultados.canvisresp %}
-		<li>{{ macros.nom(ent,start,dep) }} <p>{{ ent.stamp }} - Resp. {{ macros.resp(ent.resp) }} (anterior {{ macros.resp(ent.oldresp) }})</p>
+		<li>{{ macros.nom(ent,start,dep) }} <p>{{ ent.stamp }} -
+		{% if ent.resp=="null" and ent.oldresp!="null" %}
+		   {{ macros.resp(ent.oldresp) }} ha deixat el càrrec. No fenc replacement.
+		{% else %}
+		   {% if ent.resp != "null" and ent.oldresp=="null" %}
+		      {{ macros.resp(ent.resp) }} va assumir el càrrec. Estava vacant.
+		   {% else %}
+		      {{ macros.resp(ent.resp) }} ha reemplaçat a {{ macros.resp(ent.oldresp) }}
+		   {% endif %}
+		{% endif %}
+		
+		
+		</p>
 		</li>
     {% endfor %}  
   </ul>

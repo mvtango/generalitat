@@ -77,6 +77,10 @@ def entidad(idd=None) :
 	entidad=query_db("select * from entitats where id=? order by stamp desc", (idd,),one=True)
 	return render_template("entidad.html", resultados=resultados, total=total, entidad=entidad)
 	
+@app.route('/p/<nom>')
+def persona(nom=None) :
+	resultados=query_db("select * from entitats where resp=? order by stamp desc",(nom,))
+	return render_template("persona.html", resultados=resultados)
 	
 	
 
