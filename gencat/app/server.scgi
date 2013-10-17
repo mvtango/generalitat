@@ -1,0 +1,42 @@
+#!/usr/bin/python
+# coding: utf-8
+
+import os
+import argparse
+from flup.server.scgi import WSGIServer
+import logging
+from loghelper import rotating_logfile
+from config import Config
+
+def make_parser():
+    parser = argparse.ArgumentParser(epilog="Gemüse kaufen!")
+    parser.add_argument('--host',     help="default: 127.0.0.1", default='127.0.0.1')
+    parser.add_argument('--port',     help="default: 8080", default=8080, type=int)
+    parser.add_argument('--sitename',     help="host:port", default="")
+    grp = parser.add_argument_group("Development flags", "DO NOT USE IN PRODUCTION!")
+    grp.add_argument('--debug', help="Enable Werkzeug debugger and reloader", action='store_true')
+
+    return parser
+
+
+
+if __name__ == '__main__':
+	args = make_parser().parse_args()
+	import time
+	
+	if not args.sitename:
+		args.sitename = '%s:%d' % (args.host, args.port)
+	
+	logger=logging.getLogger('')
+	rotating_logfile(logger,filename=os.path.join(Config.HOME,"log/%s.log" % args.sitename),
+			level=logging.DEBUG)
+
+	from routes import app
+
+	while True :
+		try :
+			WSGIServer(app, bindAddress=(args.host, args.port)).run()
+		except Exception, e:
+			logger.error("WSGI process died %s" %e)
+			
+		break
