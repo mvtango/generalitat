@@ -1,0 +1,7 @@
+<h5>{{ resultados|length }} càrrec{% if resultados|length !=1 %}s{% endif %}</h5>
+<ul>
+{% for ent in resultados %}
+<li>{{ ent.nom}} ({{ ent.stamp }})</li>
+{% endfor %}
+
+</ul>
