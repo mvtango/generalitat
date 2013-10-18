@@ -1,0 +1,30 @@
+{% extends "site.html" %}
+{% import "macros.html" as macros %}
+
+{% block title %}
+   càrrecs múltiples 
+{% endblock %}
+
+{% block content %}
+<div class="row">
+     <div class="col">
+     <div class="col-lg-2"></div>
+     <div class="col-lg-8">
+     {% for grouper,list in resultados|groupby("resp") %}
+     
+	<h4>{{ grouper }} <small>{{ list|length }} càrrecs</small></h4>
+	   <ul>
+	   {% for ll in list %}
+	    <li>
+	     {{ macros.nom(ll) }}
+	    </li>
+	   {% endfor %}
+       </ul>
+     {% endfor %}
+     
+     </div>
+</div>
+
+
+
+{% endblock %}
