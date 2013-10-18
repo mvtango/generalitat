@@ -44,12 +44,12 @@
     {% for ent in resultados.canvisresp %}
 		<li>{{ macros.nom(ent,start,dep) }} <p>{{ ent.stamp }} -
 		{% if ent.resp=="null" and ent.oldresp!="null" %}
-		   {{ macros.resp(ent.oldresp) }} ha deixat el càrrec. No fenc replacement.
+		   <span class="glyphicon glyphicon-log-out"></span> {{ macros.resp(ent.oldresp) }} ha deixat el càrrec. No fenc replacement.
 		{% else %}
 		   {% if ent.resp != "null" and ent.oldresp=="null" %}
-		      {{ macros.resp(ent.resp) }} va assumir el càrrec. Estava vacant.
+		      <span class="glyphicon glyphicon-log-in"></span> {{ macros.resp(ent.resp) }} va assumir el càrrec. Estava vacant.
 		   {% else %}
-		      {{ macros.resp(ent.resp) }} ha reemplaçat a {{ macros.resp(ent.oldresp) }}
+		      <span class="glyphicon glyphicon-transfer"></span> {{ macros.resp(ent.resp) }} ha reemplaçat a {{ macros.resp(ent.oldresp) }}
 		   {% endif %}
 		{% endif %}
 		
@@ -64,7 +64,7 @@
   <h4>{{ resultados.canvisnom|length }} entitats rebatejades</h4>
   <ul>
     {% for ent in resultados.canvisnom %}
-		<li>{{ macros.nom(ent,start,dep) }} <p>nom anterior: {{ ent.oldnom }} <br/> {{ ent.stamp }}  - Resp. {{ macros.resp(ent.resp) }} <br/>
+		<li>{{ macros.nom(ent,start,dep) }} <p><del>{{ ent.oldnom }}</del> <br/> {{ ent.stamp }}  - Resp. {{ macros.resp(ent.resp) }} <br/>
 		 
 		</p></li>
     {% endfor %}  

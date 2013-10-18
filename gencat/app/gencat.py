@@ -43,12 +43,11 @@ def query_all(query,param) :
 		res[t]=filter(lambda a: a["test"]>0.1,res[t])
 	return res
 	
- 
+@app.route('/d/<dep>/<start>/<end>') 
 @app.route('/d/<dep>/<start>')
 @app.route('/d/<start>')
 @app.route('/')
-def diario(start=None,dep=None) :
-	end=None
+def diario(start=None,dep=None,end=None) :
 	if dep is None and start is not None and re.match("^\d$",start) :
 		dep=start
 		start=None
@@ -56,14 +55,18 @@ def diario(start=None,dep=None) :
 		start=(datetime.datetime.now()-datetime.timedelta(days=7)).strftime("%Y-%m-%d")
 	if end is None :
 		end=(datetime.datetime.strptime(start,"%Y-%m-%d")+datetime.timedelta(days=7)).strftime("%Y-%m-%d")
+	else :
+		if end=='avui' :
+			end=datetime.datetime.now().strftime("%Y-%m-%d")
 	if dep is not None :
 		qs=" and iddep='%s' " % dep
 	else :
 		qs=""
+	diff=(datetime.datetime.strptime(end,"%Y-%m-%d")-datetime.datetime.strptime(start,"%Y-%m-%d")).days
 	resultados=query_all("select * from %%s where stamp>=? and stamp<=? %s order by  iddep asc, stamp asc, id asc" % (qs,),(start,end))
 	startdate=datetime.datetime.strptime(start,"%Y-%m-%d")
-	nav=[ { 'link' : url_for('diario',dep=dep,start=away(startdate,-8)), 'text' : 'anterior' },
-		  { 'link' : url_for('diario',dep=dep,start=away(startdate,8)), 'text' : 'posterior' },
+	nav=[ { 'link' : url_for('diario',dep=dep,start=away(startdate,-diff)), 'text' : 'anterior' },
+		  { 'link' : url_for('diario',dep=dep,start=away(startdate,diff)), 'text' : 'posterior' },
 	    ]
 	return render_template("diario.html", resultados=resultados, start=start, end=end, dep=dep,
 	                                      total=reduce(lambda a,b: a+len(b), resultados.values(),0),
