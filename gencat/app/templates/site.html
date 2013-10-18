@@ -29,7 +29,12 @@
     <div class="container">
 
       <div class="masthead">
-        <h3 style="cursor: pointer" onClick="document.location.href='{{ url_for('diario',start=None) }}'">Sismógraf de la Generalitat</h3>
+        <h3 style="cursor: pointer" onClick="document.location.href='{{ url_for('diario',start=None) }}'">Sismógraf de la Generalitat
+        <small>
+        Aquest servei està en ple desenvolupament. Si té preguntes o suggeriments, contacteu-nos <a href="http://twitter.com/opengovcat">@opengovcat</a>.
+        </small>
+        
+        </h3>
  <!--       <ul class="nav nav-justified">
           <li><a href="{{ url_for('diario',start=None) }}"><span class="glyphicon glyphicon-home"></span></a></li>
           {% for e in config.EVENTS %}
