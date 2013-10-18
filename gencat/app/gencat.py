@@ -58,7 +58,7 @@ def diario(start=None,dep=None,end=None) :
 	else :
 		if end=='avui' :
 			end=datetime.datetime.now().strftime("%Y-%m-%d")
-	if dep is not None :
+	if dep is not None and dep != '0' :
 		qs=" and iddep='%s' " % dep
 	else :
 		qs=""
@@ -86,8 +86,10 @@ def persona(nom=None) :
 	return render_template("persona.html", resultados=resultados)
 	
 	
-
-
+@app.route('/multi/') 
+def multiple() :
+	resultados=query_db('select id,stamp,nom,iddep,resp from entitats where resp in (select resp from (select resp,count(distinct id) as c from entitats where resp!="null" and resp not like "Conseller%" group by resp having c>1)) order by resp,id desc;')
+	return render_template("multiple.html",resultados=resultados)
 
 
 if not app.debug:
