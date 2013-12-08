@@ -31,7 +31,7 @@ if __name__ == '__main__':
 	rotating_logfile(logger,filename=os.path.join(Config.HOME,"log/%s.log" % args.sitename),
 			level=logging.DEBUG)
 
-	from routes import app
+	from gencat import app
 
 	while True :
 		try :

@@ -14,9 +14,9 @@
 
 # PATH should only include /usr/* if it runs after the mountnfs.sh script
 NAME=gencat
-APPDIR=/home/martin/projekte/$NAME
+APPDIR=/home/martin/projekte/generalitat/$NAME
 PATH=$APPDIR/bin:/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
-DESC="SHZ Readerboard"
+DESC="GENCAT"
 DAEMON=$APPDIR/bin/python
 DAEMON_ARGS="$APPDIR/app/server.scgi --host 0.0.0.0 --port 2926 "
 PIDFILE=$APPDIR/var/run/$NAME.pid
@@ -25,10 +25,13 @@ CHUSER="martin"
 VERBOSE=1
 
 # Exit if the package is not installed
-[ -x "$DAEMON" ] || exit 0
+[ -x "$DAEMON" ] ||  exit 0
 
 # Read configuration variable file if it is present
 [ -r /etc/default/$NAME ] && . /etc/default/$NAME
+
+
+. $APPDIR/bin/activate
 
 # Load the VERBOSE setting and other rcS variables
 . /lib/init/vars.sh
@@ -49,7 +52,7 @@ do_start()
 	#   2 if daemon could not be started
 	start-stop-daemon -c $CHUSER --start --quiet --pidfile $PIDFILE -b -m --exec $DAEMON --test > /dev/null \
 		|| return 1
-	start-stop-daemon -c $CHUSER --start --quiet --pidfile $PIDFILE -b -m --exec $DAEMON -- \
+	start-stop-daemon -c $CHUSER --start  --pidfile $PIDFILE -b -m --exec $DAEMON -- \
 		$DAEMON_ARGS \
 		|| return 2
 	# Add code here, if necessary, that waits for the process to be ready
@@ -96,6 +99,8 @@ do_reload() {
 	start-stop-daemon --stop --signal 1 --quiet --pidfile $PIDFILE --name $NAME
 	return 0
 }
+
+export VERBOSE=1
 
 case "$1" in
   start)

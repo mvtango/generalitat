@@ -15,8 +15,10 @@ cd $DIR/../py
 od=../data/xml
 of=$od/`date +%Y-%m-%d`-unitatssac.xml
 
-wget --output-file=/dev/null http://www20.gencat.cat/dadesobertes/recursos/organismes/unitatssac.xml --output-document=$of
-# python ./maketree.py $of >../data/maketree.log
+find $od -name '*xml' -mtime +2  -exec gzip {} \;
 
+wget --output-file=/dev/null http://www20.gencat.cat/dadesobertes/recursos/organismes/unitatssac.xml --output-document=$of
+python ./maketree.py $of 2>&1 >>../log/maketree.log
+python ./organigramas.py $of 2>&1 >>../log/organigramas.log
 
 

@@ -104,3 +104,39 @@ body {
 	background: transparent;
 	border: 0px;
 }
+
+ul.entidades {
+	list-style: none; 
+}
+
+ul.entidades li {
+	background-repeat: no-repeat;
+	padding-left: 44px;
+	background-position-x: -4px;
+	background-position-y: -4px;
+
+}
+
+ul.nuevas li {
+	background-image: url(../img/nueva.png);
+}
+
+ul.borradas li {
+	background-image: url(../img/borrada.png);
+}
+
+ul.nombre li {
+	background-image: url(../img/nombre.png);
+}
+
+ul.responsable li {
+	background-image: url(../img/responsable.png);
+}
+
+ul.responsable li.responsable-in {
+	background-image: url(../img/responsable-in.png);
+}
+
+ul.responsable li.responsable-out {
+	background-image: url(../img/responsable-out.png);
+}
