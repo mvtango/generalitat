@@ -1,0 +1,36 @@
+{% extends "site.html" %}
+{% import "macros.html" as macros %}
+
+
+{% block title %}
+  Canvi #{{ canvi.cid }} - {{ new.nom }} {{ canvi.stamp }}
+{% endblock %}
+
+
+{% block content %}
+<div class="row">
+ <div class="col-lg-8">
+  <h2>{{ macros.nom(new,start=canvi.stamp) }} <small><a title="enllaç directe" href="" ><span class="glyphicon glyphicon-link"></span> canvi #{{ canvi.cid }} a {{ canvi.stamp }}</a></small></h2>
+  {% if canvi.type=='new' %}
+  <p>
+  Creat el {{ canvi.stamp }}.
+  </p>
+  {% elif canvi.type=='delete' %}
+  <p>
+  Suprimit el {{ canvi.stamp }}. 
+  </p>
+  {% else %}
+  <p>
+   {% if old.resp != new.resp %}
+  
+   {% elif old.nom != new.nom %}
+   
+   
+   {% endif %}
+  </p>
+  {% endif %}
+</div>
+
+</div>
+
+{% endblock %}

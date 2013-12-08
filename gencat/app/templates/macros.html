@@ -11,5 +11,8 @@
    <i>no especificat</i>
    {% endif %} 
 {%- endmacro %}
+{% macro canvi(r) -%}
+ <a href="{{ url_for('canvi',cid=r.cid) }}" title="enllaç directe"><span class="glyphicon glyphicon-link"></span></a>
+{%- endmacro %}
 
 

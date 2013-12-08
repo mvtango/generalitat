@@ -29,6 +29,23 @@ tests = { "canvisresp" : test_distance("resp","oldresp"),
 		  "canvisnom" : test_distance("nom","oldnom")
 	     }
 
+
+def _in_out_both(ent) :
+	if ent["resp"]=="null" and ent["oldresp"]!="null" :
+		return "responsable-out"
+	if ent["resp"]!="null" and ent["oldresp"]=="null" :
+		return "responsable-in"
+	return "responsable"
+
+
+classify = { "canvisresp" : _in_out_both,
+			 "canvisnom"  : lambda a : "nombre",
+			 "borrados"  : lambda a : "borradas",
+			 "nuevos"  : lambda a : "nuevas",
+	       }
+
+
+
 def away(n,days) :
 	return (n+datetime.timedelta(days=days)).strftime("%Y-%m-%d")
  
@@ -41,6 +58,9 @@ def query_all(query,param) :
 		for r in res[t] :
 			r["test"]=v(r)
 		res[t]=filter(lambda a: a["test"]>0.1,res[t])
+	for (t,v) in classify.items() :
+		for r in res[t] :
+			r["class"]=v(r)	
 	return res
 	
 @app.route('/d/<dep>/<start>/<end>') 
@@ -84,6 +104,18 @@ def entidad(idd=None) :
 def persona(nom=None) :
 	resultados=query_db("select * from entitats where resp=? order by stamp desc",(nom,))
 	return render_template("persona.html", resultados=resultados)
+
+
+
+@app.route('/c/<cid>')
+def canvi(cid=None) :
+	canvi=query_db("select *,rowid as cid from canvis where rowid=?",(cid,),one=True)
+	old=query_db("select * from entitats where rowid=?",(canvi["oldid"],),one=True)
+	new=query_db("select * from entitats where rowid=?",(canvi["newid"],),one=True)
+	return render_template("canvi.html", canvi= canvi, old=old, new=new)
+	
+
+
 	
 	
 @app.route('/multi/') 

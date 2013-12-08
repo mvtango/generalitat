@@ -23,37 +23,38 @@
   </h2>
   {% if resultados.nuevos %}
   <h4>{{ resultados.nuevos|length }} noves entitats creades</h4>
-  <ul>
+  <ul class="entidades nuevas">
     {% for ent in resultados.nuevos %}
-		<li>{{ macros.nom(ent,start,dep) }} <p>{{ ent.stamp }} - Resp. {{ macros.resp(ent.resp) }}</p></li>
+		<li>{{ macros.nom(ent,start,dep) }} <p>{{ ent.stamp }} - Resp. {{ macros.resp(ent.resp) }} {{ macros.canvi(ent) }}</p>   
+        </li>
     {% endfor %}  
   </ul>
   {% endif %}
   {% if resultados.borrados %}
   <h4>{{ resultados.borrados|length }} entitats suprimides</h4>
-  <ul>
+  <ul class="entidades borradas">
     {% for ent in resultados.borrados %}
 		<li>{{ macros.nom(ent,start,dep) }} <p> {{ ent.stamp }} - Resp. {{ macros.resp(ent.resp) }}
-		</p></li>
+		{{ macros.canvi(ent) }}</p></li>
     {% endfor %}  
   </ul>
   {% endif %}
   {% if resultados.canvisresp %}
   <h4>{{ resultados.canvisresp|length }} entitats amb responsabilitats cambiads</h4>
-  <ul>
+  <ul class="entidades responsable">
     {% for ent in resultados.canvisresp %}
-		<li>{{ macros.nom(ent,start,dep) }} <p>{{ ent.stamp }} -
-		{% if ent.resp=="null" and ent.oldresp!="null" %}
-		   <span class="glyphicon glyphicon-log-out"></span> {{ macros.resp(ent.oldresp) }} ha deixat el càrrec. No fenc replacement.
+		<li class="{{ ent.class }}">{{ macros.nom(ent,start,dep) }} <p>{{ ent.stamp }} -
+		{% if ent.class=="responsable-out" %}
+		   <!-- <span class="glyphicon glyphicon-log-out"></span> -->{{ macros.resp(ent.oldresp) }} ha deixat el càrrec. No fenc replacement.
 		{% else %}
-		   {% if ent.resp != "null" and ent.oldresp=="null" %}
-		      <span class="glyphicon glyphicon-log-in"></span> {{ macros.resp(ent.resp) }} va assumir el càrrec. Estava vacant.
+		   {% if ent.class == "reponsable-in" %}
+		   <!--   <span class="glyphicon glyphicon-log-in"></span>--> {{ macros.resp(ent.resp) }} va assumir el càrrec. Estava vacant.
 		   {% else %}
-		      <span class="glyphicon glyphicon-transfer"></span> {{ macros.resp(ent.resp) }} ha reemplaçat a {{ macros.resp(ent.oldresp) }}
+		   <!--   <span class="glyphicon glyphicon-transfer"></span> --> {{ macros.resp(ent.resp) }} ha reemplaçat a {{ macros.resp(ent.oldresp) }}
 		   {% endif %}
 		{% endif %}
 		
-		
+		{{ macros.canvi(ent) }}
 		</p>
 		</li>
     {% endfor %}  
@@ -62,10 +63,10 @@
 
   {% if resultados.canvisnom %}
   <h4>{{ resultados.canvisnom|length }} entitats rebatejades</h4>
-  <ul>
+  <ul class="entidades nombre">
     {% for ent in resultados.canvisnom %}
-		<li>{{ macros.nom(ent,start,dep) }} <p><del>{{ ent.oldnom }}</del> <br/> {{ ent.stamp }}  - Resp. {{ macros.resp(ent.resp) }} <br/>
-		 
+		<li>{{ macros.nom(ent,start,dep) }} <p><del>{{ ent.oldnom }}</del> <br/> {{ ent.stamp }}  - Resp. {{ macros.resp(ent.resp) }} 
+		{{ macros.canvi(ent) }}
 		</p></li>
     {% endfor %}  
   </ul>
