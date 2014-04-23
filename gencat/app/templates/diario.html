@@ -40,7 +40,7 @@
   </ul>
   {% endif %}
   {% if resultados.canvisresp %}
-  <h4>{{ resultados.canvisresp|length }} entitats amb responsabilitats cambiads</h4>
+  <h4>{{ resultados.canvisresp|length }} entitats amb responsabilitats canviades</h4>
   <ul class="entidades responsable">
     {% for ent in resultados.canvisresp %}
 		<li class="{{ ent.class }}">{{ macros.nom(ent,start,dep) }} <p>{{ ent.stamp }} -

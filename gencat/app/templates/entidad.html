@@ -1,7 +1,7 @@
 {% import "macros.html" as macros %}
 
   {% if resultados.nuevos %}
-  <h5>entitat creada</h5>
+  <h5>entitats creades</h5>
   <ul>
     {% for ent in resultados.nuevos %}
 		<li><p>{{ ent.stamp }} - Resp. {{ macros.resp(ent.resp) }}</p></li>
@@ -9,7 +9,7 @@
   </ul>
   {% endif %}
   {% if resultados.borrados %}
-  <h5>entitats suprimida</h5>
+  <h5>entitats suprimides</h5>
   <ul>
     {% for ent in resultados.borrados %}
 		<li><p> {{ ent.stamp }} - Resp. {{ macros.resp(ent.resp) }}
@@ -18,7 +18,7 @@
   </ul>
   {% endif %}
   {% if resultados.canvisresp %}
-  <h5>{{ resultados.canvisresp|length }} responsabilitats cambiads</h5>
+  <h5>{{ resultados.canvisresp|length }} responsabilitats canviades</h5>
   <ul>
     {% for ent in resultados.canvisresp %}
 		<li><p>{{ ent.stamp }} - Resp. {{ macros.resp(ent.resp) }} (anterior {{ macros.resp(ent.oldresp) }})</p>
