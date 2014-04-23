@@ -67,6 +67,11 @@ jobs= [ { 'find'  : u'Departament de la Presidència',
 #					  os.path.join(here,"../opengov.cat/generalitat/0.3/generalitat.json") 
 ]
 		},
+		{ 'find'  : 'Economia',
+          'files' : [ 
+					  os.path.join(here,"../data/web/economia.json"),
+		 	]
+		},
 		{ 'find'  : 'CatSalut',
           'files' : [ 
 					  os.path.join(here,"../data/web/catsalut.json"),
