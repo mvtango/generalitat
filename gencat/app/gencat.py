@@ -120,7 +120,9 @@ def canvi(cid=None) :
 	
 @app.route('/multi/') 
 def multiple() :
-	resultados=query_db('select id,stamp,nom,iddep,resp from entitats where resp in (select resp from (select resp,count(distinct id) as c from entitats where resp!="null" and resp not like "Conseller%" group by resp having c>1)) order by resp,id desc;')
+	resultados=query_db("""
+	select distinct id,resp,nom,iddep,stamp from entitats where resp in (select resp from (select distinct resp,count(distinct id) as cn from entitats where resp!="null" and resp not like "Conseller%" group by resp having cn>1 order by cn asc)) order by resp,stamp
+	""")
 	return render_template("multiple.html",resultados=resultados)
 
 
