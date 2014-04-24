@@ -9,26 +9,45 @@
 
 {% block content %}
 <div class="row">
- <div class="col-lg-8">
-  <h2>{{ macros.nom(new,start=canvi.stamp) }} <small><a title="enllaç directe" href="" ><span class="glyphicon glyphicon-link"></span> canvi #{{ canvi.cid }} a {{ canvi.stamp }}</a></small></h2>
-  {% if canvi.type=='new' %}
-  <p>
-  Creat el {{ canvi.stamp }}.
-  </p>
-  {% elif canvi.type=='delete' %}
-  <p>
-  Suprimit el {{ canvi.stamp }}. 
-  </p>
-  {% else %}
-  <p>
-   {% if old.resp != new.resp %}
+ <div class="col-lg-1"></div>
+ <div class="col-lg-2">
   
-   {% elif old.nom != new.nom %}
-   
-   
+  <div class="well" style="margin-top: 1em">
+<a title="enllaç directe" href="" ><span class="glyphicon glyphicon-link"></span> canvi #{{ canvi.cid }} a {{ canvi.stamp }}</a>
+  </div>
+ </div>
+ <div class="col-lg-8">
+  <h2>{{ macros.nom(new,start=canvi.stamp) }} <a class="btn btn-xs btn-default" target="_blank" href="http://www10.gencat.cat/sac/AppJava/organisme_fitxa.jsp?codi={{ new.id }}">obrir en gencat.cat</a></h2>
+  <h4>
+  {% if canvi.type=='new' %}
+  Creat a {{ canvi.stamp }}.
+  {% endif %} 
+  {% if canvi.type=='delete' %}
+  Suprimit a {{ canvi.stamp }}. 
+  {% endif %}
+  </h4>
+  <h4><strong>Resp.:</strong>
+   {% if old and old.resp != new.resp %}
+	<strike>{{ old.resp }}</strike> {{ new.resp }} <br/>
+   {% else %}
+	{% if new.resp!="null" %} {{ new.resp }} {% else %} no especificat {% endif %}
+   {% endif %}
+   </h4>
+   <h4>
+   {% if old and old.nom != new.nom %}
+	<strong>Nom:</strong> <strike>{{ old.nom }}</strike> {{ new.nom }} <br/>
+   {% else %}
    {% endif %}
   </p>
-  {% endif %}
+  <div style="display: none">
+  <p>
+  <b>Old</b>{{ old|pprint }}
+  <br/>
+  <b>New</b>{{ new|pprint }}
+  <br/>
+  <b>Canvi</b> {{ canvi | pprint }} 
+  </p>
+  </div>
 </div>
 
 </div>

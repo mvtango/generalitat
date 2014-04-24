@@ -16,10 +16,11 @@
   {% if dep %}
      <button class="btn btn-default">{{ config.DEPTS[dep] }} <a href="{{ url_for('diario',start=start) }}">suprimir filtro</a></button>
   {% endif %}
-  <br/>
+  <span style="white-space: nowrap;">
   {% for n in nav %}
-     <a class="btn btn-primary {{ n.disabled }}" href="{{ n.link }}">{{ n.text }}</a> 
+     <a class="btn btn-default {{ n.disabled }}" title="{{ n.title }}" href="{{ n.link }}">{{ n.text|safe }}</a> 
   {% endfor %}
+  </span>
   </h2>
   {% if resultados.nuevos %}
   <h4>{{ resultados.nuevos|length }} noves entitats creades</h4>

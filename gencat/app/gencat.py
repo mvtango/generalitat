@@ -72,9 +72,9 @@ def diario(start=None,dep=None,end=None) :
 		dep=start
 		start=None
 	if start is None :
-		start=(datetime.datetime.now()-datetime.timedelta(days=7)).strftime("%Y-%m-%d")
+		start=(datetime.datetime.now()-datetime.timedelta(days=6)).strftime("%Y-%m-%d")
 	if end is None :
-		end=(datetime.datetime.strptime(start,"%Y-%m-%d")+datetime.timedelta(days=7)).strftime("%Y-%m-%d")
+		end=(datetime.datetime.strptime(start,"%Y-%m-%d")+datetime.timedelta(days=6)).strftime("%Y-%m-%d")
 	else :
 		if end=='avui' :
 			end=datetime.datetime.now().strftime("%Y-%m-%d")
@@ -85,8 +85,8 @@ def diario(start=None,dep=None,end=None) :
 	diff=(datetime.datetime.strptime(end,"%Y-%m-%d")-datetime.datetime.strptime(start,"%Y-%m-%d")).days
 	resultados=query_all("select * from %%s where stamp>=? and stamp<=? %s order by  iddep asc, stamp asc, id asc" % (qs,),(start,end))
 	startdate=datetime.datetime.strptime(start,"%Y-%m-%d")
-	nav=[ { 'link' : url_for('diario',dep=dep,start=away(startdate,-diff)), 'text' : 'anterior' },
-		  { 'link' : url_for('diario',dep=dep,start=away(startdate,diff)), 'text' : 'posterior' },
+	nav=[ { 'link' : url_for('diario',dep=dep,start=away(startdate,-diff)), 'title' : "des de %s" % away(startdate,-diff),  'text' : '&laquo;' },
+		  { 'link' : url_for('diario',dep=dep,start=away(startdate,diff)), 'title' : "des de %s" % away(startdate,diff),'text' : '&raquo;' },
 	    ]
 	return render_template("diario.html", resultados=resultados, start=start, end=end, dep=dep,
 	                                      total=reduce(lambda a,b: a+len(b), resultados.values(),0),
@@ -112,7 +112,7 @@ def canvi(cid=None) :
 	canvi=query_db("select *,rowid as cid from canvis where rowid=?",(cid,),one=True)
 	old=query_db("select * from entitats where rowid=?",(canvi["oldid"],),one=True)
 	new=query_db("select * from entitats where rowid=?",(canvi["newid"],),one=True)
-	return render_template("canvi.html", canvi= canvi, old=old, new=new)
+	return render_template("canvi.html", canvi=canvi, old=old, new=new)
 	
 
 
