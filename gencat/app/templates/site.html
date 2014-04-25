@@ -37,14 +37,15 @@
           </button>
 	<a class="navbar-brand" href="{{ url_for('diario',start=None) }}"><strong>Sismógraf</strong> de la Generalitat <i><span class="secondary">beta</span></i></a>
 	    <p class="navbar-text navbar-right">
-		Un projecte de <a class="navbar-link" href="http://opengov.cat">opengov.cat</a>
+		Un projecte de <a class="navbar-link" href="http://opengov.cat">opengov.cat</a> 
+	&middot;	<a target="_blank" href="http://dadesobertes.gencat.cat/ca/cercador/detall-cataleg/?id=3830">Font de Dades</a>
 	    </p>
           <ul class="nav navbar-nav">
           	{% for e in config.EVENTS %}
           		<li><a href="{{ url_for('event',slug=e.slug) }}">{{ e.title }}</a></li>
           	{% endfor %}
-			<li><a href=" ">Què és això</a></li>
-			<li><a href=" ">Com Contribuir</a></li>
+			<li><a href="/ca/2014/04/que-es-el-sismografo-de-la-generalitat/ ">Què és això</a></li>
+			<li><a href="/ca/2014/04/como-colaborar-en-el-sismografo-jpd14/">Com Contribuir</a></li>
           </ul>
         </div>
       </div>

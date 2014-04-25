@@ -105,7 +105,9 @@ def persona(nom=None) :
 	resultados=query_db("select * from entitats where resp=? order by stamp desc",(nom,))
 	return render_template("persona.html", resultados=resultados)
 
-
+	
+	
+	
 
 @app.route('/c/<cid>')
 def canvi(cid=None) :
@@ -124,6 +126,26 @@ def multiple() :
 	select distinct id,resp,nom,iddep,stamp from entitats where resp in (select resp from (select distinct resp,count(distinct id) as cn from entitats where resp!="null" and resp not like "Conseller%" group by resp having cn>1 order by cn asc)) order by resp,stamp
 	""")
 	return render_template("multiple.html",resultados=resultados)
+
+
+@app.route('/api/canvis/<dep>/<start>/<end>') 
+def api(start=None,dep=None,end=None,typ=None) :
+	if dep is None or start is None or end is None:
+		return jsonify({ "status" : "error", "message" : "See %s for details." % url_for("rtfm") })
+	if dep != 'all' :
+		dep=re.search("(\d+)",dep)
+		if dep :
+			qs=" and iddep='%s' " % dep.groups()[0]
+		else :
+			qs=""
+	else :
+		qs=""
+	resultados=query_all("select * from %%s where stamp>=? and stamp<=? %s order by  iddep asc, stamp asc, id asc" % (qs,),(start,end))
+	return jsonify({ "status" : "ok", "resultados" : resultados})
+
+@app.route('/api/')
+def rtfm() :
+	return redirect("/es/2014/04/como-colaborar-en-el-sismografo-jpd14/#api", code=302)
 
 
 if not app.debug:
