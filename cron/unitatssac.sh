@@ -17,7 +17,7 @@ of=$od/`date +%Y-%m-%d`-unitatssac.xml
 
 find $od -name '*xml' -mtime +2  -exec gzip {} \;
 
-wget --output-file=/dev/null http://www20.gencat.cat/dadesobertes/recursos/organismes/unitatssac.xml --output-document=$of
+wget --output-file=/dev/null http://fitxers.dadesobertes.gencat.cat/recursos/organismes/unitatssac.xml --output-document=$of
 python ./maketree.py $of 2>&1 >>../log/maketree.log
 python ./organigramas.py $of 2>&1 >>../log/organigramas.log
 
