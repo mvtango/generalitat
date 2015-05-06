@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sismógrafo de la Generalitat">
+    <meta name="description" content="Sismògraf de la Generalitat">
     <meta name="author" content="Martin Virtel">
     <link rel="shortcut icon" href="{{ url_for('static',filename='favicon.ico') }}">
 
-    <title>{% block title %} {% endblock %} | Sismógrafo de la Generalitat </title>
+    <title>{% block title %} {% endblock %} | Sismògraf de la Generalitat </title>
     <link href="{{ url_for('static',filename='css/functionpro.css')}}" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
@@ -35,7 +35,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-	<a class="navbar-brand" href="{{ url_for('diario',start=None) }}"><strong>Sismógrafo</strong> de la Generalitat <i><span class="secondary">beta</span></i></a>
+	<a class="navbar-brand" href="{{ url_for('diario',start=None) }}"><strong>Sismògraf</strong> de la Generalitat <i><span class="secondary">beta</span></i></a>
 	    <p class="navbar-text navbar-right">
 		Un projecte d'<a class="navbar-link" href="http://opengov.cat">opengov.cat</a> 
 	&middot;	<a target="_blank" href="http://dadesobertes.gencat.cat/ca/cercador/detall-cataleg/?id=3830">Font de dades</a>
@@ -59,7 +59,7 @@
 
 	  </div> <!-- /container -->
 	  <div class="container transparent" >
-        <h4>&copy; 2013 - 2014 <a href="http://opengov.cat">opengov.cat</a></h4>
+        <h4>&copy; 2013 - 2015 <a href="http://opengov.cat">opengov.cat</a></h4>
       </div>
     {% endblock %}
 	<script src="{{ url_for('static',filename='js/jquery.js')}}"></script>
