@@ -13,6 +13,7 @@ import datetime
 logger=logging.getLogger(__name__)
 
 organigrama_url="http://www10.gencat.cat/sac/AppJava/organigrama_query.jsp?nivell=1&pares=true&codi=%s&jq=200001"
+# nuevo url : organigrama_url="http://sac.gencat.cat/sacgencat/AppJava/organigrama.jsp?codi=%s&jq=110"
 database=dumptruck.DumpTruck("../data/generalitat.sqlite")
 
 cachelock=Lock()
