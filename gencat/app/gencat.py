@@ -88,9 +88,14 @@ def diario(start=None,dep=None,end=None) :
 	nav=[ { 'link' : url_for('diario',dep=dep,start=away(startdate,-diff)), 'title' : "des de %s" % away(startdate,-diff),  'text' : '&laquo;' },
 		  { 'link' : url_for('diario',dep=dep,start=away(startdate,diff)), 'title' : "des de %s" % away(startdate,diff),'text' : '&raquo;' },
 	    ]
-	return render_template("diario.html", resultados=resultados, start=start, end=end, dep=dep,
+	rformat=request.args.get("format",False)
+	if rformat=="json" :
+		return jsonify(resultados=resultados,start=start,dep=dep,end=end)
+	else :
+		return render_template("diario.html", resultados=resultados, start=start, end=end, dep=dep,
 	                                      total=reduce(lambda a,b: a+len(b), resultados.values(),0),
-	                                      nav=nav
+	                                      nav=nav,
+					      request=request
 	                                      )
 
 @app.route('/e/<idd>')
